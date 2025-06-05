@@ -1,0 +1,23 @@
+{
+  "name": "gh-page",
+  "version": "1.0.0",
+  "description": "The web page for FTC Team 6046, First Tech Coyotes",
+  "homepage": "https://github.com/chsRobotix/gh-page#readme",
+  "bugs": {
+    "url": "https://github.com/chsRobotix/gh-page/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chsRobotix/gh-page.git"
+  },
+  "license": "ISC",
+  "author": "Eric Zhang",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
+  }
+}
