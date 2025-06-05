@@ -1,30 +1,23 @@
 {
-    "name": "chsrobotix-github-io",
-    "homepage": "http://chsrobotix.github.io/",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist",
-        "lint": "eslint .",
-        "preview": "vite preview"
+    "name": "chsrobotix.github.io",
+    "version": "1.0.0",
+    "description": "The web page for FTC Team 6046, First Tech Coyotes",
+    "homepage": "https://github.com/chsRobotix/chsRobotix.github.io#readme",
+    "bugs": {
+        "url": "https://github.com/chsRobotix/chsRobotix.github.io/issues"
     },
-    "dependencies": {
-        "react": "^19.1.0",
-        "react-dom": "^19.1.0"
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chsRobotix/chsRobotix.github.io.git"
+    },
+    "license": "ISC",
+    "author": "",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "devDependencies": {
-        "@eslint/js": "^9.25.0",
-        "@types/react": "^19.1.2",
-        "@types/react-dom": "^19.1.2",
-        "@vitejs/plugin-react-swc": "^3.9.0",
-        "eslint": "^9.25.0",
-        "eslint-plugin-react-hooks": "^5.2.0",
-        "eslint-plugin-react-refresh": "^0.4.19",
-        "globals": "^16.0.0",
-        "vite": "^6.3.5"
+        "gh-pages": "^6.3.0"
     }
 }
