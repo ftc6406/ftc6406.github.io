@@ -1,3 +1,3 @@
-var ghpages = require('gh-pages');
+const ghpages = require("gh-pages");
 
-ghpages.publish('./gh-pages', function(err) {});
+ghpages.publish("./gh-pages", function (err) {});
