@@ -1,3 +1,3 @@
 const ghPages = require('gh-pages');
 
-ghPages.publish('dist', (err) => {});
+ghPages.publish('./vite/dist', (err) => {});
