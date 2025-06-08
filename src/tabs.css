@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+#tab {
+    margin: 10%;
+    padding: 10%;
+    width: 100pt;
+    background-color: #fff;
+}

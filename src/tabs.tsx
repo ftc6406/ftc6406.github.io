@@ -1,6 +1,8 @@
 import { useState } from "react";
 import type { MouseEvent } from "react";
 
+import "./tabs.css";
+
 function Tabs() {
     const [currentTab, setCurrentTab] = useState("home-tab");
 
@@ -12,12 +14,12 @@ function Tabs() {
     return (
         <>
             <div
-                className="bg-gray-800 text-gray-50 w-full h-2/5"
+                className="w-full h-1/5 bg-gray-800 text-gray-50 text-3xl justify-items-center flex"
                 id="tabs"
                 onClick={handleClick}
             >
-                <div id="home-tab">Home</div>
-                <div id="about-us-tab">About Us</div>
+                <div className="tab mx-100" id="home-tab">Home</div>
+                <div className="tab mx-100" id="about-us-tab">About Us</div>
             </div>
         </>
     );
