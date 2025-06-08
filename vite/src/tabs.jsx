@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import "./tabs.css";
-
 function Tabs() {
     const [currentTab, setCurrentTab] = useState("home-tab");
 
@@ -12,8 +10,7 @@ function Tabs() {
 
     return (
         <>
-            {/* <link rel="stylesheet" href="./src/assets/tabs.css"/> */}
-            <div id="tabs" onClick={handleClick}>
+            <div class="bg-gray-800 text-gray-50 w-full h-2/5" id="tabs" onClick={handleClick}>
                 <div id="home-tab">Home</div>
                 <div id="about-us-tab">About Us</div>
             </div>
