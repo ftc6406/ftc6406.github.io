@@ -1,8 +1,6 @@
 import { useState } from "react";
 import type { MouseEvent } from "react";
 
-import "./tabs.css";
-
 function Tabs() {
     const [currentTab, setCurrentTab] = useState("home-tab");
 
@@ -11,15 +9,24 @@ function Tabs() {
         console.log(`Current tab: ${currentTab}`);
     }
 
+    const TAB_NAMES: string[] = ["Home", "About Us"];
+
     return (
         <>
             <div
-                className="w-full h-1/4 bg-gray-800 text-gray-50 text-3xl justify-items-center flex"
+                className="w-full h-1/3 bg-gray-700 text-gray-50 text-xl content-stretch flex"
                 id="tabs"
                 onClick={handleClick}
             >
-                <div className="tab mx-200 my-96" id="home-tab">Home</div>
-                <div className="tab mx-200 my-96" id="about-us-tab">About Us</div>
+                {TAB_NAMES.map((tabName, index) => (
+                    <div
+                        key={index}
+                        className="tab px-50 py-4 hover:bg-gray-600"
+                        id={`${tabName.toLowerCase().replace(" ", "-")}-tab`}
+                    >
+                        {tabName}
+                    </div>
+                ))}
             </div>
         </>
     );
