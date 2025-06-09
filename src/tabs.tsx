@@ -14,12 +14,12 @@ function Tabs() {
     return (
         <>
             <div
-                className="w-full h-1/5 bg-gray-800 text-gray-50 text-3xl justify-items-center flex"
+                className="w-full h-1/4 bg-gray-800 text-gray-50 text-3xl justify-items-center flex"
                 id="tabs"
                 onClick={handleClick}
             >
-                <div className="tab mx-100" id="home-tab">Home</div>
-                <div className="tab mx-100" id="about-us-tab">About Us</div>
+                <div className="tab mx-200 my-96" id="home-tab">Home</div>
+                <div className="tab mx-200 my-96" id="about-us-tab">About Us</div>
             </div>
         </>
     );
