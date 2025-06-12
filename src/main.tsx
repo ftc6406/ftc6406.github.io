@@ -6,7 +6,7 @@ import Tabs from "./tabs.tsx";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <App />
         <Tabs />
+        <App />
     </StrictMode>
 );
