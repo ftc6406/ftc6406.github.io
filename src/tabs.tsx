@@ -18,10 +18,6 @@ function Tabs() {
                 id="tabs"
                 onClick={handleClick}
             >
-                <img
-                    className="object-scale-down h-16 w-16"
-                    src="./src/assets/6406-logo.png"
-                />
                 {TAB_NAMES.map((tabName, index) => (
                     <div
                         key={index}
