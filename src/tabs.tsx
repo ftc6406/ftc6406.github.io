@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { MouseEvent } from "react";
 
-function Tabs() {
+function Tabs({height}: {height: number}) {
     const [currentTab, setCurrentTab] = useState("home-tab");
 
     function handleClick(event: MouseEvent<HTMLDivElement>) {
@@ -10,18 +10,17 @@ function Tabs() {
     }
 
     const TAB_NAMES: string[] = ["Home", "About Us"];
-
     return (
         <>
             <div
-                className="w-full h-1/3 bg-gray-700 text-xl justify-end flex"
+                className={`w-full h-${height} bg-zinc-800 text-xl justify-end flex`}
                 id="tabs"
                 onClick={handleClick}
             >
                 {TAB_NAMES.map((tabName, index) => (
                     <div
                         key={index}
-                        className="tab px-25 py-4 hover:bg-gray-500"
+                        className="tab px-[5%] py-4 hover:bg-zinc-700 align-middle"
                         id={`${tabName.toLowerCase().replace(" ", "-")}-tab`}
                     >
                         {tabName}

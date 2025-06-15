@@ -1,7 +1,10 @@
-function Logo() {
+function Logo({height}: {height: number}) {
+    console.log(height);
+
     return (
         <img
-            className="object-scale-down h-12 w-12 m-1 absolute"
+            id="logo"
+            className={`object-scale-down h-${height} w-${height} p-${height} -mb-${height}`}
             src="./src/assets/logo.png"
         />
     );
