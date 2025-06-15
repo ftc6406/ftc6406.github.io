@@ -14,14 +14,14 @@ function Tabs() {
     return (
         <>
             <div
-                className="w-full h-1/3 bg-blue-700 text-xl justify-end flex"
+                className="w-full h-1/3 bg-gray-700 text-xl justify-end flex"
                 id="tabs"
                 onClick={handleClick}
             >
                 {TAB_NAMES.map((tabName, index) => (
                     <div
                         key={index}
-                        className="tab px-25 py-4 hover:bg-blue-500"
+                        className="tab px-25 py-4 hover:bg-gray-500"
                         id={`${tabName.toLowerCase().replace(" ", "-")}-tab`}
                     >
                         {tabName}
