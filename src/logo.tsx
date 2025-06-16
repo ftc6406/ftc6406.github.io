@@ -4,7 +4,7 @@ function Logo({height}: {height: number}) {
     return (
         <img
             id="logo"
-            className={`object-scale-down h-${height} w-${height} p-${height} -mb-${height}`}
+            className={`object-scale-down h-${height} w-${height} p-${height} m-${height} -mb-${height}`}
             src="./src/assets/logo.png"
         />
     );

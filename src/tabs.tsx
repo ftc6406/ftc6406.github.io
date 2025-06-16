@@ -13,7 +13,7 @@ function Tabs({height}: {height: number}) {
     return (
         <>
             <div
-                className={`w-full h-${height} bg-zinc-800 text-xl justify-end flex`}
+                className={`w-full h-${height} p-${height} bg-zinc-800 text-xl justify-end flex`}
                 id="tabs"
                 onClick={handleClick}
             >
