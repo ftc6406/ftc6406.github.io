@@ -13,8 +13,9 @@ function Navbar() {
 
     return (
         <div className="w-full px-4 bg-zinc-800 flex justify-between">
-            <div className="justify-self-start p-2">
+            <div className="flex p-2 justify-self-start items-center">
                 <img src="assets/logo.png" alt="Logo" className="w-10" />
+                <div className="pl-2 text-2xl text-[#24b1cb]">First Tech Coyotes</div>
             </div>
 
             <div className="flex justify-end">
