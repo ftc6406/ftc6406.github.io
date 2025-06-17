@@ -9,7 +9,7 @@ function Navbar() {
         console.log(`Current tab: ${currentTab}`);
     }
 
-    const TAB_NAMES: string[] = ["Home", "About Us"];
+    const TAB_NAMES: string[] = ["Home", "About Us", "Contact Us"];
 
     return (
         <div className="w-full px-4 bg-zinc-800 flex justify-between">

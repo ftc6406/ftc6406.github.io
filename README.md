@@ -17,5 +17,5 @@ To build and deploy the website, run `npm run deploy` from the [root directory(.
 
 ## Images
 
--   [man_mountain.jpg](https://commons.wikimedia.org/wiki/File:Man_Atop_A_Mountain_(187811195).jpeg) - Wikimedia Commons
-- [placeholder.jpg](https://commons.wikimedia.org/wiki/File:Daniel-sessler-hVXywJklGU0-unsplash.jpg) - Wikimedia Commons
+-   [man_mountain.jpg](<https://commons.wikimedia.org/wiki/File:Man_Atop_A_Mountain_(187811195).jpeg>) - Wikimedia Commons
+-   [placeholder.jpg](https://commons.wikimedia.org/wiki/File:Daniel-sessler-hVXywJklGU0-unsplash.jpg) - Wikimedia Commons
