@@ -29,8 +29,8 @@ function Navbar() {
                     return (
                         <div
                             key={`tab-link-${index}`}
-                            className={`flex px-4 text-nowrap text-xl hover:bg-zinc-600 ${
-                                currentTab == ID ? "bg-zinc-600" : ""
+                            className={`flex px-4 text-nowrap text-xl hover:bg-zinc-700 ${
+                                currentTab == ID ? "bg-zinc-700" : ""
                             } items-center`}
                             id={ID}
                             onClick={handleClick}
