@@ -9,10 +9,10 @@ function Navbar() {
         setCurrentTab(event.currentTarget.id);
     }
 
-    const TAB_NAMES: string[] = ["Home", "About Us", "Contact Us"];
+    const TAB_NAMES: string[] = ["Home", "About Us", "Gallery", "Contact Us"];
 
     return (
-        <div className="w-full px-4 bg-zinc-800 flex justify-between">
+        <div className="fixed w-full z-200 flex px-4 justify-between bg-zinc-800">
             <div className="flex p-2 justify-self-start items-center">
                 <img src="assets/logo.png" alt="Logo" className="w-10" />
                 <div className="pl-2 text-2xl text-[#24b1cb]">
@@ -27,16 +27,18 @@ function Navbar() {
                         .replace(" ", "-")}-tab`;
 
                     return (
-                        <div
-                            key={`tab-link-${index}`}
-                            className={`flex px-4 text-nowrap text-xl hover:bg-zinc-700 ${
-                                currentTab == ID ? "bg-zinc-700" : ""
-                            } items-center`}
-                            id={ID}
-                            onClick={handleClick}
-                        >
-                            <span>{tabName}</span>
-                        </div>
+                        <a href={`#${ID.replace("-tab", "")}`} className="flex justify-end">
+                            <div
+                                key={`tab-link-${index}`}
+                                className={`flex px-4 text-nowrap text-xl hover:bg-zinc-700 ${
+                                    currentTab == ID ? "bg-zinc-700" : ""
+                                } items-center`}
+                                id={ID}
+                                onClick={handleClick}
+                            >
+                                <span>{tabName}</span>
+                            </div>
+                        </a>
                     );
                 })}
             </div>
