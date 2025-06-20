@@ -27,7 +27,10 @@ function Navbar() {
                         .replace(" ", "-")}-tab`;
 
                     return (
-                        <a href={`#${ID.replace("-tab", "")}`} className="flex justify-end">
+                        <a
+                            href={`#${ID.replace("-tab", "")}`}
+                            className="flex justify-end"
+                        >
                             <div
                                 key={`tab-link-${index}`}
                                 className={`flex px-4 text-nowrap text-xl hover:bg-zinc-700 ${
