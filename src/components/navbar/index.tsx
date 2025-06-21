@@ -12,10 +12,10 @@ function Navbar() {
     const TAB_NAMES: string[] = ["Home", "About Us", "Gallery", "Contact Us"];
 
     return (
-        <div className="fixed w-full z-200 flex px-4 justify-between bg-zinc-800">
+        <div className="fixed w-full z-100 px-4 flex justify-between bg-zinc-800">
             <div className="flex p-2 justify-self-start items-center">
                 <img src="assets/logo.png" alt="Logo" className="w-10" />
-                <div className="pl-2 text-2xl text-[#24b1cb]">
+                <div className="text-2xl text-[#24b1cb]">
                     First Tech Coyotes
                 </div>
             </div>
@@ -33,9 +33,9 @@ function Navbar() {
                         >
                             <div
                                 key={`tab-link-${index}`}
-                                className={`flex px-4 text-nowrap text-xl hover:bg-zinc-700 ${
+                                className={`flex px-4 hover:bg-zinc-700 ${
                                     currentTab == ID ? "bg-zinc-700" : ""
-                                } items-center`}
+                                } text-nowrap text-xl text-[#24b1cb] items-center`}
                                 id={ID}
                                 onClick={handleClick}
                             >
