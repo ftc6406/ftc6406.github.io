@@ -6,8 +6,15 @@ function AboutUs() {
                 Hello, this is some placeholder text for the About Us section.
             </p>
 
-            <h2>Awards</h2>
-            <ul></ul>
+            <h2 className="text-3xl mt-4">Awards</h2>
+            <ul>
+                <li>2022 - Judges' Choice Award</li>
+                <li>2023 - Design Award</li>
+                <li>2023 - Motivate Award 2nd Place</li>
+                <li>2023 - Think Award 3rd Place</li>
+                <li>2024 - Innovate Award sponsored by RTX 2nd Place</li>
+                <li>2024 - Think Award 2nd Place</li>
+            </ul>
             <br />
         </div>
     );
