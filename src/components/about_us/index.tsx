@@ -1,6 +1,6 @@
 function AboutUs() {
     return (
-        <div id="about-us" className="m-8">
+        <div id="about-us" className="m-6 p-4 rounded-lg bg-zinc-700">
             <h1 className="text-4xl">About Us</h1>
             <p>
                 Hello, this is some placeholder text for the About Us section.
