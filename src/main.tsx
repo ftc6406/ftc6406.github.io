@@ -12,7 +12,7 @@ createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <Navbar />
         <Home />
-        <AboutUs /> 
+        <AboutUs />
         <Gallery />
         <ContactUs />
     </StrictMode>
