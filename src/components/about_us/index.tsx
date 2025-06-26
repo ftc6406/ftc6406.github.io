@@ -1,4 +1,12 @@
 function AboutUs() {
+    const AWARDS = {
+        2022: ["Judges' Choice Award"],
+        2023: ["Design Award", "Motivate Award 2nd Place", "Think Award 3rd Place"],
+        2024: ["Innovate Award sponsored by RTX 2nd Place", "Think Award 2nd Place"]
+    }
+
+    
+
     return (
         <>
             <h1 className="text-4xl text-center font-bold">About Us</h1>
@@ -8,12 +16,27 @@ function AboutUs() {
 
             <h2 className="text-3xl mt-8 text-center">Awards</h2>
             <ul>
-                <li>2022 - Judges' Choice Award</li>
-                <li>2023 - Design Award</li>
-                <li>2023 - Motivate Award 2nd Place</li>
-                <li>2023 - Think Award 3rd Place</li>
-                <li>2024 - Innovate Award sponsored by RTX 2nd Place</li>
-                <li>2024 - Think Award 2nd Place</li>
+                <li>
+                    <p>2022</p>
+                    <ul>
+                        <li>Judges' Choice Award</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>2023</p>
+                    <ul>
+                        <li>Design Award</li>
+                        <li>Motivate Award 2nd Place</li>
+                        <li>Think Award 3rd Place</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>2024</p>
+                    <ul>
+                        <li>Innovate Award sponsored by RTX 2nd Place</li>
+                        <li>Think Award 2nd Place</li>
+                    </ul>
+                </li>
             </ul>
             <br />
         </>
