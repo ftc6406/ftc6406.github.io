@@ -10,6 +10,6 @@ createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <Navbar />
         <Home />
-        <Pages/>
+        <Pages />
     </StrictMode>
 );

@@ -17,9 +17,11 @@ function AboutUs() {
         LIST_ITEMS.push(
             <li>
                 <p>{YEAR}</p>
-                {AWARDS.map((ele) => {
-                    return <li>{ele}</li>;
-                })}
+                <ul className="mb-4">
+                    {AWARDS.map((ele) => {
+                        return <li className="ml-4">{ele}</li>;
+                    })}
+                </ul>
             </li>
         );
     }
