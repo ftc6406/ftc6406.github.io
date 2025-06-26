@@ -30,7 +30,7 @@ function AboutUs() {
         <>
             <h1 className="text-4xl text-center font-bold">About Us</h1>
             <p>
-                Hello, this is some placeholder text for the About Us section.
+                We are FTC team 6406, First Tech Coyotes. We are a community of programmers and engineers.
             </p>
 
             <h2 className="text-3xl mt-8 text-center">Awards</h2>
