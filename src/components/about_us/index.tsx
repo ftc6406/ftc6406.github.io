@@ -1,11 +1,28 @@
 function AboutUs() {
-    const AWARDS = {
+    const ALL_WARDS = {
         2022: ["Judges' Choice Award"],
-        2023: ["Design Award", "Motivate Award 2nd Place", "Think Award 3rd Place"],
-        2024: ["Innovate Award sponsored by RTX 2nd Place", "Think Award 2nd Place"]
-    }
+        2023: [
+            "Design Award",
+            "Motivate Award 2nd Place",
+            "Think Award 3rd Place",
+        ],
+        2024: [
+            "Innovate Award sponsored by RTX 2nd Place",
+            "Think Award 2nd Place",
+        ],
+    };
 
-    
+    const LIST_ITEMS = [];
+    for (const [YEAR, AWARDS] of Object.entries(ALL_WARDS)) {
+        LIST_ITEMS.push(
+            <li>
+                <p>{YEAR}</p>
+                {AWARDS.map((ele) => {
+                    return <li>{ele}</li>;
+                })}
+            </li>
+        );
+    }
 
     return (
         <>
@@ -15,30 +32,7 @@ function AboutUs() {
             </p>
 
             <h2 className="text-3xl mt-8 text-center">Awards</h2>
-            <ul>
-                <li>
-                    <p>2022</p>
-                    <ul>
-                        <li>Judges' Choice Award</li>
-                    </ul>
-                </li>
-                <li>
-                    <p>2023</p>
-                    <ul>
-                        <li>Design Award</li>
-                        <li>Motivate Award 2nd Place</li>
-                        <li>Think Award 3rd Place</li>
-                    </ul>
-                </li>
-                <li>
-                    <p>2024</p>
-                    <ul>
-                        <li>Innovate Award sponsored by RTX 2nd Place</li>
-                        <li>Think Award 2nd Place</li>
-                    </ul>
-                </li>
-            </ul>
-            <br />
+            <ul>{LIST_ITEMS}</ul>
         </>
     );
 }
