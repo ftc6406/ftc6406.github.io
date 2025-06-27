@@ -3,7 +3,9 @@ function ContactUs() {
         <>
             <h1 className="text-4xl text-center font-bold">Contact Us</h1>
             <p>
-                Hello, this is some placeholder text for the Contact Us section.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
+                magna ex. Donec elementum ultrices ullamcorper. Cras varius
+                ullamcorper mauris, ac eleifend est volutpat vitae.
             </p>
         </>
     );
