@@ -14,7 +14,7 @@ function AboutUs() {
 
     return (
         <>
-            <h1 className="text-4xl text-center font-bold">About Us</h1>
+            <h1 className="pb-4 text-4xl text-center font-bold">About Us</h1>
             <p>
                 We are FTC team 6406, First Tech Coyotes. We are a community of
                 programmers and engineers. Lorem ipsum dolor sit amet,
