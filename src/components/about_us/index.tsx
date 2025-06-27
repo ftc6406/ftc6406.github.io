@@ -22,9 +22,20 @@ function AboutUs() {
                         return <li className="ml-4">{ele}</li>;
                     })}
                 </ul>
-            </li>
+            </li> 
         );
     }
+
+    const list_prop = Object.entries(ALL_WARDS).map((year, awards) => {
+        <li>
+                <p>{year}</p>
+                <ul className="mb-4">
+                    {awards.map((ele) => {
+                        return <li className="ml-4">{ele}</li>;
+                    })}
+                </ul>
+            </li> 
+    })
 
     return (
         <>
