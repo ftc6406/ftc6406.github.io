@@ -1,5 +1,5 @@
 function AboutUs() {
-    const ALL_WARDS = {
+    const ALL_AWARDS = {
         2022: ["Judges' Choice Award"],
         2023: [
             "Design Award",
@@ -11,31 +11,6 @@ function AboutUs() {
             "Think Award 2nd Place",
         ],
     };
-
-    const LIST_ITEMS = [];
-    for (const [YEAR, AWARDS] of Object.entries(ALL_WARDS)) {
-        LIST_ITEMS.push(
-            <li>
-                <p>{YEAR}</p>
-                <ul className="mb-4">
-                    {AWARDS.map((ele) => {
-                        return <li className="ml-4">{ele}</li>;
-                    })}
-                </ul>
-            </li> 
-        );
-    }
-
-    const list_prop = Object.entries(ALL_WARDS).map((year, awards) => {
-        <li>
-                <p>{year}</p>
-                <ul className="mb-4">
-                    {awards.map((ele) => {
-                        return <li className="ml-4">{ele}</li>;
-                    })}
-                </ul>
-            </li> 
-    })
 
     return (
         <>
@@ -61,7 +36,22 @@ function AboutUs() {
             </p>
 
             <h2 className="text-3xl mt-8 text-center">Awards</h2>
-            <ul>{LIST_ITEMS}</ul>
+            <ul>
+                {Object.entries(ALL_AWARDS).map((ele) => {
+                    const year = ele[0];
+                    const year_awards = ele[1];
+                    return (
+                        <li>
+                            <p>{year}</p>
+                            <ul className="mb-4">
+                                {year_awards.map((ele) => {
+                                    return <li className="ml-4">{ele}</li>;
+                                })}
+                            </ul>
+                        </li>
+                    );
+                })}
+            </ul>
         </>
     );
 }
