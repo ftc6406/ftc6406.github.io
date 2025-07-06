@@ -9,7 +9,7 @@ function Navbar() {
         setCurrentTab(event.currentTarget.id);
     }
 
-    const TAB_NAMES: string[] = ["Home", "About Us", "Gallery", "Contact Us"];
+    const TAB_NAMES = ["Home", "About Us", "Gallery", "Contact Us"];
 
     return (
         <div className="fixed w-full z-100 px-4 flex justify-between bg-zinc-800">
@@ -22,9 +22,7 @@ function Navbar() {
 
             <div className="flex justify-end">
                 {TAB_NAMES.map((tabName, index) => {
-                    const ID: string = `${tabName
-                        .toLowerCase()
-                        .replace(" ", "-")}-tab`;
+                    const ID = `${tabName.toLowerCase().replace(" ", "-")}-tab`;
 
                     return (
                         <a
