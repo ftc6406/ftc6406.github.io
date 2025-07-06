@@ -1,6 +1,6 @@
-import AboutUs from "../about_us";
-import ContactUs from "../contact_us";
-import Gallery from "../gallery";
+import AboutUs from "./about_us";
+import ContactUs from "./contact_us";
+import Gallery from "./gallery";
 
 const PAGES = [<AboutUs />, <Gallery />, <ContactUs />];
 function NonMainPages() {

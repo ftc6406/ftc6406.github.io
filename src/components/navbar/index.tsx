@@ -22,7 +22,7 @@ function Navbar() {
             <div className="flex justify-end">
                 {TAB_NAMES.map((tabName, index) => {
                     const ID = `${tabName.toLowerCase().replace(" ", "-")}-tab`;
-                
+
                     return (
                         <a
                             href={`#${ID.replace("-tab", "")}`}
