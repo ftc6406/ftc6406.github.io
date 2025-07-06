@@ -5,7 +5,6 @@ function Navbar() {
     const [currentTab, setCurrentTab] = useState("home-tab");
 
     function handleClick(event: MouseEvent<HTMLDivElement>) {
-        console.log(`Current tab: ${currentTab}`);
         setCurrentTab(event.currentTarget.id);
     }
 
@@ -23,7 +22,7 @@ function Navbar() {
             <div className="flex justify-end">
                 {TAB_NAMES.map((tabName, index) => {
                     const ID = `${tabName.toLowerCase().replace(" ", "-")}-tab`;
-
+                
                     return (
                         <a
                             href={`#${ID.replace("-tab", "")}`}
