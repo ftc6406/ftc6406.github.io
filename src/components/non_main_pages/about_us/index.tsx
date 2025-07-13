@@ -18,23 +18,7 @@ function AboutUs() {
                 About Us
             </h1>
             <p>
-                We are FTC team 6406, First Tech Coyotes. We are a community of
-                programmers and engineers. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Integer lobortis finibus rhoncus.
-                In sed leo pulvinar, interdum mi eu, luctus eros. Ut massa urna,
-                auctor id varius id, scelerisque non felis. Aliquam mollis
-                ultricies ex, eget tristique turpis commodo in. Integer quam
-                massa, dictum dictum commodo id, sodales eu nisi. Nulla luctus
-                lobortis felis, sit amet dictum nisi feugiat sit amet. Integer
-                dignissim eu lorem sit amet malesuada. Maecenas tincidunt eget
-                erat convallis tincidunt. In elementum orci quis libero cursus
-                tempor. Fusce dapibus sem at justo accumsan, ac pellentesque
-                tortor molestie. Donec quis velit at nunc imperdiet vehicula.
-                Suspendisse felis felis, vulputate vel lacus sed, blandit congue
-                nisl. Duis sed leo sit amet tellus vestibulum tincidunt. Mauris
-                sed metus vel justo venenatis consectetur. Phasellus ut massa
-                vel elit semper bibendum a id dolor. Praesent eleifend euismod
-                pulvinar.
+                We are FTC Team 6406, First Tech Coyotes, from Maryland. Our rookie year was 2012, and we continue to compete in FTC events in the Potomac region.
             </p>
 
             <h2 className="text-3xl mt-8 text-center">Awards</h2>
