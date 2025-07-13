@@ -28,7 +28,7 @@ function AboutUs() {
                     const year_awards = ele[1];
                     return (
                         <li>
-                            <p>{year}</p>
+                            <p>{year}:</p>
                             <ul className="mb-4">
                                 {year_awards.map((ele) => {
                                     return <li className="ml-8">{ele}</li>;
