@@ -14,7 +14,7 @@ function Navbar() {
         <div className="fixed w-full z-100 px-4 flex justify-between bg-zinc-800">
             <div className="flex p-2 justify-self-start items-center">
                 <img src="assets/logo.png" alt="Logo" className="w-10" />
-                <div className="text-2xl text-[#24b1cb]">
+                <div className="ml-2 text-2xl text-[#24b1cb]">
                     First Tech Coyotes
                 </div>
             </div>
