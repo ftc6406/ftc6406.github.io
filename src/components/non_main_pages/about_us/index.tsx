@@ -31,7 +31,7 @@ function AboutUs() {
                             <p>{year}</p>
                             <ul className="mb-4">
                                 {year_awards.map((ele) => {
-                                    return <li className="ml-4">{ele}</li>;
+                                    return <li className="ml-8">{ele}</li>;
                                 })}
                             </ul>
                         </li>
