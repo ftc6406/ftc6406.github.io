@@ -14,7 +14,7 @@ function Navbar() {
         <div className="fixed w-full z-100 px-4 flex justify-between bg-zinc-800">
             <div className="flex p-2 justify-self-start items-center">
                 <img src="assets/logo.png" alt="Logo" className="w-10" />
-                <div className="ml-2 text-2xl text-[#24b1cb]">
+                <div className="ml-4 text-2xl text-[#24b1cb]">
                     First Tech Coyotes
                 </div>
             </div>
@@ -25,18 +25,21 @@ function Navbar() {
 
                     return (
                         <a
+                            key={`navbar-link-${index}`}
                             href={`#${ID.replace("-tab", "")}`}
                             className="flex justify-end"
                         >
                             <div
-                                key={`tab-link-${index}`}
+                                key={`navbar-div-${index}`}
                                 className={`flex px-4 hover:bg-zinc-700 ${
                                     currentTab == ID ? "bg-zinc-700" : ""
                                 } text-nowrap text-xl text-[#24b1cb] items-center`}
                                 id={ID}
                                 onClick={handleClick}
                             >
-                                <span>{tabName}</span>
+                                <span key={`navbar-span-${index}`}>
+                                    {tabName}
+                                </span>
                             </div>
                         </a>
                     );

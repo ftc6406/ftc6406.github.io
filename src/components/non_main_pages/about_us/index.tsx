@@ -23,15 +23,15 @@ function AboutUs() {
 
             <h2 className="text-3xl mt-8 text-center">Awards</h2>
             <ul>
-                {Object.entries(ALL_AWARDS).map((ele) => {
+                {Object.entries(ALL_AWARDS).map((ele, yearIndex) => {
                     const year = ele[0];
                     const year_awards = ele[1];
                     return (
-                        <li>
-                            <p>{year}:</p>
-                            <ul className="mb-4">
-                                {year_awards.map((ele) => {
-                                    return <li className="ml-8">{ele}</li>;
+                        <li key={`year-li-${yearIndex}`}>
+                            <p key={`year-p-${yearIndex}`}>{year}:</p>
+                            <ul  key={`year-ul-${yearIndex}`}className="mb-4">
+                                {year_awards.map((ele, awardIndex) => {
+                                    return <li key={`award-li-${awardIndex}`} className="ml-8">{ele}</li>;
                                 })}
                             </ul>
                         </li>

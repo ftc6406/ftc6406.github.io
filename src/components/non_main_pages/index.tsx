@@ -6,9 +6,9 @@ const PAGES = [<AboutUs />, <Gallery />, <ContactUs />];
 function NonMainPages() {
     return (
         <div className="grid grid-cols-2 mx-32 mt-4">
-            {PAGES.map((ele) => {
+            {PAGES.map((ele, index) => {
                 return (
-                    <div className="m-2 p-8 rounded-xl bg-zinc-800">{ele}</div>
+                    <div key={`card-${index}`} className="m-2 p-8 rounded-xl bg-zinc-800">{ele}</div>
                 );
             })}
         </div>
