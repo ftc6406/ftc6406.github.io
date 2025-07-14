@@ -15,10 +15,7 @@ function Gallery() {
 
             {imagePaths.map((ele, index) => {
                 {
-                    return <img
-                        key={`gallery-${index}`}
-                        src={ele}
-                    />;
+                    return <img key={`gallery-${index}`} src={ele} />;
                 }
             })}
         </>

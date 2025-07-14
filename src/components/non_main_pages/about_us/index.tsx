@@ -18,7 +18,9 @@ function AboutUs() {
                 About Us
             </h1>
             <p>
-                We are FTC Team 6406, First Tech Coyotes, from Maryland. Our rookie year was 2012, and we continue to compete in FTC events in the Potomac region.
+                We are FTC Team 6406, First Tech Coyotes, from Maryland. Our
+                rookie year was 2012, and we continue to compete in FTC events
+                in the Potomac region.
             </p>
 
             <h2 className="text-3xl mt-8 text-center">Awards</h2>
@@ -29,9 +31,16 @@ function AboutUs() {
                     return (
                         <li key={`year-li-${yearIndex}`}>
                             <p key={`year-p-${yearIndex}`}>{year}:</p>
-                            <ul  key={`year-ul-${yearIndex}`}className="mb-4">
+                            <ul key={`year-ul-${yearIndex}`} className="mb-4">
                                 {year_awards.map((ele, awardIndex) => {
-                                    return <li key={`award-li-${awardIndex}`} className="ml-8">{ele}</li>;
+                                    return (
+                                        <li
+                                            key={`award-li-${awardIndex}`}
+                                            className="ml-8"
+                                        >
+                                            {ele}
+                                        </li>
+                                    );
                                 })}
                             </ul>
                         </li>
