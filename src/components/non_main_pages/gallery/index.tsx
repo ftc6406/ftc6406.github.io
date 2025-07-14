@@ -1,14 +1,10 @@
-const MODULES = import.meta.glob("./public/assets/*");
-console.log(MODULES);
-for (const PATH in MODULES) {
-    console.log(PATH);
-    MODULES[PATH]().then((mod) => {
-        console.log(PATH);
-    });
-}
-
 function Gallery() {
-    const images = [];
+    const imagePaths = [];
+
+    const modules = import.meta.glob("/public/assets/gallery/*");
+    for (const PATH in modules) {
+        imagePaths.push(PATH);
+    }
 
     return (
         <>
@@ -16,10 +12,14 @@ function Gallery() {
                 Gallery
             </h1>
             <p>Hello, this is some placeholder text for the Gallery section.</p>
-            {/* <img src="./assets/gallery/place_holder.jpg" /> */}
-            {images.map((ele) => {
-                console.log(ele);
-                return <img src={ele} />;
+
+            {imagePaths.map((ele, index) => {
+                {
+                    return <img
+                        key={`gallery-${index}`}
+                        src={ele}
+                    />;
+                }
             })}
         </>
     );
