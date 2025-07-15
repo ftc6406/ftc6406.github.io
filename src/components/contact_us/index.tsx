@@ -1,7 +1,7 @@
-function ContactUs() {
+function JoinUs() {
     return (
         <>
-            <h1 className="pb-4 text-4xl text-center font-bold" id="contact-us">
+            <h1 className="pb-4 text-4xl text-center font-bold" id="join-us">
                 Join Us
             </h1>
             <p>
@@ -13,4 +13,4 @@ function ContactUs() {
     );
 }
 
-export default ContactUs;
+export default JoinUs;
