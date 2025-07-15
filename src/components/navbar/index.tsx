@@ -10,7 +10,7 @@ function Navbar() {
                         alt="Logo"
                         className="md:w-14 sm:w-4"
                     />
-                    <div className="md:ml-10 sm:ml-4 md:text-4xl sm:text-2xl font-bold">
+                    <div className="md:ml-8 sm:ml-4 md:text-4xl sm:text-2xl font-bold">
                         First Tech Coyotes
                     </div>
                 </div>
