@@ -1,18 +1,20 @@
 function Navbar() {
-    const TAB_NAMES = ["Gallery", "About Us", "Contact Us"];
+    const TAB_NAMES = ["Gallery", "About Us", "Join Us"];
 
     return (
         <div className="fixed w-full z-100 px-8 flex justify-between">
-            <div className="flex md:p-4 sm:p-4 justify-self-start items-center">
-                <img
-                    src="assets/logo.svg"
-                    alt="Logo"
-                    className="md:w-8 sm:w-4"
-                />
-                <div className="md:ml-10 sm:ml-4 md:text-4xl sm:text-2xl font-bold">
-                    First Tech Coyotes
+            <a href="#hero">
+                <div className="flex md:p-4 sm:p-4 justify-self-start items-center">
+                    <img
+                        src="assets/logo.svg"
+                        alt="Logo"
+                        className="md:w-8 sm:w-4"
+                    />
+                    <div className="md:ml-10 sm:ml-4 md:text-4xl sm:text-2xl font-bold">
+                        First Tech Coyotes
+                    </div>
                 </div>
-            </div>
+            </a>
 
             <div className="flex justify-end md:space-x-16 sm:space-x-2 md:mr-16 sm:mr-2">
                 {TAB_NAMES.map((tabName, index) => {
