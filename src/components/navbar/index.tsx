@@ -3,14 +3,18 @@ function Navbar() {
 
     return (
         <div className="fixed w-full z-100 px-8 flex justify-between">
-            <div className="flex p-4 justify-self-start items-center">
-                <img src="assets/logo.svg" alt="Logo" className="w-14" />
-                <div className="ml-10 text-4xl font-bold">
+            <div className="flex md:p-4 sm:p-4 justify-self-start items-center">
+                <img
+                    src="assets/logo.svg"
+                    alt="Logo"
+                    className="md:w-8 sm:w-4"
+                />
+                <div className="md:ml-10 sm:ml-4 md:text-4xl sm:text-2xl font-bold">
                     First Tech Coyotes
                 </div>
             </div>
 
-            <div className="flex justify-end space-x-16 mr-16">
+            <div className="flex justify-end md:space-x-16 sm:space-x-2 md:mr-16 sm:mr-2">
                 {TAB_NAMES.map((tabName, index) => {
                     const ID = `${tabName.toLowerCase().replace(" ", "-")}-tab`;
 
@@ -23,7 +27,7 @@ function Navbar() {
                             <div
                                 key={`navbar-div-${index}`}
                                 className={`flex
-                                } text-nowrap text-4xl items-center`}
+                                } text-nowrap md:text-4xl sm:text-2xl items-center`}
                                 id={ID}
                             >
                                 <span key={`navbar-span-${index}`}>
