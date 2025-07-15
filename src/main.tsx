@@ -3,13 +3,17 @@ import { createRoot } from "react-dom/client";
 
 import "./index.css";
 import Navbar from "./components/navbar";
-import Home from "./components/home";
-import NonMainPages from "./components/non_main_pages";
+import Hero from "./components/hero";
+import AboutUs from "./components/about_us";
+import Gallery from "./components/gallery";
+import ContactUs from "./components/contact_us";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <Navbar />
-        <Home />
-        <NonMainPages />
+        <Hero />
+        <Gallery />
+        <AboutUs />
+        <ContactUs />
     </StrictMode>
 );
