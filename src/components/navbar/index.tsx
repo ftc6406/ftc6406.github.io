@@ -1,22 +1,30 @@
 function Navbar() {
-    const TAB_NAMES = ["Gallery", "About Us", "Join Us"];
+    const TAB_NAMES = ["Gallery", "Awards", "Join Us"];
 
     return (
-        <div className="fixed w-full z-100 px-8 flex justify-between">
+        <div
+            className="fixed w-full px-4 md:px-8 py-4
+                z-100 flex justify-between"
+        >
             <a href="#hero">
-                <div className="flex md:p-4 sm:p-4 justify-self-start items-center">
+                <div className="flex space-x-4 items-center">
                     <img
                         src="assets/logo.svg"
-                        alt="Logo"
-                        className="md:w-14 sm:w-4"
+                        alt="logo"
+                        className="w-10 md:w-12 lg:w-14"
                     />
-                    <div className="md:ml-8 sm:ml-4 md:text-4xl sm:text-2xl font-bold">
+
+                    <h2 className="text-xl md:text-3xl lg:text-4xl font-bold">
                         First Tech Coyotes
-                    </div>
+                    </h2>
                 </div>
             </a>
 
-            <div className="flex justify-end md:space-x-16 sm:space-x-2 md:mr-16 sm:mr-2">
+            {/* < md navbar */}
+            <div className="md:hidden"></div>
+
+            {/* >=md navbar */}
+            <div className="hidden md:flex space-x-16">
                 {TAB_NAMES.map((tabName, index) => {
                     const ID = `${tabName.toLowerCase().replace(" ", "-")}-tab`;
 
@@ -24,18 +32,11 @@ function Navbar() {
                         <a
                             key={`navbar-link-${index}`}
                             href={`#${ID.replace("-tab", "")}`}
-                            className="flex justify-end"
+                            id={ID}
+                            className="flex text-2xl lg:text-3xl 
+                                text-nowrap items-center"
                         >
-                            <div
-                                key={`navbar-div-${index}`}
-                                className={`flex
-                                } text-nowrap md:text-4xl sm:text-2xl items-center`}
-                                id={ID}
-                            >
-                                <span key={`navbar-span-${index}`}>
-                                    {tabName}
-                                </span>
-                            </div>
+                            {tabName}
                         </a>
                     );
                 })}

@@ -1,15 +1,24 @@
 function JoinUs() {
     return (
-        <>
-            <h1 className="pb-4 text-4xl text-center font-bold" id="join-us">
-                Join Us
+        <footer
+            className="p-8 md:p-16 lg:p-32 space-y-12
+                bg-stone-900 text-base md:text-lg lg:text-xl"
+        >
+            <h1 className="text-3xl md:text-4xl lg:text-5xl" id="join-us">
+                Contact Us
             </h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
-                magna ex. Donec elementum ultrices ullamcorper. Cras varius
-                ullamcorper mauris, ac eleifend est volutpat vitae.
-            </p>
-        </>
+
+            <div className="grid lg:grid-flow-col gap-2">
+                <p>Still have any question? Feel free to reach out to us.</p>
+                <p className="select-all">example@gmail.com</p>
+            </div>
+
+            <hr className="text-base text-white leading-0" />
+            <div className="flex items-center space-x-4 ">
+                <img src="/assets/logo.svg" className="w-10 md:w-12 lg:w-14" />
+                <p>First Tech Coyotes</p>
+            </div>
+        </footer>
     );
 }
 

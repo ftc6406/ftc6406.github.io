@@ -7,6 +7,7 @@ import Hero from "./components/hero";
 import AboutUs from "./components/about_us";
 import Gallery from "./components/gallery";
 import JoinUs from "./components/join_us";
+import ContactUs from "./components/contact_us";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
@@ -15,5 +16,6 @@ createRoot(document.getElementById("root")!).render(
         <Gallery />
         <AboutUs />
         <JoinUs />
+        <ContactUs />
     </StrictMode>
 );
