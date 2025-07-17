@@ -1,7 +1,9 @@
 @import "tailwindcss";
-
-
 @theme {
     --color-coyote-cyan: #345780,
     --color-coyote-navy: #56AEC8,
+}
+
+html {
+    scroll-behavior: smooth;
 }
