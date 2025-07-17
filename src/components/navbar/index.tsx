@@ -1,20 +1,33 @@
-import React, { useState, type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 
 const Navbar = (): ReactNode => {
+    // Navbar states
     const [isOpen, setIsOpen] = useState(false);
+
+    // Whether the user has scrolled past the hero section
+    const [isHeroScrolled, setIsHeroScrolled] = useState(false);
+
+    const TAB_NAMES = ["Gallery", "Awards", "Join Us"];
     const menuButtonImg = isOpen
         ? "assets/close_x.svg"
         : "assets/hamburger_menu.svg";
 
-    const TAB_NAMES = ["Gallery", "Awards", "Join Us"];
+    // Changes navbar color after scrolling 100vh
+    window.addEventListener("scroll", () =>
+        setIsHeroScrolled(window.scrollY > window.innerHeight)
+    );
+
     return (
         <div
+            id="navbar"
             className={`fixed w-full px-4 md:px-8 py-4
                 z-100 flex justify-between
-                ${isOpen ? "bg-stone-900" : "bg-transparent"}
+                
                 transition duration-1000
                 starting:translate-y-[-100%] translate-y-0
-                starting:opacity-0 opacity-100`}
+                starting:opacity-0 opacity-100
+                ${isOpen || isHeroScrolled ? "bg-stone-900" : "bg-transparent"}
+            `}
         >
             {/* Logo and team name */}
             <a href="#hero" className="flex space-x-4 items-center">
@@ -43,7 +56,7 @@ const Navbar = (): ReactNode => {
                 </button>
             </div>
 
-            {/* Mobile nav menu */}
+            {/* Mobile nav dropdown menu */}
             <div
                 className={`absolute md:hidden
                         top-full left-0 w-full py-4 space-y-4
@@ -87,7 +100,10 @@ const Navbar = (): ReactNode => {
                             href={`#${anchorLink}`}
                             id={`${anchorLink}-tab`}
                             className="flex text-2xl lg:text-3xl 
-                                text-nowrap items-center"
+                                text-nowrap items-center
+
+                                transition duration-300
+                                hover:underline underline-offset-8"
                         >
                             {tabName}
                         </a>
