@@ -41,7 +41,7 @@ function Hero() {
                   First Tech Coyotes
                 </h1>
 
-                <h2 className="text-4xl 2xl:text-5xl">Student engineers</h2>
+                <h2 className="text-3xl lg:text-4xl 2xl:text-5xl">Student engineers</h2>
               </div>
             </div>
 
@@ -75,8 +75,8 @@ function Hero() {
         <img
           src="assets/chevron.svg"
           className="absolute place-self-center 
-            bottom-28 md:bottom-24 lg:bottom-12 
-            w-36 md:w-32 lg:w-28
+            bottom-24 
+            w-28
             animate-bounce"
         />
       </div>
