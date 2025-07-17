@@ -32,7 +32,7 @@ function Hero() {
                         {/* Button */}
                         <div className="col-start-1">
                             <button
-                                className="px-25 py-4
+                                className="px-28 py-4
                                     border-5 border-white
                                     text-3xl font-bold"
                             >
