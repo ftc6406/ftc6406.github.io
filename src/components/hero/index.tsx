@@ -3,7 +3,7 @@ function Hero() {
         <div className="bg-[url(assets/man_mountain.jpg)] bg-center" id="hero">
             {/* Backdrop filter */}
             <div
-                className="h-[100vh] px-32 py-64 space-y-16
+                className="h-[100vh] px-32 py-64 space-y-12
                     backdrop-brightness-70"
             >
                 {/* Content */}
