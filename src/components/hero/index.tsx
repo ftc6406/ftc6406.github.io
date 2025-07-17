@@ -3,22 +3,18 @@ function Hero() {
         <div className="bg-[url(assets/man_mountain.jpg)] bg-center" id="hero">
             {/* Backdrop filter */}
             <div
-                className="h-[100vh] pt-64
-                    flex flex-row
+                className="h-[100vh] px-32 py-64 space-y-44
                     backdrop-brightness-70"
             >
                 {/* Content */}
                 <div className="flex flex-row">
                     {/* Logo */}
-                    <div
-                        className="pl-32
-                            shrink-0"
-                    >
+                    <div className="shrink-0">
                         <img src="/assets/logo.svg" className="w-44" />
                     </div>
 
                     {/* Text */}
-                    <div className="grid grid-cols-2">
+                    <div className="grid grid-cols-2 gap-8">
                         {/* Team Name */}
                         <div>
                             <div>
@@ -43,7 +39,7 @@ function Hero() {
 
                         {/* Team description */}
                         <div>
-                            <p className="text-3xl">
+                            <p className="text-right text-3xl">
                                 We are the First Tech Coyotes, a large public
                                 school team that participates in the FIRST Tech
                                 Challenge. As a diverse body of students
@@ -53,6 +49,8 @@ function Hero() {
                         </div>
                     </div>
                 </div>
+
+                <img src="assets/chevron.svg" className="place-self-center" />
             </div>
         </div>
     );
