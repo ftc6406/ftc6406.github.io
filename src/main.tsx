@@ -8,13 +8,16 @@ import AboutUs from "./components/about_us";
 import Gallery from "./components/gallery";
 import JoinUs from "./components/join_us";
 import ContactUs from "./components/contact_us";
+import Awards from "./components/awards";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <Navbar />
         <Hero />
-        <Gallery />
         <AboutUs />
+        <Gallery />
+        
+        <Awards />
         <JoinUs />
         <ContactUs />
     </StrictMode>

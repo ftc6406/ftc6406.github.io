@@ -1,7 +1,12 @@
-@import "tailwindcss";
-
-
+@import 'tailwindcss';
 @theme {
-    --color-coyote-cyan: #345780,
-    --color-coyote-navy: #56AEC8,
+  --breakpoint-xs: 30rem;
+
+  --color-accent: #56aec8;
+  --color-primary: #345780;
+  --color-secondary: #1f2937;
+}
+
+html {
+  scroll-behavior: smooth;
 }
