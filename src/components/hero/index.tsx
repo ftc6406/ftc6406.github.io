@@ -6,7 +6,9 @@ function Hero() {
     >
       {/* Backdrop filter */}
       <div
-        className="h-[100vh] px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 py-56 md:py-52 lg:py-48 2xl:py-44 space-y-12
+        className="h-[100vh] 
+          px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 
+          py-56 md:py-52 lg:py-48 2xl:py-44 space-y-12
           place-items-center xl:place-items-start
           backdrop-brightness-70"
       >
@@ -25,26 +27,29 @@ function Hero() {
 
           {/* Text */}
           <div
-            className="mt-4 md:mt-5 lg:mt-6 grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
+            className="mt-4 md:mt-5 lg:mt-6 
+              grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
               place-items-center xl:place-items-start"
           >
             {/* Team Name */}
             <div>
-              <div className="space-y-4 text-center xl:text-left">
+              <div
+                className="space-y-4 
+                  text-center xl:text-left"
+              >
                 <h1 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold">
                   First Tech Coyotes
                 </h1>
 
-                <h2 className="text-4xl 2xl:text-5xl">
-                  Student engineers
-                </h2>
+                <h2 className="text-4xl 2xl:text-5xl">Student engineers</h2>
               </div>
             </div>
 
             {/* Button */}
             <div className="col-start-1">
               <button
-                className="hidden xl:block px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-28 py-4
+                className="hidden xl:block 
+                  px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-28 py-4
                   outline-5 outline-white
                   xl:text-2xl 2xl:text-3xl font-bold"
               >
@@ -54,7 +59,10 @@ function Hero() {
 
             {/* Team description */}
             <div>
-              <p className="hidden xl:block text-right xl:text-2xl 2xl:text-3xl">
+              <p
+                className="hidden xl:block 
+                  text-right xl:text-2xl 2xl:text-3xl"
+              >
                 We are the First Tech Coyotes, a large public school team that
                 participates in the FIRST Tech Challenge. As a diverse body of
                 students pursuing STEM, we seek to inspire and teach like-minded
@@ -66,7 +74,10 @@ function Hero() {
 
         <img
           src="assets/chevron.svg"
-          className="absolute bottom-28 md:bottom-24 lg:bottom-12 place-self-center w-36 md:w-32 lg:w-28 animate-bounce"
+          className="absolute place-self-center 
+            bottom-28 md:bottom-24 lg:bottom-12 
+            w-36 md:w-32 lg:w-28
+            animate-bounce"
         />
       </div>
     </div>
