@@ -7,8 +7,9 @@ function Hero() {
             />
 
             <div className="absolute flex">
-                <img src="/assets/logo.svg" className=""></img>
-                <div>
+                <img src="/assets/logo.svg" className="" />
+
+                <div className="">
                     <p className="text-[80px] font-bold">First Tech Coyotes</p>
                     <p className="text-6xl">Student engineers</p>
                 </div>
