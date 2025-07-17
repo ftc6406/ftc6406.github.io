@@ -51,7 +51,11 @@ function Hero() {
                 className="hidden xl:block 
                   px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-28 py-4
                   outline-5 outline-white
-                  xl:text-2xl 2xl:text-3xl font-bold"
+                  xl:text-2xl 2xl:text-3xl font-bold
+                  cursor-pointer
+                  transition duration-300
+                  hover:bg-white hover:text-primary hover:outline-none
+                  active:bg-white/20 active:text-white/80 active:outline-none"
               >
                 Join Us
               </button>
