@@ -14,11 +14,14 @@ function Hero() {
                     </div>
 
                     {/* Text */}
-                    <div className="grid grid-cols-2 gap-28">
+                    <div
+                        className="mt-8
+                            grid grid-cols-2 gap-28"
+                    >
                         {/* Team Name */}
                         <div>
-                            <div>
-                                <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold">
+                            <div className="space-y-4">
+                                <h1 className="text-2xl md:text-4xl lg:text-7xl font-bold">
                                     First Tech Coyotes
                                 </h1>
 
@@ -53,7 +56,11 @@ function Hero() {
                     </div>
                 </div>
 
-                <img src="assets/chevron.svg" className="place-self-center" />
+                <img
+                    src="assets/chevron.svg"
+                    className="place-self-center 
+                        animate-bounce"
+                />
             </div>
         </div>
     );
