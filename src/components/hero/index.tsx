@@ -8,39 +8,49 @@ function Hero() {
                     backdrop-brightness-70"
             >
                 {/* Content */}
-                <div className="grid-cols-subgrid">
+                <div className="flex flex-row">
                     {/* Logo */}
-                    <div className="pl-32">
+                    <div
+                        className="pl-32
+                            shrink-0"
+                    >
                         <img src="/assets/logo.svg" className="w-44" />
                     </div>
+
                     {/* Text */}
-                    <div className="pt-8 pl-12">
-                        <h1
-                            className="text-2xl md:text-4xl lg:text-6xl 
-                            font-bold"
-                        >
-                            First Tech Coyotes
-                        </h1>
+                    <div className="grid grid-cols-2">
+                        {/* Team Name */}
+                        <div>
+                            <div>
+                                <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold">
+                                    First Tech Coyotes
+                                </h1>
 
-                        <h2 className="text-5xl">Student engineers</h2>
-                        {/* <div className="flex flex-row">
-                    <button
-                        type="button"
-                        className="w-[313px] h-[77px]
-                                border-5 text-[32px]"
-                    >
-                        Join Us
-                    </button>
+                                <h2 className="text-5xl">Student engineers</h2>
+                            </div>
+                        </div>
 
-                    <div>
-                        <p className="text-[32px] w-[721px]">
-                            We are the First Tech Coyotes, a large public school
-                            team that participates in the FIRST Tech Challenge.
-                            As a diverse body of students pursuing STEM, we seek
-                            to inspire and teach like-minded youth in robotics.
-                        </p>
-                    </div>
-                </div> */}
+                        {/* Button */}
+                        <div className="col-start-1">
+                            <button
+                                className="px-25 py-4
+                                    border-5 border-white
+                                    text-3xl font-bold"
+                            >
+                                Join Us
+                            </button>
+                        </div>
+
+                        {/* Team description */}
+                        <div>
+                            <p className="text-3xl">
+                                We are the First Tech Coyotes, a large public
+                                school team that participates in the FIRST Tech
+                                Challenge. As a diverse body of students
+                                pursuing STEM, we seek to inspire and teach
+                                like-minded youth in robotics.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
