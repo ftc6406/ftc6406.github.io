@@ -1,8 +1,18 @@
 import type { ReactNode } from 'react';
+import AwardCard from './awardCard';
+
+const GALLERY_PATH = 'assets/gallery';
+
+const AWARDS = await fetch('awards.json').then((res) => res.json());
+interface AwardSeason {
+  year: number;
+  awards: string[];
+  images: string[];
+}
 
 const Awards = (): ReactNode => {
   return (
-    <div id="awards">
+    <div id="awards" className="relative">
       {/* Background*/}
 
       {/* Content */}
@@ -14,46 +24,22 @@ const Awards = (): ReactNode => {
           Awards and Recognition
         </h1>
 
-        <div
-          className="grid xl:grid-flow-col xl:grid-cols-2 
-            gap-8 xl:gap-32"
-        >
-          <div>
-            <p>
-              We are aspiring computer scientists and engineers and . Our team
-              comes from all levels of technical experience, so we encourage
-              anyone to join, STEM or not, and are willing to lend our expertise
-              to teach newcomers the skills necessary to explore their passions
-              in robotics and innovation.
-            </p>
-          </div>
+        <p className="text-center text-balance">
+          We would like to recognize our team's tireless efforts in robotic
+          innovation by commemorating the successes and accomplishments we made
+          along on our journey. We would also like to thank Leidos for their
+          gracious donations for allowing us travel so far.
+        </p>
 
-          <div>
-            <p className="select-all mb-4">
-              The structure of our team is simple. We have three branches, the
-              Engineers, the Programmers, and the Documenters:
-            </p>
-            <ul className="list-disc ml-8">
-              <li>Engineers handle robot assembly and CAD</li>
-              <li>Programmers maintain robot code and logic</li>
-              <li>
-                Documenters write team documentation and the engineering
-                portfolio
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="flex justify-center xs:justify-start">
-          <button
-            className="px-6 py-2 outline-4 outline-coyote-navy 
-              text-coyote-navy font-medium cursor-pointer
-              transition duration-300
-              hover:bg-coyote-navy hover:text-white hover:outline-none
-              active:bg-coyote-navy/20 active:text-coyote-navy/80 active:outline-none"
-          >
-            Interest Form
-          </button>
+        <div className="divide-y-1 divide-white/60">
+          {AWARDS.map(({ year, awards, images }: AwardSeason) => (
+            <AwardCard
+              key={`award-year-${year}`}
+              year={year}
+              awards={awards}
+              images={images}
+            />
+          ))}
         </div>
       </div>
     </div>
@@ -61,3 +47,5 @@ const Awards = (): ReactNode => {
 };
 
 export default Awards;
+export { GALLERY_PATH };
+export type { AwardSeason };
