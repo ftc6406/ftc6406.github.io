@@ -8,7 +8,7 @@ function Hero() {
       <div
         className="h-[100vh] 
           px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 
-          py-44 space-y-12
+          py-36 md:py-44 space-y-12
           place-items-center xl:place-items-start
           backdrop-brightness-70"
       >
