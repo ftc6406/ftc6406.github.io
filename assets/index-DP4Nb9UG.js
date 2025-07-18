@@ -71,7 +71,7 @@ Error generating stack: `+a.message+`
               text-2xl lg:text-3xl \r
               text-nowrap capitalize\r
 \r
-              hover:underline underline-offset-8`,children:J},`navbar-link-${$}`))})]})};function Qv(){return x.jsx("div",{className:"relative bg-[url(assets/man_mountain.jpg)] bg-center",id:"hero",children:x.jsxs("div",{className:`h-[100vh] \r
+              hover:underline underline-offset-8`,children:J},`navbar-link-${$}`))})]})};function Qv(){return x.jsx("div",{className:"relative bg-[url(man_mountain.jpg)] bg-center",id:"hero",children:x.jsxs("div",{className:`h-[100vh] \r
           px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 \r
           py-36 md:py-44 space-y-12\r
           place-items-center xl:place-items-start\r
