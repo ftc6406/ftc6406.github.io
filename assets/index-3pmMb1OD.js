@@ -73,7 +73,7 @@ Error generating stack: `+a.message+`
 \r
               hover:underline underline-offset-8`,children:J},`navbar-link-${$}`))})]})};function Qv(){return x.jsx("div",{className:"relative bg-[url(assets/man_mountain.jpg)] bg-center",id:"hero",children:x.jsxs("div",{className:`h-[100vh] \r
           px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 \r
-          py-44 space-y-12\r
+          py-36 md:py-44 space-y-12\r
           place-items-center xl:place-items-start\r
           backdrop-brightness-70`,children:[x.jsxs("div",{className:`flex flex-col xl:flex-row gap-0 md:gap-10\r
             place-items-center xl:place-items-start`,children:[x.jsx("div",{className:"shrink-0",children:x.jsx("img",{src:"/assets/logo.svg",className:"w-28 md:w-32 lg:w-36 xl:w-40 2xl:w-44"})}),x.jsxs("div",{className:`mt-4 md:mt-5 lg:mt-6 \r
