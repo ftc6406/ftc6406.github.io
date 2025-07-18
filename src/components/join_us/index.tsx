@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 const JoinUs = (): ReactNode => {
   return (
-    <div id="join">
+    <div id="join" className="relative">
       {/* Background*/}
       <img
         className="absolute z-1 
@@ -26,14 +26,7 @@ const JoinUs = (): ReactNode => {
             <p>
               We are aspiring computer scientists and engineers. Our team comes
               from all levels of technical experience, so we{' '}
-              <span
-                className="relative inline-block 
-                  before:absolute before:inset-0 before:bg-pink-500"
-              >
-                <span className="relative mx-1">
-                  encourage anyone to join, STEM or not,
-                </span>
-              </span>{' '}
+              <b>encourage anyone to join, STEM or not, </b>
               and are willing to lend our expertise to teach newcomers the
               skills necessary to explore their passions in robotics and
               innovation.
