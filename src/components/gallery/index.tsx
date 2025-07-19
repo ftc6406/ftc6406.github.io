@@ -1,7 +1,9 @@
-function Gallery() {
+import type { ReactNode } from 'react';
+
+const Gallery = (): ReactNode => {
   const imagePaths = [];
 
-  const modules = import.meta.glob('/public/assets/gallery/*');
+  const modules = import.meta.glob("/public/assets/gallery/*");
   for (const PATH in modules) {
     imagePaths.push(PATH);
   }
@@ -25,6 +27,6 @@ function Gallery() {
       })}
     </>
   );
-}
+};
 
 export default Gallery;

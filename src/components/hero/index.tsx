@@ -1,4 +1,7 @@
-function Hero() {
+import type { ReactNode } from 'react';
+import AboutUsText from '../about_us/aboutUsText';
+
+const Hero = (): ReactNode => {
   return (
     <div
       className="relative bg-[url(assets/man_mountain.jpg)] bg-center"
@@ -71,10 +74,7 @@ function Hero() {
                 className="hidden xl:block 
                   text-right xl:text-2xl 2xl:text-3xl"
               >
-                We are the First Tech Coyotes, a large public school team that
-                participates in the FIRST Tech Challenge. As a diverse body of
-                students pursuing STEM, we seek to inspire and teach like-minded
-                youth in robotics.
+                <AboutUsText />
               </p>
             </div>
           </div>
@@ -90,6 +90,6 @@ function Hero() {
       </div>
     </div>
   );
-}
+};
 
 export default Hero;

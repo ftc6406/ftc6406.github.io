@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 import type { AwardSeason } from '.';
 
 const AwardCard = (props: AwardSeason): ReactNode => {
+  // eslint-disable-next-line prefer-const
   let { year, awards, images } = props;
   if (images.length > 2) images = images.slice(0, 2);
 
