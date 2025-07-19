@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
-import AboutUsText from '../about_us/aboutUsText';
+
+const ABOUT_US_TEXT = await fetch('aboutUsText.txt').then((res) => res.text());
 
 const Hero = (): ReactNode => {
   return (
@@ -28,7 +29,7 @@ const Hero = (): ReactNode => {
             />
           </div>
 
-          {/* Text */}
+          {/* Team name and description */}
           <div
             className="mt-4 md:mt-5 lg:mt-6 
               grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
@@ -50,7 +51,7 @@ const Hero = (): ReactNode => {
               </div>
             </div>
 
-            {/* Button */}
+            {/* "Join Us" button */}
             <div className="col-start-1">
               <a href="#join">
                 <button
@@ -68,18 +69,19 @@ const Hero = (): ReactNode => {
               </a>
             </div>
 
-            {/* Team description */}
+            {/* "About Us" text */}
             <div>
               <p
                 className="hidden xl:block 
                   text-right xl:text-2xl 2xl:text-3xl"
               >
-                <AboutUsText />
+                {ABOUT_US_TEXT}
               </p>
             </div>
           </div>
         </div>
 
+        {/* Chevron */}
         <img
           src="assets/chevron.svg"
           className="absolute place-self-center 

@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
-import AboutUsText from './aboutUsText';
+
+const ABOUT_US_TEXT = await fetch('aboutUsText.txt').then((res) => res.text());
 
 const AboutUs = (): ReactNode => {
   return (
@@ -11,7 +12,7 @@ const AboutUs = (): ReactNode => {
       text-center text-3xl"
     >
       <p className="w-2xl text-black">
-        <AboutUsText />
+        {ABOUT_US_TEXT}
       </p>
     </div>
   );
