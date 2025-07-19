@@ -11,7 +11,7 @@ const Gallery = (): ReactNode => {
   return (
     <div
       id="gallery"
-      className="w-screen
+      className="w-full
         bg-linear-to-br from-[#56AEC8] to-[#345780]"
     >
       <h1 className="text-right text-7xl">Gallery</h1>

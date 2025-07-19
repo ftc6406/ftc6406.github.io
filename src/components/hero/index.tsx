@@ -10,16 +10,15 @@ const Hero = (): ReactNode => {
     >
       {/* Backdrop filter */}
       <div
-        className="h-[100vh] 
-          px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 
-          py-36 md:py-44 space-y-12
+        className="h-[100vh]
           place-items-center xl:place-items-start
           backdrop-brightness-70"
       >
         {/* Content */}
         <div
           className="flex flex-col xl:flex-row gap-0 md:gap-10
-            place-items-center xl:place-items-start"
+            px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 
+            py-36 md:py-44 space-y-12"
         >
           {/* Logo */}
           <div className="shrink-0">
