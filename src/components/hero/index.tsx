@@ -1,4 +1,8 @@
-function Hero() {
+import type { ReactNode } from 'react';
+
+const ABOUT_US_TEXT = await fetch('aboutUsText.txt').then((res) => res.text());
+
+const Hero = (): ReactNode => {
   return (
     <div
       className="relative bg-[url(assets/man_mountain.jpg)] bg-center"
@@ -25,7 +29,7 @@ function Hero() {
             />
           </div>
 
-          {/* Text */}
+          {/* Team name and description */}
           <div
             className="mt-4 md:mt-5 lg:mt-6 
               grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
@@ -47,7 +51,7 @@ function Hero() {
               </div>
             </div>
 
-            {/* Button */}
+            {/* "Join Us" button */}
             <div className="col-start-1">
               <a href="#join">
                 <button
@@ -65,21 +69,19 @@ function Hero() {
               </a>
             </div>
 
-            {/* Team description */}
+            {/* "About Us" text */}
             <div>
               <p
                 className="hidden xl:block 
                   text-right xl:text-2xl 2xl:text-3xl"
               >
-                We are the First Tech Coyotes, a large public school team that
-                participates in the FIRST Tech Challenge. As a diverse body of
-                students pursuing STEM, we seek to inspire and teach like-minded
-                youth in robotics.
+                {ABOUT_US_TEXT}
               </p>
             </div>
           </div>
         </div>
 
+        {/* Chevron */}
         <img
           src="assets/chevron.svg"
           className="absolute place-self-center 
@@ -90,6 +92,6 @@ function Hero() {
       </div>
     </div>
   );
-}
+};
 
 export default Hero;
