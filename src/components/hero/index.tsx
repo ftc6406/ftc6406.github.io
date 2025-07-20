@@ -5,7 +5,7 @@ const ABOUT_US_TEXT = await fetch('aboutUsText.txt').then((res) => res.text());
 const Hero = (): ReactNode => {
   return (
     <div
-      className="relative bg-[url(assets/man_mountain.jpg)] bg-center"
+      className="relative bg-[url(assets/man_mountain.jpg)] bg-center bg-cover"
       id="hero"
     >
       {/* Backdrop filter */}
@@ -17,7 +17,8 @@ const Hero = (): ReactNode => {
         {/* Content */}
         <div
           className="flex flex-col xl:flex-row gap-0 md:gap-10
-            px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 
+            place-items-center xl:place-items-start
+            px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32
             py-36 md:py-44 space-y-12"
         >
           {/* Logo */}
@@ -30,8 +31,7 @@ const Hero = (): ReactNode => {
 
           {/* Team name and description */}
           <div
-            className="mt-4 md:mt-5 lg:mt-6 
-              grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
+            className="grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
               place-items-center xl:place-items-start"
           >
             {/* Team Name */}
