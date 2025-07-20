@@ -12,21 +12,24 @@ const Gallery = (): ReactNode => {
     <div
       id="gallery"
       className="w-full
-        bg-linear-to-br from-[#56AEC8] to-[#345780]"
+        px-28 py-36
+        bg-linear-to-r from-[#56AEC8] to-[#345780]"
     >
       <h1 className="text-right text-7xl">Gallery</h1>
-      <p>Hello, this is some placeholder text for the Gallery section.</p>
 
-      {/* {imagePaths.map((ele, index) => {
-        {
-          return (
-            <img
-              key={`gallery-${index}`}
-              src={ele.substring(ele.indexOf('assets/'))}
-            />
-          );
-        }
-      })} */}
+      <div id="gallery-images" className="grid-cols-6 gap-8">
+        {imagePaths.map((ele, index) => {
+          {
+            return (
+              <img
+                key={`gallery-${index}`}
+                src={ele.substring(ele.indexOf('assets/'))}
+                className="max-h-64"
+              />
+            );
+          }
+        })}
+      </div>
     </div>
   );
 };
