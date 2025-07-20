@@ -19,7 +19,7 @@ const Hero = (): ReactNode => {
           className="flex flex-col xl:flex-row gap-0 md:gap-10
             place-items-center xl:place-items-start
             px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32
-            py-36 md:py-44 space-y-12"
+            py-36 md:py-40 lg:py-44 space-y-12"
         >
           {/* Logo */}
           <div className="shrink-0">
@@ -84,8 +84,8 @@ const Hero = (): ReactNode => {
         <img
           src="assets/chevron.svg"
           className="absolute place-self-center 
-            bottom-24 
-            w-28
+            bottom-16 md:bottom-24 
+            w-24 md:w-28
             animate-bounce"
         />
       </div>
