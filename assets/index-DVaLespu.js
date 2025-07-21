@@ -69,12 +69,12 @@ Error generating stack: `+a.message+`
             `,children:w},`navbar-link-${$}`))}),z.jsx("div",{className:"hidden lg:flex space-x-16",children:B.map((w,$)=>z.jsx("a",{href:`#${w}`,className:`flex items-center 
               text-3xl text-nowrap capitalize
 
-              hover:underline underline-offset-8`,children:w},`navbar-link-${$}`))})]})},Qr=await fetch("aboutUsText.txt").then(x=>x.text()),Zr=()=>z.jsx("div",{className:"relative bg-[url(assets/man_mountain.jpg)] bg-center bg-cover",id:"hero",children:z.jsxs("div",{className:`h-[100vh]
+              hover:underline underline-offset-8`,children:w},`navbar-link-${$}`))})]})},Qr=await fetch("aboutUsText.txt").then(x=>x.text()),Zr=()=>z.jsxs("div",{className:"relative bg-[url(assets/man_mountain.jpg)] bg-center bg-cover",id:"hero",children:[z.jsx("div",{className:`h-[100vh]
           place-items-center xl:place-items-start
-          backdrop-brightness-70`,children:[z.jsxs("div",{className:`flex flex-col xl:flex-row gap-0 md:gap-10
+          backdrop-brightness-70`,children:z.jsxs("div",{className:`flex flex-col xl:flex-row gap-8 md:gap-12
             place-items-center xl:place-items-start
             px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32
-            py-36 md:py-40 lg:py-44 space-y-12`,children:[z.jsx("div",{className:"shrink-0",children:z.jsx("img",{src:"/assets/logo.svg",className:"w-28 md:w-32 lg:w-36 xl:w-40 2xl:w-44"})}),z.jsxs("div",{className:`grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
+            py-36 md:py-40 lg:py-44`,children:[z.jsx("div",{className:"shrink-0",children:z.jsx("img",{src:"/assets/logo.svg",className:"w-28 md:w-32 lg:w-36 xl:w-40 2xl:w-44"})}),z.jsxs("div",{className:`grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
               place-items-center xl:place-items-start`,children:[z.jsx("div",{children:z.jsxs("div",{className:`space-y-4 
                   text-center xl:text-left`,children:[z.jsx("h1",{className:"text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold",children:"First Tech Coyotes"}),z.jsx("h2",{className:"text-3xl lg:text-4xl 2xl:text-5xl",children:"Student engineers"})]})}),z.jsx("div",{className:"col-start-1",children:z.jsx("a",{href:"#join",children:z.jsx("button",{className:`hidden xl:block 
                   px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-28 py-4
@@ -84,14 +84,15 @@ Error generating stack: `+a.message+`
                   transition duration-300
                   hover:bg-white hover:text-primary hover:outline-none
                   active:bg-white/20 active:text-white/80 active:outline-none`,children:"Join Us"})})}),z.jsx("div",{children:z.jsx("p",{className:`hidden xl:block 
-                  text-right xl:text-2xl 2xl:text-3xl`,children:Qr})})]})]}),z.jsx("img",{src:"assets/chevron.svg",className:`absolute place-self-center 
-            bottom-16 md:bottom-24 
+                  text-right xl:text-2xl 2xl:text-3xl`,children:Qr})})]})]})}),z.jsx("img",{src:"assets/chevron.svg",className:`absolute left-[calc(50%-48px)] md:left-[calc(50%-56px)]
+            bottom-16 md:bottom-24
             w-24 md:w-28
-            animate-bounce`})]})}),Cr=await fetch("aboutUsText.txt").then(x=>x.text()),Vr=()=>z.jsx("div",{className:`block xl:hidden
-      flex justify-center items-center 
+            animate-bounce`})]}),Cr=await fetch("aboutUsText.txt").then(x=>x.text()),Vr=()=>z.jsx("div",{className:`block xl:hidden
+      flex justify-center items-center
       h-100
+      px-16
       bg-white
-      text-center text-3xl`,children:z.jsx("p",{className:"w-2xl text-black",children:Cr})}),Lr="modulepreload",Kr=function(x){return"/"+x},no={},Jr=function(P,X,m){let B=Promise.resolve();if(X&&X.length>0){let w=function(T){return Promise.all(T.map(U=>Promise.resolve(U).then(ll=>({status:"fulfilled",value:ll}),ll=>({status:"rejected",reason:ll}))))};document.getElementsByTagName("link");const $=document.querySelector("meta[property=csp-nonce]"),N=($==null?void 0:$.nonce)||($==null?void 0:$.getAttribute("nonce"));B=w(X.map(T=>{if(T=Kr(T),T in no)return;no[T]=!0;const U=T.endsWith(".css"),ll=U?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${T}"]${ll}`))return;const J=document.createElement("link");if(J.rel=U?"stylesheet":Lr,U||(J.as="script"),J.crossOrigin="",J.href=T,N&&J.setAttribute("nonce",N),document.head.appendChild(J),U)return new Promise((_l,Ol)=>{J.addEventListener("load",_l),J.addEventListener("error",()=>Ol(new Error(`Unable to preload CSS for ${T}`)))})}))}function Z(w){const $=new Event("vite:preloadError",{cancelable:!0});if($.payload=w,window.dispatchEvent($),!$.defaultPrevented)throw w}return B.then(w=>{for(const $ of w||[])$.status==="rejected"&&Z($.reason);return P().catch(Z)})},wr=()=>{const x=[],P=Object.assign({"/public/assets/gallery/place_holder.jpg":()=>Jr(()=>import("./place_holder-Dx0eSeA4.js"),[])});for(const X in P)x.push(X);return z.jsxs("div",{id:"gallery",className:`w-full
+      text-center text-xl md:text-2xl lg:text-3xl`,children:z.jsx("p",{className:"w-lg md:w-xl lg:w-2xl text-black",children:Cr})}),Lr="modulepreload",Kr=function(x){return"/"+x},no={},Jr=function(P,X,m){let B=Promise.resolve();if(X&&X.length>0){let w=function(T){return Promise.all(T.map(U=>Promise.resolve(U).then(ll=>({status:"fulfilled",value:ll}),ll=>({status:"rejected",reason:ll}))))};document.getElementsByTagName("link");const $=document.querySelector("meta[property=csp-nonce]"),N=($==null?void 0:$.nonce)||($==null?void 0:$.getAttribute("nonce"));B=w(X.map(T=>{if(T=Kr(T),T in no)return;no[T]=!0;const U=T.endsWith(".css"),ll=U?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${T}"]${ll}`))return;const J=document.createElement("link");if(J.rel=U?"stylesheet":Lr,U||(J.as="script"),J.crossOrigin="",J.href=T,N&&J.setAttribute("nonce",N),document.head.appendChild(J),U)return new Promise((_l,Ol)=>{J.addEventListener("load",_l),J.addEventListener("error",()=>Ol(new Error(`Unable to preload CSS for ${T}`)))})}))}function Z(w){const $=new Event("vite:preloadError",{cancelable:!0});if($.payload=w,window.dispatchEvent($),!$.defaultPrevented)throw w}return B.then(w=>{for(const $ of w||[])$.status==="rejected"&&Z($.reason);return P().catch(Z)})},wr=()=>{const x=[],P=Object.assign({"/public/assets/gallery/place_holder.jpg":()=>Jr(()=>import("./place_holder-Dx0eSeA4.js"),[])});for(const X in P)x.push(X);return z.jsxs("div",{id:"gallery",className:`w-full
         px-28 py-36
         bg-linear-to-r from-[#56AEC8] to-[#345780]`,children:[z.jsx("h1",{className:"text-right text-7xl",children:"Gallery"}),z.jsx("div",{id:"gallery-images",className:"grid-cols-6 gap-8",children:x.map((X,m)=>z.jsx("img",{src:X.substring(X.indexOf("assets/")),className:"max-h-64"},`gallery-${m}`))})]})},Wr=()=>z.jsxs("div",{id:"join",className:"relative",children:[z.jsx("img",{className:`absolute z-1 
           left-[calc(50%-40px)] md:left-[calc(50%-60px)] lg:left-[calc(50%-80px)] 
