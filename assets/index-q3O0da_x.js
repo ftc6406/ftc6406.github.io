@@ -69,9 +69,9 @@ Error generating stack: `+a.message+`
             `,children:w},`navbar-link-${$}`))}),z.jsx("div",{className:"hidden lg:flex space-x-16",children:B.map((w,$)=>z.jsx("a",{href:`#${w}`,className:`flex items-center 
               text-3xl text-nowrap capitalize
 
-              hover:underline underline-offset-8`,children:w},`navbar-link-${$}`))})]})},Qr=await fetch("aboutUsText.txt").then(x=>x.text()),Zr=()=>z.jsxs("div",{className:"relative bg-[url(assets/man_mountain.jpg)] bg-center bg-cover",id:"hero",children:[z.jsx("div",{className:`h-[100vh]
+              hover:underline underline-offset-8`,children:w},`navbar-link-${$}`))})]})},Qr=await fetch("aboutUsText.txt").then(x=>x.text()),Zr=()=>z.jsx("div",{className:"relative bg-[url(assets/man_mountain.jpg)] bg-center bg-cover",id:"hero",children:z.jsxs("div",{className:`h-[100vh]
           place-items-center xl:place-items-start
-          backdrop-brightness-70`,children:z.jsxs("div",{className:`flex flex-col xl:flex-row gap-8 md:gap-12
+          backdrop-brightness-70`,children:[z.jsxs("div",{className:`flex flex-col xl:flex-row gap-8 md:gap-12
             place-items-center xl:place-items-start
             px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32
             py-36 md:py-40 lg:py-44`,children:[z.jsx("div",{className:"shrink-0",children:z.jsx("img",{src:"/assets/logo.svg",className:"w-28 md:w-32 lg:w-36 xl:w-40 2xl:w-44"})}),z.jsxs("div",{className:`grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
@@ -84,10 +84,10 @@ Error generating stack: `+a.message+`
                   transition duration-300
                   hover:bg-white hover:text-primary hover:outline-none
                   active:bg-white/20 active:text-white/80 active:outline-none`,children:"Join Us"})})}),z.jsx("div",{children:z.jsx("p",{className:`hidden xl:block 
-                  text-right xl:text-2xl 2xl:text-3xl`,children:Qr})})]})]})}),z.jsx("img",{src:"assets/chevron.svg",className:`absolute left-[calc(50%-48px)] md:left-[calc(50%-56px)]
+                  text-right xl:text-2xl 2xl:text-3xl`,children:Qr})})]})]}),z.jsx("img",{src:"assets/chevron.svg",className:`absolute place-self-center 
             bottom-16 md:bottom-24
             w-24 md:w-28
-            animate-bounce`})]}),Cr=await fetch("aboutUsText.txt").then(x=>x.text()),Vr=()=>z.jsx("div",{className:`block xl:hidden
+            animate-bounce`})]})}),Cr=await fetch("aboutUsText.txt").then(x=>x.text()),Vr=()=>z.jsx("div",{className:`block xl:hidden
       flex justify-center items-center
       h-100
       px-16
