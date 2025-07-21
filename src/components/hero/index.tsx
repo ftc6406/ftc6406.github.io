@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import '../../index.css';
 
 const ABOUT_US_TEXT = await fetch('aboutUsText.txt').then((res) => res.text());
 
@@ -10,7 +11,7 @@ const Hero = (): ReactNode => {
     >
       {/* Backdrop filter */}
       <div
-        className="h-[100vh]
+        className="
           place-items-center xl:place-items-start
           backdrop-brightness-70"
       >
@@ -20,7 +21,7 @@ const Hero = (): ReactNode => {
             className="flex flex-col xl:flex-row gap-8 md:gap-12
               place-items-center xl:place-items-start
               px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32
-              pt-36 md:pt-40 lg:pt-44"
+              py-36 md:py-40 lg:py-44"
           >
             {/* Logo */}
             <div className="shrink-0">
@@ -84,9 +85,11 @@ const Hero = (): ReactNode => {
           {/* Chevron */}
           <img
             src="assets/chevron.svg"
-            className="place-self-center
-            w-24 md:w-28
-            animate-bounce"
+            className="
+              place-self-center
+              mb-8 md:mb-16
+              w-24 md:w-28
+              animate-bounce"
           />
         </div>
       </div>
