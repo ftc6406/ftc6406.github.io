@@ -20,7 +20,7 @@ const Navbar = (): ReactNode => {
   return (
     <div
       id="navbar"
-      className={`fixed w-full px-4 md:px-8 py-4
+      className={`fixed w-full px-4 md:px-8 lg:px-16 py-4
         z-1000 flex justify-between
         
         transition duration-1000
@@ -82,13 +82,13 @@ const Navbar = (): ReactNode => {
       </div>
 
       {/* Desktop navbar anchors */}
-      <div className="hidden lg:flex space-x-16">
+      <div className="hidden lg:flex space-x-8">
         {TAB_NAMES.map((tabName, index) => (
           <a
             key={`navbar-link-${index}`}
             href={`#${tabName}`}
             className="flex items-center 
-              text-2xl xl:text-3xl text-nowrap capitalize
+              text-xl xl:text-2xl text-nowrap capitalize
 
               hover:underline underline-offset-8"
           >
