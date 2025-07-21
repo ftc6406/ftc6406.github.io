@@ -6,7 +6,7 @@ const ABOUT_US_TEXT = await fetch('aboutUsText.txt').then((res) => res.text());
 const Hero = (): ReactNode => {
   return (
     <div
-      className="relative bg-[url(assets/man_mountain.jpg)] bg-center bg-cover"
+      className="relative bg-[url(assets/hero_placeholder.jpg)] bg-center bg-cover"
       id="hero"
     >
       {/* Backdrop filter */}
