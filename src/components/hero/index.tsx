@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import '../../index.css';
 
 const ABOUT_US_TEXT = await fetch('aboutUsText.txt').then((res) => res.text());
 
@@ -10,51 +11,52 @@ const Hero = (): ReactNode => {
     >
       {/* Backdrop filter */}
       <div
-        className="h-[100vh]
+        className="
           place-items-center xl:place-items-start
           backdrop-brightness-70"
       >
         {/* Content */}
-        <div
-          className="flex flex-col xl:flex-row gap-0 md:gap-10
-            place-items-center xl:place-items-start
-            px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32
-            py-36 md:py-40 lg:py-44 space-y-12"
-        >
-          {/* Logo */}
-          <div className="shrink-0">
-            <img
-              src="/assets/logo.svg"
-              className="w-28 md:w-32 lg:w-36 xl:w-40 2xl:w-44"
-            />
-          </div>
-
-          {/* Team name and description */}
+        <div className="flex flex-col">
           <div
-            className="grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
-              place-items-center xl:place-items-start"
+            className="flex flex-col xl:flex-row gap-8 md:gap-12
+              place-items-center xl:place-items-start
+              px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32
+              py-36 md:py-40 lg:py-44"
           >
-            {/* Team Name */}
-            <div>
-              <div
-                className="space-y-4 
-                  text-center xl:text-left"
-              >
-                <h1 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold">
-                  First Tech Coyotes
-                </h1>
-
-                <h2 className="text-3xl lg:text-4xl 2xl:text-5xl">
-                  Student engineers
-                </h2>
-              </div>
+            {/* Logo */}
+            <div className="shrink-0">
+              <img
+                src="/assets/logo.svg"
+                className="w-28 md:w-32 lg:w-36 xl:w-40 2xl:w-44"
+              />
             </div>
 
-            {/* "Join Us" button */}
-            <div className="col-start-1">
-              <a href="#join">
-                <button
-                  className="hidden xl:block 
+            {/* Team name and description */}
+            <div
+              className="grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
+              place-items-center xl:place-items-start"
+            >
+              {/* Team Name */}
+              <div>
+                <div
+                  className="space-y-4 
+                  text-center xl:text-left"
+                >
+                  <h1 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold">
+                    First Tech Coyotes
+                  </h1>
+
+                  <h2 className="text-3xl lg:text-4xl 2xl:text-5xl">
+                    Student engineers
+                  </h2>
+                </div>
+              </div>
+
+              {/* "Join Us" button */}
+              <div className="col-start-1">
+                <a href="#join">
+                  <button
+                    className="hidden xl:block 
                   px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-28 py-4
                   outline-5 outline-white
                   xl:text-2xl 2xl:text-3xl font-bold
@@ -62,32 +64,34 @@ const Hero = (): ReactNode => {
                   transition duration-300
                   hover:bg-white hover:text-primary hover:outline-none
                   active:bg-white/20 active:text-white/80 active:outline-none"
-                >
-                  Join Us
-                </button>
-              </a>
-            </div>
+                  >
+                    Join Us
+                  </button>
+                </a>
+              </div>
 
-            {/* "About Us" text */}
-            <div>
-              <p
-                className="hidden xl:block 
+              {/* "About Us" text */}
+              <div>
+                <p
+                  className="hidden xl:block 
                   text-right xl:text-2xl 2xl:text-3xl"
-              >
-                {ABOUT_US_TEXT}
-              </p>
+                >
+                  {ABOUT_US_TEXT}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Chevron */}
-        <img
-          src="assets/chevron.svg"
-          className="absolute place-self-center 
-            bottom-16 md:bottom-24 
-            w-24 md:w-28
-            animate-bounce"
-        />
+          {/* Chevron */}
+          <img
+            src="assets/chevron.svg"
+            className="
+              place-self-center
+              mb-8 md:mb-16
+              w-24 md:w-28
+              animate-bounce"
+          />
+        </div>
       </div>
     </div>
   );
