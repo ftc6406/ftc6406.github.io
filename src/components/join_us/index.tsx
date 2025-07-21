@@ -54,8 +54,8 @@ const JoinUs = (): ReactNode => {
             className="px-6 py-2 outline-4 outline-primary 
               text-primary font-medium cursor-pointer
               transition duration-300
-              hover:bg-primary hover:text-white hover:outline-none
-              active:bg-primary/20 active:text-primary/80 active:outline-none"
+              hover:bg-primary hover:text-white
+              active:bg-primary/20 active:text-primary/80 active:outline-primary/20"
           >
             Interest Form
           </button>

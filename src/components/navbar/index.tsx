@@ -55,7 +55,7 @@ const Navbar = (): ReactNode => {
 
       {/* Mobile nav dropdown menu */}
       <div
-        className={`absolute md:hidden
+        className={`absolute lg:hidden
           top-full left-0 w-full px-4 divide-y-1 divide-white/60
 
           transition-all duration-1000 transition-discrete
@@ -88,7 +88,7 @@ const Navbar = (): ReactNode => {
             key={`navbar-link-${index}`}
             href={`#${tabName}`}
             className="flex items-center 
-              text-3xl text-nowrap capitalize
+              text-2xl xl:text-3xl text-nowrap capitalize
 
               hover:underline underline-offset-8"
           >
