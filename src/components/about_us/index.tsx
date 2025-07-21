@@ -6,12 +6,13 @@ const AboutUs = (): ReactNode => {
   return (
     <div
       className="block xl:hidden
-      flex justify-center items-center 
+      flex justify-center items-center
       h-100
+      px-16
       bg-white
-      text-center text-3xl"
+      text-center text-xl md:text-2xl lg:text-3xl"
     >
-      <p className="w-2xl text-black">
+      <p className="w-lg md:w-xl lg:w-2xl text-black">
         {ABOUT_US_TEXT}
       </p>
     </div>
