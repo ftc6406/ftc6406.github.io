@@ -1,7 +1,10 @@
 [
   {
-    "year": 2022,
-    "awards": ["Judges' Choice Award"],
+    "year": 2024,
+    "awards": [
+      "Innovate Award sponsored by RTX 2nd Place",
+      "Think Award 2nd Place"
+    ],
     "images": ["place_holder.jpg"]
   },
   {
@@ -14,11 +17,8 @@
     "images": ["place_holder.jpg", "place_holder.jpg"]
   },
   {
-    "year": 2024,
-    "awards": [
-      "Innovate Award sponsored by RTX 2nd Place",
-      "Think Award 2nd Place"
-    ],
+    "year": 2022,
+    "awards": ["Judges' Choice Award"],
     "images": ["place_holder.jpg"]
   }
 ]

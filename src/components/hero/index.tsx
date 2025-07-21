@@ -1,21 +1,25 @@
-function Hero() {
+import type { ReactNode } from 'react';
+
+const ABOUT_US_TEXT = await fetch('aboutUsText.txt').then((res) => res.text());
+
+const Hero = (): ReactNode => {
   return (
     <div
-      className="relative bg-[url(assets/man_mountain.jpg)] bg-center"
+      className="relative bg-[url(assets/man_mountain.jpg)] bg-center bg-cover"
       id="hero"
     >
       {/* Backdrop filter */}
       <div
-        className="h-[100vh] 
-          px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32 
-          py-36 md:py-44 space-y-12
+        className="h-[100vh]
           place-items-center xl:place-items-start
           backdrop-brightness-70"
       >
         {/* Content */}
         <div
           className="flex flex-col xl:flex-row gap-0 md:gap-10
-            place-items-center xl:place-items-start"
+            place-items-center xl:place-items-start
+            px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32
+            py-36 md:py-40 lg:py-44 space-y-12"
         >
           {/* Logo */}
           <div className="shrink-0">
@@ -25,10 +29,9 @@ function Hero() {
             />
           </div>
 
-          {/* Text */}
+          {/* Team name and description */}
           <div
-            className="mt-4 md:mt-5 lg:mt-6 
-              grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
+            className="grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
               place-items-center xl:place-items-start"
           >
             {/* Team Name */}
@@ -47,7 +50,7 @@ function Hero() {
               </div>
             </div>
 
-            {/* Button */}
+            {/* "Join Us" button */}
             <div className="col-start-1">
               <a href="#join">
                 <button
@@ -65,31 +68,29 @@ function Hero() {
               </a>
             </div>
 
-            {/* Team description */}
+            {/* "About Us" text */}
             <div>
               <p
                 className="hidden xl:block 
                   text-right xl:text-2xl 2xl:text-3xl"
               >
-                We are the First Tech Coyotes, a large public school team that
-                participates in the FIRST Tech Challenge. As a diverse body of
-                students pursuing STEM, we seek to inspire and teach like-minded
-                youth in robotics.
+                {ABOUT_US_TEXT}
               </p>
             </div>
           </div>
         </div>
 
+        {/* Chevron */}
         <img
           src="assets/chevron.svg"
           className="absolute place-self-center 
-            bottom-24 
-            w-28
+            bottom-16 md:bottom-24 
+            w-24 md:w-28
             animate-bounce"
         />
       </div>
     </div>
   );
-}
+};
 
 export default Hero;

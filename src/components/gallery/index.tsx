@@ -1,4 +1,6 @@
-function Gallery() {
+import type { ReactNode } from 'react';
+
+const Gallery = (): ReactNode => {
   const imagePaths = [];
 
   const modules = import.meta.glob('/public/assets/gallery/*');
@@ -7,24 +9,29 @@ function Gallery() {
   }
 
   return (
-    <>
-      <h1 className="pb-4 text-[80px] text-center font-bold" id="gallery">
-        Gallery
-      </h1>
-      <p>Hello, this is some placeholder text for the Gallery section.</p>
+    <div
+      id="gallery"
+      className="w-full
+        px-28 py-36
+        bg-linear-to-r from-[#56AEC8] to-[#345780]"
+    >
+      <h1 className="text-right text-7xl">Gallery</h1>
 
-      {imagePaths.map((ele, index) => {
-        {
-          return (
-            <img
-              key={`gallery-${index}`}
-              src={ele.substring(ele.indexOf('assets/'))}
-            />
-          );
-        }
-      })}
-    </>
+      <div id="gallery-images" className="grid-cols-6 gap-8">
+        {imagePaths.map((ele, index) => {
+          {
+            return (
+              <img
+                key={`gallery-${index}`}
+                src={ele.substring(ele.indexOf('assets/'))}
+                className="max-h-64"
+              />
+            );
+          }
+        })}
+      </div>
+    </div>
   );
-}
+};
 
 export default Gallery;
