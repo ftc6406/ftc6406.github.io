@@ -69,7 +69,7 @@ Error generating stack: `+a.message+`
             `,children:w},`navbar-link-${$}`))}),z.jsx("div",{className:"hidden lg:flex space-x-16",children:B.map((w,$)=>z.jsx("a",{href:`#${w}`,className:`flex items-center \r
               text-3xl text-nowrap capitalize\r
 \r
-              hover:underline underline-offset-8`,children:w},`navbar-link-${$}`))})]})},Qv=await fetch("aboutUsText.txt").then(x=>x.text()),Zv=()=>z.jsx("div",{className:"relative bg-[url(assets/hero_placeholder.jpg)] bg-center bg-cover",id:"hero",children:z.jsx("div",{className:`place-items-center xl:place-items-start\r
+              hover:underline underline-offset-8`,children:w},`navbar-link-${$}`))})]})},Qv=await fetch("aboutUsText.txt").then(x=>x.text()),Zv=()=>z.jsx("section",{className:"relative bg-[url(assets/hero_placeholder.jpg)] bg-center bg-cover",id:"hero",children:z.jsx("div",{className:`place-items-center xl:place-items-start\r
           backdrop-brightness-70`,children:z.jsxs("div",{className:"flex flex-col",children:[z.jsxs("div",{className:`flex flex-col xl:flex-row gap-8 md:gap-12\r
               place-items-center xl:place-items-start\r
               px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32\r
