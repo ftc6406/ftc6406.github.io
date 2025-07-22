@@ -1,12 +1,10 @@
 import type { ReactNode } from 'react';
 import '../../index.css';
-import heroImg from '/assets/hero_placeholder.jpg';
+import heroImg from '/assets/hero_placeholder.jpg?url';
 
 const ABOUT_US_TEXT = await fetch('aboutUsText.txt').then((res) => res.text());
 
 const Hero = (): ReactNode => {
-  console.log(heroImg);
-
   return (
     <div
       className={`relative bg-[url(${heroImg})] bg-center bg-cover`}
@@ -64,8 +62,8 @@ const Hero = (): ReactNode => {
                   xl:text-2xl 2xl:text-3xl font-bold
                   cursor-pointer
                   transition duration-300
-                  hover:bg-white hover:text-primary hover:outline-none
-                  active:bg-white/20 active:text-white/80 active:outline-none"
+                  hover:bg-white hover:text-primary
+                  active:bg-white/20 active:text-white/80 active:outline-white/20"
                   >
                     Join Us
                   </button>
