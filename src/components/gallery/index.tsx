@@ -13,7 +13,7 @@ const Gallery = (): ReactNode => {
       id="gallery"
       className="w-full
         px-28 py-36
-        bg-linear-to-r from-[#56AEC8] to-[#345780]"
+        bg-linear-to-r from-accent to-primary"
     >
       <h1 className="text-right text-7xl">Gallery</h1>
 

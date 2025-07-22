@@ -6,13 +6,12 @@ const ABOUT_US_TEXT = await fetch('aboutUsText.txt').then((res) => res.text());
 const Hero = (): ReactNode => {
   return (
     <div
-      className="relative bg-[url(assets/man_mountain.jpg)] bg-center bg-cover"
+      className="relative bg-[url(assets/hero_placeholder.jpg)] bg-center bg-cover"
       id="hero"
     >
       {/* Backdrop filter */}
       <div
-        className="
-          place-items-center xl:place-items-start
+        className="place-items-center xl:place-items-start
           backdrop-brightness-70"
       >
         {/* Content */}
@@ -39,7 +38,7 @@ const Hero = (): ReactNode => {
               {/* Team Name */}
               <div>
                 <div
-                  className="space-y-4 
+                  className="space-y-4
                   text-center xl:text-left"
                 >
                   <h1 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold">
@@ -56,7 +55,7 @@ const Hero = (): ReactNode => {
               <div className="col-start-1">
                 <a href="#join">
                   <button
-                    className="hidden xl:block 
+                    className="hidden xl:block
                   px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-28 py-4
                   outline-5 outline-white
                   xl:text-2xl 2xl:text-3xl font-bold
@@ -73,7 +72,7 @@ const Hero = (): ReactNode => {
               {/* "About Us" text */}
               <div>
                 <p
-                  className="hidden xl:block 
+                  className="hidden xl:block
                   text-right xl:text-2xl 2xl:text-3xl"
                 >
                   {ABOUT_US_TEXT}
@@ -85,8 +84,7 @@ const Hero = (): ReactNode => {
           {/* Chevron */}
           <img
             src="assets/chevron.svg"
-            className="
-              place-self-center
+            className="place-self-center
               mb-8 md:mb-16
               w-24 md:w-28
               animate-bounce"

@@ -7,14 +7,11 @@ const AboutUs = (): ReactNode => {
     <div
       className="block xl:hidden
       flex justify-center items-center
-      h-100
-      px-16
+      p-16
       bg-white
       text-center text-xl md:text-2xl lg:text-3xl"
     >
-      <p className="w-lg md:w-xl lg:w-2xl text-black">
-        {ABOUT_US_TEXT}
-      </p>
+      <p className="w-lg md:w-xl lg:w-2xl text-black">{ABOUT_US_TEXT}</p>
     </div>
   );
 };
