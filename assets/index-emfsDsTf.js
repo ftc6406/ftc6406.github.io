@@ -69,23 +69,21 @@ Error generating stack: `+a.message+`
             `,children:w},`navbar-link-${$}`))}),z.jsx("div",{className:"hidden lg:flex space-x-16",children:B.map((w,$)=>z.jsx("a",{href:`#${w}`,className:`flex items-center \r
               text-3xl text-nowrap capitalize\r
 \r
-              hover:underline underline-offset-8`,children:w},`navbar-link-${$}`))})]})},Qv=await fetch("aboutUsText.txt").then(x=>x.text()),Zv=()=>z.jsx("div",{className:"relative bg-[url(assets/man_mountain.jpg)] bg-center bg-cover",id:"hero",children:z.jsx("div",{className:`\r
-          place-items-center xl:place-items-start\r
+              hover:underline underline-offset-8`,children:w},`navbar-link-${$}`))})]})},Qv=await fetch("aboutUsText.txt").then(x=>x.text()),Zv=()=>z.jsx("div",{className:"relative bg-[url(assets/hero_placeholder.jpg)] bg-center bg-cover",id:"hero",children:z.jsx("div",{className:`place-items-center xl:place-items-start\r
           backdrop-brightness-70`,children:z.jsxs("div",{className:"flex flex-col",children:[z.jsxs("div",{className:`flex flex-col xl:flex-row gap-8 md:gap-12\r
               place-items-center xl:place-items-start\r
               px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32\r
               py-36 md:py-40 lg:py-44`,children:[z.jsx("div",{className:"shrink-0",children:z.jsx("img",{src:"/assets/logo.svg",className:"w-28 md:w-32 lg:w-36 xl:w-40 2xl:w-44"})}),z.jsxs("div",{className:`grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24\r
-              place-items-center xl:place-items-start`,children:[z.jsx("div",{children:z.jsxs("div",{className:`space-y-4 \r
-                  text-center xl:text-left`,children:[z.jsx("h1",{className:"text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold",children:"First Tech Coyotes"}),z.jsx("h2",{className:"text-3xl lg:text-4xl 2xl:text-5xl",children:"Student engineers"})]})}),z.jsx("div",{className:"col-start-1",children:z.jsx("a",{href:"#join",children:z.jsx("button",{className:`hidden xl:block \r
+              place-items-center xl:place-items-start`,children:[z.jsx("div",{children:z.jsxs("div",{className:`space-y-4\r
+                  text-center xl:text-left`,children:[z.jsx("h1",{className:"text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold",children:"First Tech Coyotes"}),z.jsx("h2",{className:"text-3xl lg:text-4xl 2xl:text-5xl",children:"Student engineers"})]})}),z.jsx("div",{className:"col-start-1",children:z.jsx("a",{href:"#join",children:z.jsx("button",{className:`hidden xl:block\r
                   px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-28 py-4\r
                   outline-5 outline-white\r
                   xl:text-2xl 2xl:text-3xl font-bold\r
                   cursor-pointer\r
                   transition duration-300\r
                   hover:bg-white hover:text-primary hover:outline-none\r
-                  active:bg-white/20 active:text-white/80 active:outline-none`,children:"Join Us"})})}),z.jsx("div",{children:z.jsx("p",{className:`hidden xl:block \r
-                  text-right xl:text-2xl 2xl:text-3xl`,children:Qv})})]})]}),z.jsx("img",{src:"assets/chevron.svg",className:`\r
-              place-self-center\r
+                  active:bg-white/20 active:text-white/80 active:outline-none`,children:"Join Us"})})}),z.jsx("div",{children:z.jsx("p",{className:`hidden xl:block\r
+                  text-right xl:text-2xl 2xl:text-3xl`,children:Qv})})]})]}),z.jsx("img",{src:"assets/chevron.svg",className:`place-self-center\r
               mb-8 md:mb-16\r
               w-24 md:w-28\r
               animate-bounce`})]})})}),Cv=await fetch("aboutUsText.txt").then(x=>x.text()),Vv=()=>z.jsx("div",{className:`block xl:hidden\r
@@ -94,7 +92,7 @@ Error generating stack: `+a.message+`
       bg-white\r
       text-center text-xl md:text-2xl lg:text-3xl`,children:z.jsx("p",{className:"w-lg md:w-xl lg:w-2xl text-black",children:Cv})}),Lv="modulepreload",Kv=function(x){return"/"+x},no={},Jv=function(P,X,m){let B=Promise.resolve();if(X&&X.length>0){let w=function(T){return Promise.all(T.map(U=>Promise.resolve(U).then(ll=>({status:"fulfilled",value:ll}),ll=>({status:"rejected",reason:ll}))))};document.getElementsByTagName("link");const $=document.querySelector("meta[property=csp-nonce]"),N=($==null?void 0:$.nonce)||($==null?void 0:$.getAttribute("nonce"));B=w(X.map(T=>{if(T=Kv(T),T in no)return;no[T]=!0;const U=T.endsWith(".css"),ll=U?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${T}"]${ll}`))return;const J=document.createElement("link");if(J.rel=U?"stylesheet":Lv,U||(J.as="script"),J.crossOrigin="",J.href=T,N&&J.setAttribute("nonce",N),document.head.appendChild(J),U)return new Promise((_l,Ol)=>{J.addEventListener("load",_l),J.addEventListener("error",()=>Ol(new Error(`Unable to preload CSS for ${T}`)))})}))}function Z(w){const $=new Event("vite:preloadError",{cancelable:!0});if($.payload=w,window.dispatchEvent($),!$.defaultPrevented)throw w}return B.then(w=>{for(const $ of w||[])$.status==="rejected"&&Z($.reason);return P().catch(Z)})},wv=()=>{const x=[],P=Object.assign({"/public/assets/gallery/place_holder.jpg":()=>Jv(()=>import("./place_holder-Dx0eSeA4.js"),[])});for(const X in P)x.push(X);return z.jsxs("div",{id:"gallery",className:`w-full\r
         px-28 py-36\r
-        bg-linear-to-r from-[#56AEC8] to-[#345780]`,children:[z.jsx("h1",{className:"text-right text-7xl",children:"Gallery"}),z.jsx("div",{id:"gallery-images",className:"grid-cols-6 gap-8",children:x.map((X,m)=>z.jsx("img",{src:X.substring(X.indexOf("assets/")),className:"max-h-64"},`gallery-${m}`))})]})},Wv=()=>z.jsxs("div",{id:"join",className:"relative",children:[z.jsx("img",{className:`absolute z-1 \r
+        bg-linear-to-r from-accent to-primary`,children:[z.jsx("h1",{className:"text-right text-7xl",children:"Gallery"}),z.jsx("div",{id:"gallery-images",className:"grid-cols-6 gap-8",children:x.map((X,m)=>z.jsx("img",{src:X.substring(X.indexOf("assets/")),className:"max-h-64"},`gallery-${m}`))})]})},Wv=()=>z.jsxs("div",{id:"join",className:"relative",children:[z.jsx("img",{className:`absolute z-1 \r
           left-[calc(50%-40px)] md:left-[calc(50%-60px)] lg:left-[calc(50%-80px)] \r
           w-20 md:w-30 lg:w-40`,src:"/assets/triangle_down.svg"}),z.jsxs("div",{className:`p-8 pt-12 md:p-16 lg:p-32 space-y-8 lg:space-y-12\r
           bg-white text-base md:text-lg lg:text-xl text-black`,children:[z.jsx("h1",{className:"text-3xl md:text-4xl lg:text-5xl",children:"Join Us"}),z.jsxs("div",{className:`grid xl:grid-flow-col xl:grid-cols-2 \r
