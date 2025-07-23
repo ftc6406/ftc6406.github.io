@@ -7,12 +7,15 @@ const ABOUT_US_TEXT = await fetch('aboutUsText.txt').then((res) => res.text());
 const Hero = (): ReactNode => {
   return (
     <div
-      className={`relative bg-[url(${heroImg})] bg-center bg-cover`}
+      className={`relative
+        min-h-dvh
+        bg-[url(${heroImg})] bg-center bg-cover`}
       id="hero"
     >
       {/* Backdrop filter */}
       <div
-        className="place-items-center xl:place-items-start
+        className="min-h-dvh
+          place-items-center xl:place-items-start
           backdrop-brightness-70"
       >
         {/* Content */}
