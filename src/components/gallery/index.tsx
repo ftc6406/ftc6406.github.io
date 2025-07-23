@@ -15,9 +15,17 @@ const Gallery = (): ReactNode => {
         px-20 md:px-24 lg:px-28 py-28 md:py-32 lg:py-36
         bg-linear-to-r from-accent to-primary"
     >
-      <h1 className="text-right text-4xl md:text-6xl lg:text-7xl">Gallery</h1>
+      <h1
+        className="pb-16
+        text-right text-4xl md:text-6xl lg:text-7xl"
+      >
+        Gallery
+      </h1>
 
-      <div id="gallery-images" className="grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 lg:gap-8">
+      <div
+        id="gallery-images"
+        className="grid gap-4 [grid-template-columns:repeat(auto-fill, minmax(120px, 1fr))] [grid-template-rows:masonry]"
+      >
         {imagePaths.map((ele, index) => {
           {
             return (
