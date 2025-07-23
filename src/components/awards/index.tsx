@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import AwardCard from './awardCard';
 
 const GALLERY_PATH = 'assets/gallery';
 
@@ -31,16 +30,7 @@ const Awards = (): ReactNode => {
           gracious donations for allowing us travel so far.
         </p>
 
-        <div className="divide-y-1 divide-white/60">
-          {AWARDS.map(({ year, awards, images }: AwardSeason) => (
-            <AwardCard
-              key={`award-year-${year}`}
-              year={year}
-              awards={awards}
-              images={images}
-            />
-          ))}
-        </div>
+        
       </div>
     </div>
   );
