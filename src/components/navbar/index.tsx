@@ -20,8 +20,8 @@ const Navbar = (): ReactNode => {
   return (
     <div
       id="navbar"
-      className={`fixed w-full px-4 md:px-8 lg:px-16 py-4
-        z-1000 flex justify-between
+      className={`fixed w-full px-4 md:px-8 lg:px-12 xl:px-16 py-2 md:py-4
+        flex justify-between z-1000 
         
         transition duration-1000
         starting:translate-y-[-100%] translate-y-0
@@ -45,7 +45,7 @@ const Navbar = (): ReactNode => {
       {/* Mobile nav menu toggle */}
       <div className="flex lg:hidden items-center">
         <button
-          className="size-7 text-3xl"
+          className="size-7"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="toggle mobile menu"
         >
@@ -55,8 +55,9 @@ const Navbar = (): ReactNode => {
 
       {/* Mobile nav dropdown menu */}
       <div
-        className={`absolute lg:hidden
-          top-full left-0 w-full px-4 divide-y-1 divide-white/60
+        className={`absolute overflow-y-scroll
+          top-full left-0 w-full px-4 pb-2
+          divide-y-1 divide-white/60
 
           transition-all duration-1000 transition-discrete
           starting:bg-transparent
@@ -67,8 +68,9 @@ const Navbar = (): ReactNode => {
           <a
             key={`navbar-link-${index}`}
             href={`#${tabName}`}
-            className={`p-4 flex items-center
-              text-3xl text-nowrap capitalize
+            className={`p-1 sm:p-2 md:p-4
+              flex items-center
+              text-lg sm:text-xl md:text-2xl text-nowrap capitalize
 
               transition-opacity duration-1000 transition-discrete
               starting:opacity-0
@@ -89,7 +91,6 @@ const Navbar = (): ReactNode => {
             href={`#${tabName}`}
             className="flex items-center 
               text-xl xl:text-2xl text-nowrap capitalize
-
               hover:underline underline-offset-8"
           >
             {tabName}
