@@ -1,11 +1,10 @@
 import type { ReactNode } from 'react';
 import '../../index.css';
-import heroImg from '/assets/hero_placeholder.jpg?url';
 
 import AboutUs from './aboutUs';
 
 const ABOUT_US_TEXT = `We are the First Tech Coyotes, a large public school team that participates in the FIRST Tech Challenge.
- As a diverse body of students pursuing STEM, we seek to inspire and teach like-minded youth in robotics.`;
+  As a diverse body of students pursuing STEM, we seek to inspire and teach like-minded youth in robotics.`;
 
 const Hero = (): ReactNode => {
   return (
@@ -13,7 +12,7 @@ const Hero = (): ReactNode => {
       <div
         className={`relative
         min-h-dvh
-        bg-[url(${heroImg})] bg-center bg-cover`}
+        bg-[url(/assets/hero_placeholder.jpg)] bg-center bg-cover`}
         id="hero"
       >
         {/* Backdrop filter */}
