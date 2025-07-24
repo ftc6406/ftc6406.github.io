@@ -39,7 +39,10 @@ const Gallery = (): ReactNode => {
       </h1>
 
       {/* Gallery columns */}
-      <div id="gallery-images" className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-end`}>
+      <div
+        id="gallery-images"
+        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-end`}
+      >
         {/* Create each column */}
         {cols.map((col, colIndex) => {
           return (
