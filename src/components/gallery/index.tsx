@@ -1,13 +1,16 @@
 import type { ReactNode } from 'react';
 
-import "./gallery.css";
+// Retrieves all files in `assets/gallery`.
+const modules = import.meta.glob('/public/assets/gallery/*');
 
 const Gallery = (): ReactNode => {
-  const imagePaths = [];
+  // Extract the filepaths.
+  const imagePaths = Object.keys(modules);
 
-  const modules = import.meta.glob('/public/assets/gallery/*');
-  for (const PATH in modules) {
-    imagePaths.push(PATH);
+  // Separte the images into 3 columns.
+  const cols: string[][] = [];
+  for (let i = 0; i < 3; i++) {
+    cols.push(imagePaths.filter((_, index) => index % 3 === i));
   }
 
   return (
@@ -24,20 +27,25 @@ const Gallery = (): ReactNode => {
         Gallery
       </h1>
 
-      <div
-        id="gallery-images"
-        className="masonry"
-      >
-        {imagePaths.map((ele, index) => {
-          {
-            return (
-              <img
-                key={`gallery-${index}`}
-                src={ele.substring(ele.indexOf('assets/'))}
-                className="max-h-32 md:max-h-48 lg:max-h-64"
-              />
-            );
-          }
+      {/* Gallery columns */}
+      <div id="gallery-images" className="grid grid-cols-3 gap-4">
+        {/* Create each column */}
+        {cols.map((col, colIndex) => {
+          return (
+            // Place images in each column.
+            <div key={`gallery-col-${colIndex}`} className="grid gap-4">
+              {col.map((imagePath, imageIndex) => {
+                {
+                  return (
+                    <img
+                      key={`gallery-${imageIndex}`}
+                      src={imagePath.substring(imagePath.indexOf('assets/'))}
+                    />
+                  );
+                }
+              })}
+            </div>
+          );
         })}
       </div>
     </div>
