@@ -7,10 +7,21 @@ const Gallery = (): ReactNode => {
   // Extract the filepaths.
   const imagePaths = Object.keys(modules);
 
+  console.log(window.innerWidth);
+
+  let num_cols;
+  if (window.innerWidth > 1024) {
+    num_cols = 3;
+  } else if (window.innerWidth > 768) {
+    num_cols = 2;
+  } else {
+    num_cols = 1;
+  }
+
   // Separte the images into 3 columns.
   const cols: string[][] = [];
-  for (let i = 0; i < 3; i++) {
-    cols.push(imagePaths.filter((_, index) => index % 3 === i));
+  for (let i = 0; i < num_cols; i++) {
+    cols.push(imagePaths.filter((_, index) => index % num_cols === i));
   }
 
   return (
@@ -22,13 +33,13 @@ const Gallery = (): ReactNode => {
     >
       <h1
         className="pb-16
-        text-right text-4xl md:text-6xl lg:text-7xl"
+          text-right text-4xl md:text-6xl lg:text-7xl"
       >
         Gallery
       </h1>
 
       {/* Gallery columns */}
-      <div id="gallery-images" className="grid grid-cols-3 gap-4 justify-end">
+      <div id="gallery-images" className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-end`}>
         {/* Create each column */}
         {cols.map((col, colIndex) => {
           return (
