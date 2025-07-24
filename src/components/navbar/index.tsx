@@ -30,7 +30,7 @@ const Navbar = (): ReactNode => {
       `}
     >
       {/* Logo and team name */}
-      <a href="#hero" className="flex space-x-4 items-center">
+      <a href="#hero" className="flex gap-4 items-center">
         <img
           src="assets/logo.svg"
           alt="logo"
@@ -57,7 +57,7 @@ const Navbar = (): ReactNode => {
       <div
         className={`absolute overflow-y-scroll
           top-full left-0 w-full px-4 pb-2
-          divide-y-1 divide-white/60
+          z-1000 divide-y-1 divide-white/60
 
           transition-all duration-1000 transition-discrete
           starting:bg-transparent
@@ -70,7 +70,7 @@ const Navbar = (): ReactNode => {
             href={`#${tabName}`}
             className={`p-1 sm:p-2 md:p-4
               flex items-center
-              text-lg sm:text-xl md:text-2xl text-nowrap capitalize
+              text-base sm:text-lg md:text-xl text-nowrap capitalize
 
               transition-opacity duration-1000 transition-discrete
               starting:opacity-0
@@ -84,7 +84,7 @@ const Navbar = (): ReactNode => {
       </div>
 
       {/* Desktop navbar anchors */}
-      <div className="hidden lg:flex space-x-8">
+      <div className="hidden lg:flex gap-8">
         {TAB_NAMES.map((tabName, index) => (
           <a
             key={`navbar-link-${index}`}

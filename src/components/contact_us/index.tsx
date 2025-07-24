@@ -15,7 +15,7 @@ const ContactUs = (): ReactNode => {
       </div>
 
       <hr className="text-base text-white/60 leading-0" />
-      <div className="flex items-center space-x-4 ">
+      <div className="flex items-center gap-4">
         <img src="/assets/logo.svg" className="w-10 md:w-12 lg:w-14" />
         <p>First Tech Coyotes</p>
       </div>

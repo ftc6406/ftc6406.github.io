@@ -1,8 +1,7 @@
 import type { ReactNode } from 'react';
+import StickyTimeline from './stickyTimeline';
 
-const GALLERY_PATH = 'assets/gallery';
-
-const AWARDS = await fetch('awards.json').then((res) => res.json());
+const AWARD_TIMELINE = await fetch('awards.json').then((res) => res.json());
 interface AwardSeason {
   year: number;
   awards: string[];
@@ -11,7 +10,7 @@ interface AwardSeason {
 
 const Awards = (): ReactNode => {
   return (
-    <div id="awards" className="relative">
+    <section id="awards" className="relative">
       {/* Background*/}
 
       {/* Content */}
@@ -29,13 +28,16 @@ const Awards = (): ReactNode => {
           along on our journey. We would also like to thank Leidos for their
           gracious donations for allowing us travel so far.
         </p>
-
-        
       </div>
-    </div>
+
+      <StickyTimeline
+        awardTimeline={AWARD_TIMELINE}
+      />
+
+      
+    </section>
   );
 };
 
 export default Awards;
-export { GALLERY_PATH };
 export type { AwardSeason };
