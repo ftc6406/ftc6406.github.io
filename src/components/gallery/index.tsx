@@ -29,7 +29,7 @@ const Gallery = (): ReactNode => {
       id="gallery"
       className="w-full
         px-24 md:px-28 lg:px-32 py-28 md:py-32 lg:py-36
-        bg-linear-to-r from-accent to-primary"
+        bg-linear-to-br from-accent to-primary"
     >
       <h1
         className="pb-32
