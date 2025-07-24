@@ -28,7 +28,7 @@ const Gallery = (): ReactNode => {
       </h1>
 
       {/* Gallery columns */}
-      <div id="gallery-images" className="grid grid-cols-3 gap-4">
+      <div id="gallery-images" className="grid grid-cols-3 gap-4 justify-end">
         {/* Create each column */}
         {cols.map((col, colIndex) => {
           return (
@@ -40,6 +40,7 @@ const Gallery = (): ReactNode => {
                     <img
                       key={`gallery-${imageIndex}`}
                       src={imagePath.substring(imagePath.indexOf('assets/'))}
+                      className="size-full object-cover"
                     />
                   );
                 }
