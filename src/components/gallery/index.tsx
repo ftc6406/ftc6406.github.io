@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react';
 
+import "./gallery.css";
+
 const Gallery = (): ReactNode => {
   const imagePaths = [];
 
@@ -24,7 +26,7 @@ const Gallery = (): ReactNode => {
 
       <div
         id="gallery-images"
-        className="grid gap-4 [grid-template-columns:repeat(auto-fill, minmax(120px, 1fr))] [grid-template-rows:masonry]"
+        className="masonry"
       >
         {imagePaths.map((ele, index) => {
           {
