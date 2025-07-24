@@ -32,7 +32,7 @@ const Gallery = (): ReactNode => {
         bg-linear-to-r from-accent to-primary"
     >
       <h1
-        className="pb-16
+        className="pb-32
           text-right text-4xl md:text-6xl lg:text-7xl"
       >
         Gallery
