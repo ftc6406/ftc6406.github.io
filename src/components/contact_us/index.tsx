@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
 
 const ContactUs = (): ReactNode => {
   return (
@@ -21,6 +21,6 @@ const ContactUs = (): ReactNode => {
       </div>
     </footer>
   );
-};
+}
 
 export default ContactUs;
