@@ -7,9 +7,11 @@ const modules = import.meta.glob('/public/assets/gallery/*');
 
 const Gallery = (): ReactNode => {
   // Extract the filepaths.
-  const imagePaths = Object.keys(modules);
+  const imagePaths = Object.keys(modules).map((image) => {
+    return image.replace('/public', '');
+  });
 
-  const responsive = {
+  const RESPONSIVE = {
     superLargeDesktop: {
       breakpoint: { max: 1280, min: 1024 },
       items: 5,
@@ -29,7 +31,7 @@ const Gallery = (): ReactNode => {
   };
 
   let num_cols;
-  if (window.innerWidth > 1024) {
+  if (window.innerWidth > RESPONSIVE.superLargeDesktop.breakpoint.min) {
     num_cols = 6;
   } else {
     num_cols = 4;
@@ -50,7 +52,7 @@ const Gallery = (): ReactNode => {
     >
       <h1
         className="pb-32
-          text-right text-4xl md:text-6xl lg:text-7xl"
+          text-center md:text-right text-5xl md:text-6xl lg:text-8xl"
       >
         Gallery
       </h1>
@@ -69,12 +71,12 @@ const Gallery = (): ReactNode => {
               className={`mt-${colIndex * 10}
                 grid gap-4`}
             >
-              {col.map((imagePath, imageIndex) => {
+              {col.map((image, imageIndex) => {
                 {
                   return (
                     <img
                       key={`gallery-${imageIndex}`}
-                      src={imagePath.substring(imagePath.indexOf('assets/'))}
+                      src={image}
                       className="size-full object-cover"
                     />
                   );
@@ -87,9 +89,13 @@ const Gallery = (): ReactNode => {
 
       {/* Gallery carousel */}
       <div id="gallery-carousel" className="block md:hidden">
-        <Carousel responsive={responsive}>
+        <Carousel
+          responsive={RESPONSIVE}
+          ssr={true} // means to render carousel on server-side.
+          infinite={true}
+        >
           {imagePaths.map((image) => {
-            return <img src={image} />;
+            return <img src={image} className="m-auto" />;
           })}
         </Carousel>
       </div>
