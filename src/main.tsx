@@ -21,4 +21,4 @@ createRoot(document.getElementById('root')!).render(
     <JoinUs />
     <ContactUs />
   </StrictMode>
-);
+); 
