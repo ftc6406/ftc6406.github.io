@@ -98,6 +98,7 @@ const Gallery = (): ReactNode => {
           ssr={true} // means to render carousel on server-side.
           infinite={true}
           autoPlay={true}
+          deviceType={deviceType}
         >
           {images.map((image) => {
             return <img src={image} className="m-auto" />;
