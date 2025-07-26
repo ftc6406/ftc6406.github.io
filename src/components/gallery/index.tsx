@@ -12,7 +12,7 @@ const Gallery = (): ReactNode => {
   const RESPONSIVE = {
     superLargeDesktop: {
       breakpoint: { max: 1536, min: 1280 },
-      numCols: 6,
+      numCols: 4,
       items: 5,
     },
     desktop: {
@@ -22,12 +22,12 @@ const Gallery = (): ReactNode => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 768 },
-      numCols: 4,
+      numCols: 2,
       items: 2,
     },
     mobile: {
       breakpoint: { max: 768, min: 640 },
-      numCols: 4,
+      numCols: 2,
       items: 1,
     },
   };
@@ -41,8 +41,6 @@ const Gallery = (): ReactNode => {
       break;
     }
   }
-
-  console.log(`${deviceType}, ${numCols}`);
 
   // Separte the images into columns.
   const cols: string[][] = [];
