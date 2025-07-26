@@ -29,8 +29,6 @@ const Awards = (): ReactNode => {
           along on our journey. We would also like to thank Leidos for their
           gracious donations for allowing us travel so far.
         </p>
-
-        
       </div>
     </div>
   );

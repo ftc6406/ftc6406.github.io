@@ -3,13 +3,18 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 // Retrieves all files in `assets/gallery`.
-const modules = import.meta.glob('/public/assets/gallery/*');
+// const modules = import.meta.glob('/public/assets/gallery/*');
+
+const GALLERY_PATH = 'assets/gallery';
+const GALLERY = await fetch('gallery.json').then((res) => res.json());
 
 const Gallery = (): ReactNode => {
   // Extract the filepaths.
-  const imagePaths = Object.keys(modules).map((image) => {
-    return image.replace('/public', '');
-  });
+  const images: string[] = GALLERY.images.map(
+    (image: string) => `${GALLERY_PATH}/${image}`
+  );
+
+  console.log(images);
 
   const RESPONSIVE = {
     superLargeDesktop: {
@@ -40,7 +45,7 @@ const Gallery = (): ReactNode => {
   // Separte the images into columns.
   const cols: string[][] = [];
   for (let i = 0; i < num_cols; i++) {
-    cols.push(imagePaths.filter((_, index) => index % num_cols === i));
+    cols.push(images.filter((_, index) => index % num_cols === i));
   }
 
   return (
@@ -94,7 +99,7 @@ const Gallery = (): ReactNode => {
           ssr={true} // means to render carousel on server-side.
           infinite={true}
         >
-          {imagePaths.map((image) => {
+          {images.map((image) => {
             return <img src={image} className="m-auto" />;
           })}
         </Carousel>
