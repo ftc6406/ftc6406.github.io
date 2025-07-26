@@ -1,8 +1,7 @@
 import type { ReactNode } from 'react';
+import StickyTimeline from './stickyTimeline';
 
-const GALLERY_PATH = 'assets/gallery';
-
-const AWARDS = await fetch('awards.json').then((res) => res.json());
+const AWARD_TIMELINE = await fetch('awards.json').then((res) => res.json());
 interface AwardSeason {
   year: number;
   awards: string[];
@@ -11,31 +10,35 @@ interface AwardSeason {
 
 const Awards = (): ReactNode => {
   return (
-    <div id="awards" className="relative">
+    <section id="awards" className="relative 
+        py-12 md:py-16 lg:py-32 space-y-16 lg:space-y-32 bg-secondary"
+    >
       {/* Background*/}
 
       {/* Content */}
-      <div
-        className="p-8 pt-12 md:p-16 lg:p-32 space-y-8 lg:space-y-12
-          bg-secondary text-base md:text-lg lg:text-xl text-white"
+      <div className="px-8 md:px-16 lg:px-32 space-y-8 lg:space-y-12 
+          text-white"
       >
         <h1 className="text-3xl md:text-4xl lg:text-5xl text-center">
           Awards and Recognition
         </h1>
 
-        <p className="text-center text-balance">
+        <p className="text-base md:text-lg lg:text-xl text-center text-balance">
           We would like to recognize our team's tireless efforts in robotic
           innovation by commemorating the successes and accomplishments we made
           along on our journey. We would also like to thank Leidos for their
           gracious donations for allowing us travel so far.
         </p>
-
-        
       </div>
-    </div>
+
+      <StickyTimeline
+        awardTimeline={AWARD_TIMELINE}
+      />
+
+      
+    </section>
   );
 };
 
 export default Awards;
-export { GALLERY_PATH };
 export type { AwardSeason };
