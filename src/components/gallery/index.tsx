@@ -5,7 +5,7 @@ import 'react-multi-carousel/lib/styles.css';
 // Retrieves all files in `assets/gallery`.
 // const modules = import.meta.glob('/public/assets/gallery/*');
 
-const GALLERY_PATH = 'assets/gallery';
+const GALLERY_PATH = '/assets/gallery';
 const GALLERY = await fetch('gallery.json').then((res) => res.json());
 
 const Gallery = (): ReactNode => {
