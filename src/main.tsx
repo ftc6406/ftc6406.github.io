@@ -9,8 +9,6 @@ import JoinUs from './components/join_us';
 import ContactUs from './components/contact_us';
 import Awards from './components/awards';
 
-
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Navbar />
