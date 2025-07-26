@@ -12,33 +12,39 @@ const Gallery = (): ReactNode => {
   const RESPONSIVE = {
     superLargeDesktop: {
       breakpoint: { max: 1280, min: 1024 },
+      numCols: 6,
       items: 5,
     },
     desktop: {
       breakpoint: { max: 1024, min: 768 },
+      numCols: 4,
       items: 3,
     },
     tablet: {
       breakpoint: { max: 768, min: 640 },
+      numCols: 4,
       items: 2,
     },
     mobile: {
       breakpoint: { max: 640, min: 0 },
+      numCols: 4,
       items: 1,
     },
   };
 
-  let num_cols;
-  if (window.innerWidth > RESPONSIVE.superLargeDesktop.breakpoint.min) {
-    num_cols = 6;
-  } else {
-    num_cols = 4;
+  let deviceType;
+  let numCols = -1;
+  for (const [key, value] of Object.entries(RESPONSIVE)) {
+    if (window.innerWidth > value.breakpoint.min) {
+      deviceType = key;
+      numCols = value.numCols;
+    }
   }
 
   // Separte the images into columns.
   const cols: string[][] = [];
-  for (let i = 0; i < num_cols; i++) {
-    cols.push(images.filter((_, index) => index % num_cols === i));
+  for (let i = 0; i < numCols; i++) {
+    cols.push(images.filter((_, index) => index % numCols === i));
   }
 
   return (
@@ -91,6 +97,7 @@ const Gallery = (): ReactNode => {
           responsive={RESPONSIVE}
           ssr={true} // means to render carousel on server-side.
           infinite={true}
+          autoPlay={true}
         >
           {images.map((image) => {
             return <img src={image} className="m-auto" />;
