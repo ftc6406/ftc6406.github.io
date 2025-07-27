@@ -48,11 +48,11 @@ const Hero = (): ReactNode => {
                     className="space-y-4
                       text-center xl:text-left"
                   >
-                    <h1 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
                       First Tech Coyotes
                     </h1>
 
-                    <h2 className="text-3xl lg:text-4xl 2xl:text-5xl">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
                       Student engineers
                     </h2>
                   </div>

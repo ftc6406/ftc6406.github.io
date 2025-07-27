@@ -57,7 +57,7 @@ const Gallery = (): ReactNode => {
     >
       <h1
         className="pb-32
-          text-center lg:text-right text-5xl md:text-6xl lg:text-8xl"
+          text-center lg:text-right text-6xl md:text-7xl lg:text-8xl"
       >
         Gallery
       </h1>
