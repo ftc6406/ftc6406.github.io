@@ -42,7 +42,7 @@ const Gallery = (): ReactNode => {
     }
   }
 
-  // Separte the images into columns.
+  // Separate the images into columns.
   const cols: string[][] = [];
   for (let i = 0; i < numCols; i++) {
     cols.push(images.filter((_, index) => index % numCols === i));
