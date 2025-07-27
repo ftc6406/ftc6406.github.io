@@ -102,7 +102,7 @@ const Gallery = (): ReactNode => {
           deviceType={deviceType}
         >
           {images.map((image) => {
-            return <img src={image} className="m-auto" />;
+            return <img src={image} className="m-auto size-full object-cover" />;
           })}
         </Carousel>
       </div>
