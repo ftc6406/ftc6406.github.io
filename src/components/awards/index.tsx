@@ -1,4 +1,6 @@
 import type { ReactNode } from 'react';
+import Card from './card';
+import YearDivider from './yearDivider';
 
 const Awards = (): ReactNode => {
   return (
@@ -22,14 +24,47 @@ const Awards = (): ReactNode => {
       </div>
 
       {/* Awards timeline */}
-      <div>
-        <span className="flex justify-between items-center">
-          <h2 className="text-4xl">2024</h2>
-          <hr className="w-7/10 text-xl text-black/40" />
-        </span>
-      </div>
+      <div className="space-y-16 text-base sm:text-lg md:text-2xl lg:text-3xl">
+        {/* 2024 year */}
+        <div className="space-y-4">
+          <YearDivider year={2024} />
 
-      
+          <div className="flex gap-4 lg:gap-8">
+            <Card
+              className="flex-1 md:flex-6"
+              src="assets/gallery/placeholder.jpg"
+            >
+              Innovate Award sponsored by RTX 2nd Place
+            </Card>
+
+            <Card
+              className="flex-1 md:flex-4"
+              src="assets/gallery/placeholder.jpg"
+              reverse
+            >
+              Think Award 2nd Place
+            </Card>
+          </div>
+        </div>
+
+        {/* 2023 year */}
+        <div className="space-y-4">
+          <YearDivider year={2023} />
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card src="assets/gallery/placeholder.jpg">Design Award</Card>
+
+            <Card src="assets/gallery/placeholder.jpg" reverse>
+              Motivate Award 2nd Place
+            </Card>
+
+            <Card src="assets/gallery/placeholder.jpg">
+              Think Award 3rd Place
+            </Card>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
