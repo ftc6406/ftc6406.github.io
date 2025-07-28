@@ -9,21 +9,25 @@ const ABOUT_US_TEXT = `We are the First Tech Coyotes, a large public school team
 const Hero = (): ReactNode => {
   return (
     <>
-      <div className="relative min-h-dvh 
+      <div
+        className="relative min-h-dvh
           bg-[url(/assets/hero_placeholder.jpg)] bg-center bg-cover"
         id="hero"
       >
         {/* Backdrop filter */}
-        <div className="min-h-dvh
+        <div
+          className="min-h-dvh
             place-items-center xl:place-items-start
             backdrop-brightness-70"
         >
           {/* Content */}
-          <div className="flex flex-col 
+          <div
+            className="flex flex-col
               transition duration-1000
               starting:opacity-0 opacity-100"
           >
-            <div className="flex flex-col xl:flex-row gap-8 md:gap-12
+            <div
+              className="flex flex-col xl:flex-row gap-8 md:gap-12
                 place-items-center xl:place-items-start
                 px-8 md:px-16 lg:px-24 xl:px-28 2xl:px-32
                 py-36 md:py-40 lg:py-44"
@@ -37,12 +41,14 @@ const Hero = (): ReactNode => {
               </div>
 
               {/* Team name and description */}
-              <div className="grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
+              <div
+                className="grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
                   place-items-center xl:place-items-start"
               >
                 {/* Team Name */}
                 <div>
-                  <div className="space-y-4
+                  <div
+                    className="space-y-4
                       text-center xl:text-left"
                   >
                     <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
@@ -58,7 +64,8 @@ const Hero = (): ReactNode => {
                 {/* "Join Us" button */}
                 <div className="col-start-1">
                   <a href="#join">
-                    <button className="hidden xl:block
+                    <button
+                      className="hidden xl:block
                         px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-28 py-4
                         outline-5 outline-white
                         xl:text-2xl 2xl:text-3xl font-bold
@@ -74,7 +81,8 @@ const Hero = (): ReactNode => {
 
                 {/* "About Us" text */}
                 <div>
-                  <p className="hidden xl:block
+                  <p
+                    className="hidden xl:block
                       text-right xl:text-2xl 2xl:text-3xl"
                   >
                     {ABOUT_US_TEXT}
@@ -87,7 +95,7 @@ const Hero = (): ReactNode => {
             <img
               src="assets/chevron.svg"
               className="place-self-center
-                mb-8 md:mb-16
+                mb-24 md:mb-20
                 w-24 md:w-28
                 animate-bounce"
             />
