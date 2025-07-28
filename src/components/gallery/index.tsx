@@ -4,13 +4,14 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import Masonry from 'react-masonry-css';
+import Card from './card';
 
 // Retrieves all files in `assets/gallery`.
 const modules = import.meta.glob('/public/assets/gallery/*');
 
 const Gallery = (): ReactNode => {
   // Extract the filepaths.
-  const images = Object.keys(modules);
+  const IMAGE_PATHS = Object.keys(modules);
 
   const RESPONSIVE = {
     superLargeDesktop: {
@@ -48,7 +49,7 @@ const Gallery = (): ReactNode => {
   // Separate the images into columns.
   const cols: string[][] = [];
   for (let i = 0; i < numCols; i++) {
-    cols.push(images.filter((_, index) => index % numCols === i));
+    cols.push(IMAGE_PATHS.filter((_, index) => index % numCols === i));
   }
 
   return (
@@ -58,7 +59,7 @@ const Gallery = (): ReactNode => {
         px-24 md:px-28 lg:px-32 py-28 md:py-32 lg:py-36
         bg-linear-to-br from-accent to-primary"
     >
-      <h1 
+      <h1
         className="pb-32
           text-center lg:text-right text-6xl md:text-7xl lg:text-8xl"
       >
@@ -70,12 +71,11 @@ const Gallery = (): ReactNode => {
         className="hidden lg:flex"
         columnClassName=""
       >
-        {images.map((image, index) => {
+        {IMAGE_PATHS.map((imagePath, index) => {
           return (
-            <img
-              key={`gallery-${index}`}
-              src={image}
-            />
+            <div key={`gallery-masonry-${index}`}>
+              <Card imagePath={imagePath} />
+            </div>
           );
         })}
       </Masonry>
@@ -89,7 +89,7 @@ const Gallery = (): ReactNode => {
           autoPlay={true}
           deviceType={deviceType}
         >
-          {images.map((image) => {
+          {IMAGE_PATHS.map((image) => {
             return (
               <img src={image} className="m-auto size-full object-cover" />
             );
