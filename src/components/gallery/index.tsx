@@ -54,11 +54,11 @@ const Gallery = (): ReactNode => {
   return (
     <div
       id="gallery"
-      className="flex w-full
+      className="flex flex-col w-full
         px-24 md:px-28 lg:px-32 py-28 md:py-32 lg:py-36
         bg-linear-to-br from-accent to-primary"
     >
-      <h1
+      <h1 
         className="pb-32
           text-center lg:text-right text-6xl md:text-7xl lg:text-8xl"
       >
@@ -71,11 +71,12 @@ const Gallery = (): ReactNode => {
         columnClassName=""
       >
         {images.map((image, index) => {
-          return <img
-            key={`gallery-${index}`}
-            src={image}
-            className="size-full object-cover"
-          />;
+          return (
+            <img
+              key={`gallery-${index}`}
+              src={image}
+            />
+          );
         })}
       </Masonry>
 
