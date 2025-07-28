@@ -9,8 +9,7 @@ const ABOUT_US_TEXT = `We are the First Tech Coyotes, a large public school team
 const Hero = (): ReactNode => {
   return (
     <>
-      <div
-        className="relative min-h-dvh 
+      <div className="relative min-h-dvh 
           bg-[url(/assets/hero_placeholder.jpg)] bg-center bg-cover"
         id="hero"
       >
@@ -38,8 +37,7 @@ const Hero = (): ReactNode => {
               </div>
 
               {/* Team name and description */}
-              <div
-                className="grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
+              <div className="grid xl:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24
                   place-items-center xl:place-items-start"
               >
                 {/* Team Name */}
