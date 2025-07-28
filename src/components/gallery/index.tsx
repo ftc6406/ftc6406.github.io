@@ -1,6 +1,9 @@
 import type { ReactNode } from 'react';
+
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+
+import Masonry from 'react-masonry-css';
 
 // Retrieves all files in `assets/gallery`.
 const modules = import.meta.glob('/public/assets/gallery/*');
@@ -62,35 +65,19 @@ const Gallery = (): ReactNode => {
         Gallery
       </h1>
 
-      {/* Gallery masonry */}
-      <div
-        id="gallery-masonry"
-        className={`hidden lg:grid grid-cols-${numCols} gap-4`}
+      <Masonry
+        breakpointCols={numCols}
+        className="hidden lg:block"
+        columnClassName=""
       >
-        {/* Create each column */}
-        {cols.map((col, colIndex) => {
-          return (
-            // Place images in each column.
-            <div
-              key={`gallery-col-${colIndex}`}
-              className={`mt-${colIndex * 10}
-                grid gap-4`}
-            >
-              {col.map((image, imageIndex) => {
-                {
-                  return (
-                    <img
-                      key={`gallery-${imageIndex}`}
-                      src={image}
-                      className="size-full object-cover"
-                    />
-                  );
-                }
-              })}
-            </div>
-          );
+        {images.map((image, index) => {
+          return <img
+            key={`gallery-${index}`}
+            src={image}
+            className="size-full object-cover"
+          />;
         })}
-      </div>
+      </Masonry>
 
       {/* Gallery carousel */}
       <div id="gallery-carousel" className="block lg:hidden">
@@ -102,7 +89,9 @@ const Gallery = (): ReactNode => {
           deviceType={deviceType}
         >
           {images.map((image) => {
-            return <img src={image} className="m-auto size-full object-cover" />;
+            return (
+              <img src={image} className="m-auto size-full object-cover" />
+            );
           })}
         </Carousel>
       </div>
