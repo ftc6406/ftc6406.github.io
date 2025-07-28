@@ -59,7 +59,7 @@ const Navbar = (): ReactNode => {
           top-full left-0 w-full px-4 pb-2
           z-1000 divide-y-1 divide-white/60
 
-          transition-all duration-1000 transition-discrete
+          transition duration-1000 transition-discrete
           starting:bg-transparent
           ${isOpen ? 'bg-stone-900' : 'hidden bg-transparent'}
         `}
@@ -68,8 +68,7 @@ const Navbar = (): ReactNode => {
           <a
             key={`navbar-link-${index}`}
             href={`#${tabName}`}
-            className={`p-1 sm:p-2 md:p-4
-              flex items-center
+            className={`p-1 sm:p-2 md:p-4 flex items-center
               text-base sm:text-lg md:text-xl text-nowrap capitalize
 
               transition-opacity duration-1000 transition-discrete

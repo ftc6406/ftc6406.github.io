@@ -1,24 +1,14 @@
 import type { ReactNode } from 'react';
-import StickyTimeline from './stickyTimeline';
-
-const AWARD_TIMELINE = await fetch('awards.json').then((res) => res.json());
-interface AwardSeason {
-  year: number;
-  awards: string[];
-  images: string[];
-}
 
 const Awards = (): ReactNode => {
   return (
-    <section id="awards" className="relative 
-        py-12 md:py-16 lg:py-32 space-y-16 lg:space-y-32 bg-secondary"
+    <section
+      id="awards"
+      className="p-8 pt-12 md:p-16 lg:p-32 space-y-16 lg:space-y-20
+        bg-[#f5f5f5] text-black"
     >
-      {/* Background*/}
-
-      {/* Content */}
-      <div className="px-8 md:px-16 lg:px-32 space-y-8 lg:space-y-12 
-          text-white"
-      >
+      {/* Awards introduction */}
+      <div className="space-y-8">
         <h1 className="text-3xl md:text-4xl lg:text-5xl text-center">
           Awards and Recognition
         </h1>
@@ -31,14 +21,15 @@ const Awards = (): ReactNode => {
         </p>
       </div>
 
-      <StickyTimeline
-        awardTimeline={AWARD_TIMELINE}
-      />
-
-      
+      {/* Awards timeline */}
+      <div>
+        <span className="flex">
+          <h2>2024</h2>
+          <hr className="w-6/10" />
+        </span>
+      </div>
     </section>
   );
 };
 
 export default Awards;
-export type { AwardSeason };
