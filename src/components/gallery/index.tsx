@@ -42,7 +42,7 @@ const Gallery = (): ReactNode => {
     }
   }
 
-  // Separte the images into columns.
+  // Separate the images into columns.
   const cols: string[][] = [];
   for (let i = 0; i < numCols; i++) {
     cols.push(images.filter((_, index) => index % numCols === i));
@@ -57,7 +57,7 @@ const Gallery = (): ReactNode => {
     >
       <h1
         className="pb-32
-          text-center md:text-right text-5xl md:text-6xl lg:text-8xl"
+          text-center lg:text-right text-6xl md:text-7xl lg:text-8xl"
       >
         Gallery
       </h1>
@@ -65,7 +65,7 @@ const Gallery = (): ReactNode => {
       {/* Gallery masonry */}
       <div
         id="gallery-masonry"
-        className="hidden md:grid md:grid-cols-4 lg:grid-cols-6 gap-4"
+        className={`hidden lg:grid grid-cols-${numCols} gap-4`}
       >
         {/* Create each column */}
         {cols.map((col, colIndex) => {
@@ -93,7 +93,7 @@ const Gallery = (): ReactNode => {
       </div>
 
       {/* Gallery carousel */}
-      <div id="gallery-carousel" className="block md:hidden">
+      <div id="gallery-carousel" className="block lg:hidden">
         <Carousel
           responsive={RESPONSIVE}
           ssr={true} // means to render carousel on server-side.
@@ -102,7 +102,7 @@ const Gallery = (): ReactNode => {
           deviceType={deviceType}
         >
           {images.map((image) => {
-            return <img src={image} className="m-auto" />;
+            return <img src={image} className="m-auto size-full object-cover" />;
           })}
         </Carousel>
       </div>
