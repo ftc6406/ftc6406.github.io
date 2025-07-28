@@ -7,35 +7,34 @@ import Masonry from 'react-masonry-css';
 import Card from './card';
 
 // Retrieves all files in `assets/gallery`.
-const modules = import.meta.glob('/public/assets/gallery/*');
+const MODULES = import.meta.glob('/public/assets/gallery/*');
+// Extract the filepaths.
+const IMAGE_PATHS = Object.keys(MODULES);
+
+const RESPONSIVE = {
+  superLargeDesktop: {
+    breakpoint: { max: 1536, min: 1280 },
+    numCols: 4,
+    items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 1280, min: 1024 },
+    numCols: 4,
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 768 },
+    numCols: 2,
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 768, min: 640 },
+    numCols: 2,
+    items: 1,
+  },
+};
 
 const Gallery = (): ReactNode => {
-  // Extract the filepaths.
-  const IMAGE_PATHS = Object.keys(modules);
-
-  const RESPONSIVE = {
-    superLargeDesktop: {
-      breakpoint: { max: 1536, min: 1280 },
-      numCols: 4,
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 1280, min: 1024 },
-      numCols: 4,
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 768 },
-      numCols: 2,
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 768, min: 640 },
-      numCols: 2,
-      items: 1,
-    },
-  };
-
   let deviceType;
   let numCols = RESPONSIVE.mobile.numCols;
   for (const [key, value] of Object.entries(RESPONSIVE)) {
@@ -44,12 +43,6 @@ const Gallery = (): ReactNode => {
       numCols = value.numCols;
       break;
     }
-  }
-
-  // Separate the images into columns.
-  const cols: string[][] = [];
-  for (let i = 0; i < numCols; i++) {
-    cols.push(IMAGE_PATHS.filter((_, index) => index % numCols === i));
   }
 
   return (
