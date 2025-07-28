@@ -23,11 +23,13 @@ const Awards = (): ReactNode => {
 
       {/* Awards timeline */}
       <div>
-        <span className="flex">
-          <h2>2024</h2>
-          <hr className="w-6/10" />
+        <span className="flex justify-between items-center">
+          <h2 className="text-4xl">2024</h2>
+          <hr className="w-7/10 text-xl text-black/40" />
         </span>
       </div>
+
+      
     </section>
   );
 };
