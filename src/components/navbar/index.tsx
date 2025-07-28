@@ -20,7 +20,7 @@ const Navbar = (): ReactNode => {
   return (
     <div
       id="navbar"
-      className={`fixed w-full px-4 md:px-8 lg:px-12 xl:px-16 py-2 md:py-4
+      className={`fixed w-full px-4 md:px-8 lg:px-12 xl:px-16 py-2 md:py-3
         flex justify-between z-1000 
         
         transition duration-1000
@@ -34,10 +34,10 @@ const Navbar = (): ReactNode => {
         <img
           src="assets/logo.svg"
           alt="logo"
-          className="w-10 md:w-12 lg:w-14"
+          className="w-8"
         />
 
-        <h2 className="text-xl md:text-3xl lg:text-4xl font-bold">
+        <h2 className="text-lg md:text-xl lg:text-2xl font-bold">
           First Tech Coyotes
         </h2>
       </a>
@@ -59,7 +59,7 @@ const Navbar = (): ReactNode => {
           top-full left-0 w-full px-4 pb-2
           z-1000 divide-y-1 divide-white/60
 
-          transition-all duration-1000 transition-discrete
+          transition duration-1000 transition-discrete
           starting:bg-transparent
           ${isOpen ? 'bg-stone-900' : 'hidden bg-transparent'}
         `}
@@ -68,8 +68,7 @@ const Navbar = (): ReactNode => {
           <a
             key={`navbar-link-${index}`}
             href={`#${tabName}`}
-            className={`p-1 sm:p-2 md:p-4
-              flex items-center
+            className={`p-1 sm:p-2 md:p-4 flex items-center
               text-base sm:text-lg md:text-xl text-nowrap capitalize
 
               transition-opacity duration-1000 transition-discrete
@@ -90,7 +89,7 @@ const Navbar = (): ReactNode => {
             key={`navbar-link-${index}`}
             href={`#${tabName}`}
             className="flex items-center 
-              text-xl xl:text-2xl text-nowrap capitalize
+              text-base lg:text-lg text-nowrap capitalize
               hover:underline underline-offset-8"
           >
             {tabName}

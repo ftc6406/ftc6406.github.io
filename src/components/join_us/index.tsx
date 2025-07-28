@@ -4,24 +4,21 @@ const JoinUs = (): ReactNode => {
   return (
     <section id="join" className="relative">
       {/* Background*/}
-      <img
-        className="absolute z-1
-          -top-1 xs:top-0
+      <img className="absolute z-1
+          -top-1 md:top-0
           left-[calc(50%-40px)] md:left-[calc(50%-60px)] lg:left-[calc(50%-80px)] 
           w-20 md:w-30 lg:w-40"
         src="/assets/triangle_down.svg"
       />
 
       {/* Content */}
-      <div
-        className="p-8 pt-12 md:p-16 lg:p-32 space-y-8 lg:space-y-12
+      <div className="p-8 pt-12 md:p-16 lg:p-32 space-y-8 lg:space-y-12
           bg-white text-base md:text-lg lg:text-xl text-black"
       >
         <h1 className="text-3xl md:text-4xl lg:text-5xl">Join Us</h1>
 
         {/* Team information */}
-        <div
-          className="grid xl:grid-flow-col xl:grid-cols-2 
+        <div className="grid xl:grid-flow-col xl:grid-cols-2 
             gap-8 xl:gap-32"
         >
           {/* Team overview */}
@@ -57,8 +54,7 @@ const JoinUs = (): ReactNode => {
 
         {/* Join button */}
         <div className="flex justify-center xs:justify-start">
-          <button
-            className="px-6 py-2 outline-4 outline-primary 
+          <button className="px-6 py-2 outline-4 outline-primary 
               text-primary font-medium cursor-pointer
               transition duration-300
               hover:bg-primary hover:text-white

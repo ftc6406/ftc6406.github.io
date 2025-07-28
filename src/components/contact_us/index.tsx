@@ -5,7 +5,7 @@ const ContactUs = (): ReactNode => {
     <footer
       id="contact"
       className="p-8 md:p-16 lg:p-32 space-y-12
-        bg-stone-900 text-base md:text-lg lg:text-xl"
+        bg-stone-900 text-base md:text-lg lg:text-xl text-white"
     >
       <h1 className="text-3xl md:text-4xl lg:text-5xl">Contact Us</h1>
 
