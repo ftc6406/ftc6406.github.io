@@ -54,7 +54,7 @@ const Gallery = (): ReactNode => {
   return (
     <div
       id="gallery"
-      className="w-full
+      className="flex w-full
         px-24 md:px-28 lg:px-32 py-28 md:py-32 lg:py-36
         bg-linear-to-br from-accent to-primary"
     >
@@ -67,7 +67,7 @@ const Gallery = (): ReactNode => {
 
       <Masonry
         breakpointCols={numCols}
-        className="hidden lg:block"
+        className="hidden lg:flex"
         columnClassName=""
       >
         {images.map((image, index) => {
