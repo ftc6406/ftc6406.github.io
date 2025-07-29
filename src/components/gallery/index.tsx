@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { Fragment, type ReactNode } from 'react';
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -66,9 +66,9 @@ const Gallery = (): ReactNode => {
       >
         {IMAGE_PATHS.map((imagePath, index) => {
           return (
-            <div key={`gallery-masonry-${index}`}>
-              <Card imagePath={imagePath} />
-            </div>
+            <Fragment key={`gallery-masonry-${index}`}>
+              <Card imagePath={imagePath} title="Hello world!" body="Lorem ipsum" />
+            </Fragment>
           );
         })}
       </Masonry>

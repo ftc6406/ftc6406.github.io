@@ -1,9 +1,19 @@
 import type { ReactNode } from 'react';
 
-const Card = ({ imagePath }: { imagePath: string }): ReactNode => {
+const Card = ({
+  imagePath,
+  title,
+  body,
+}: {
+  imagePath: string;
+  title?: string;
+  body?: string;
+}): ReactNode => {
   return (
-    <div className="size-full object-cover bg-white">
+    <div className="flex">
       <img src={imagePath} />
+      <div className="absolute">{title}</div>
+      <div className="absolute">{body}</div>
     </div>
   );
 };
