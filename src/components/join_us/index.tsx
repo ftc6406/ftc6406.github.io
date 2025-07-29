@@ -4,10 +4,9 @@ const JoinUs = (): ReactNode => {
   return (
     <section id="join" className="relative">
       {/* Background*/}
-      <img className="absolute z-1
-          -top-1 md:top-0
+      <img className="absolute z-1 -top-1 md:top-0
           left-[calc(50%-40px)] md:left-[calc(50%-60px)] lg:left-[calc(50%-80px)] 
-          w-20 md:w-30 lg:w-40"
+          w-20 md:w-30 lg:w-40 bg-white"
         src="/assets/triangle_down.svg"
       />
 
