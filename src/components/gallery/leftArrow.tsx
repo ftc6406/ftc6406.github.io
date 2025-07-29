@@ -4,7 +4,11 @@ const LeftArrow = ({ onClick, ...rest }) => {
     carouselState: { currentSlide, deviceType },
   } = rest;
   // onMove means if dragging or swiping in progress.
-  return <button onClick={() => onClick()} />;
+  return (
+    <button onClick={() => onClick()}>
+      <img src="/assets/leftArrow.svg" />
+    </button>
+  );
 };
 
 export default LeftArrow;

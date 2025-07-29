@@ -78,7 +78,6 @@ const Gallery = (): ReactNode => {
         <Carousel
           responsive={RESPONSIVE}
           ssr={true} // means to render carousel on server-side.
-          infinite={true}
           autoPlay={true}
           deviceType={deviceType}
         >
