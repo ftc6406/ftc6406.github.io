@@ -67,7 +67,11 @@ const Gallery = (): ReactNode => {
         {IMAGE_PATHS.map((imagePath, index) => {
           return (
             <Fragment key={`gallery-masonry-${index}`}>
-              <Card imagePath={imagePath} title="Hello world!" body="Lorem ipsum" />
+              <Card
+                imagePath={imagePath}
+                title="Hello world!"
+                body="Lorem ipsum dolor sit amet"
+              />
             </Fragment>
           );
         })}
@@ -77,7 +81,7 @@ const Gallery = (): ReactNode => {
       <div id="gallery-carousel" className="block lg:hidden">
         <Carousel
           responsive={RESPONSIVE}
-          ssr={true} // means to render carousel on server-side.
+          ssr={true} // render carousel on server-side.
           autoPlay={true}
           deviceType={deviceType}
         >
