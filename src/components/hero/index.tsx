@@ -95,7 +95,7 @@ const Hero = (): ReactNode => {
             <img
               src="assets/chevron.svg"
               className="place-self-center
-                mb-24 md:mb-20
+                mb-16 md:mb-20
                 w-24 md:w-28
                 animate-bounce"
             />
@@ -103,6 +103,7 @@ const Hero = (): ReactNode => {
         </div>
       </div>
 
+      {/* The About Us text for mobile users */}
       <AboutUs aboutUsText={ABOUT_US_TEXT} />
     </>
   );
