@@ -108,6 +108,7 @@ const Hero = (): ReactNode => {
         </div>
       </div>
 
+      {/* The About Us text for mobile users */}
       <AboutUs aboutUsText={ABOUT_US_TEXT} />
     </>
   );
