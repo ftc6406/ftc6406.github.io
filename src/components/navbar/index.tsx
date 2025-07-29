@@ -55,8 +55,7 @@ const Navbar = (): ReactNode => {
 
       {/* Mobile nav dropdown menu */}
       <div
-        className={`absolute overflow-y-scroll
-          top-full left-0 w-full px-4 pb-2
+        className={`absolute top-full left-0 w-full px-4 pb-2
           z-1000 divide-y-1 divide-white/60
 
           transition duration-1000 transition-discrete
