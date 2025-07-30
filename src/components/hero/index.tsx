@@ -4,10 +4,13 @@ import '../../index.css';
 import AboutUs from './aboutUs';
 import { Typewriter } from 'react-simple-typewriter';
 
-const ABOUT_US_TEXT = `We are the First Tech Coyotes, a large public school
-  team that participates in the FIRST Tech Challenge. As a diverse body of
-  students pursuing STEM, we seek to inspire and teach like-minded youth in
-  robotics.`;
+const ABOUT_US_TEXT = (
+  <span>
+    We are the First Tech Coyotes, a large public school team that participates
+    in the <em>FIRST®</em> Tech Challenge. As a diverse body of students
+    pursuing STEM, we seek to inspire and teach like-minded youth in robotics.
+  </span>
+);
 
 const Hero = (): ReactNode => {
   return (
