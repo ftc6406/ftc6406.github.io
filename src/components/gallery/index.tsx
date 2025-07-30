@@ -62,7 +62,7 @@ const Gallery = (): ReactNode => {
     <div
       id="gallery"
       className="flex flex-col w-full
-        py-28 md:py-32 lg:py-36
+        p-8 pt-12 md:p-16 lg:p-32
         bg-linear-to-br from-accent to-primary"
     >
       <h1
