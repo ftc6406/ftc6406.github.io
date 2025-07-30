@@ -15,17 +15,17 @@ const RESPONSIVE = {
   superLargeDesktop: {
     breakpoint: { max: 1536, min: 1280 },
     numCols: 4,
-    items: 5,
+    items: 1,
   },
   desktop: {
     breakpoint: { max: 1280, min: 1024 },
     numCols: 4,
-    items: 3,
+    items: 1,
   },
   tablet: {
     breakpoint: { max: 1024, min: 768 },
     numCols: 2,
-    items: 2,
+    items: 1,
   },
   mobile: {
     breakpoint: { max: 768, min: 640 },
@@ -47,7 +47,7 @@ const Gallery = (): ReactNode => {
 
   const cards = IMAGE_PATHS.map((imagePath, index) => {
     return (
-      <div key={`gallery-masonry-${index}`}>
+      <div key={`gallery-masonry-${index}`} className="content-center">
         <Card
           imagePath={imagePath}
           title="Hello world!"
@@ -63,7 +63,7 @@ const Gallery = (): ReactNode => {
       id="gallery"
       className="flex flex-col w-full
         p-8 pt-12 md:p-16 lg:p-32
-        bg-linear-to-br from-accent to-primary"
+        bg-linear-to-b lg:bg-linear-to-br from-accent to-primary"
     >
       <h1
         className="mr-0 lg:mr-32 mb-32
@@ -76,13 +76,12 @@ const Gallery = (): ReactNode => {
         breakpointCols={numCols}
         className="hidden lg:flex w-auto -ml-4"
         columnClassName="pl-4 space-y-4"
-        
       >
         {cards}
       </Masonry>
 
       {/* Gallery carousel */}
-      <div id="gallery-carousel" className="block lg:hidden">
+      <div id="gallery-carousel" className="flex">
         <Carousel
           responsive={RESPONSIVE}
           swipeable={true}
