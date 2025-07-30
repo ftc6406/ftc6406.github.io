@@ -47,7 +47,7 @@ const Gallery = (): ReactNode => {
 
   const cards = IMAGE_PATHS.map((imagePath, index) => {
     return (
-      <div key={`gallery-masonry-${index}`} className="content-center">
+      <div key={`gallery-masonry-${index}`}>
         <Card
           imagePath={imagePath}
           title="Hello world!"

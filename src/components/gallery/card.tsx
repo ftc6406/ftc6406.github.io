@@ -12,7 +12,7 @@ const Card = ({
   background?: boolean;
 }): ReactNode => {
   return (
-    <div className={`flex ${background ? 'flex-col' : ''} content-center`}>
+    <div className={`flex ${background ? 'flex-col' : ''}`}>
       <img src={imagePath} />
 
       <div
