@@ -47,7 +47,10 @@ const Gallery = (): ReactNode => {
 
   const cards = IMAGE_PATHS.map((imagePath, index) => {
     return (
-      <div key={`gallery-masonry-${index}`} className='ml-auto mr-auto flex justify-center'>
+      <div
+        key={`gallery-masonry-${index}`}
+        className="ml-auto mr-auto flex justify-center"
+      >
         <Card
           imagePath={imagePath}
           title="Hello world!"
@@ -82,13 +85,17 @@ const Gallery = (): ReactNode => {
       </Masonry>
 
       {/* Gallery carousel */}
-      <div id="gallery-carousel">
+      <div id="gallery-carousel" className="width-auto">
         <Carousel
           responsive={RESPONSIVE}
           swipeable={true}
+          keyBoardControl={true}
+          infinite={true}
           ssr={true} // render carousel on server-side.
           autoPlay={true}
           deviceType={deviceType}
+          containerClass="w-full"
+          itemClass='w-auto'
         >
           {cards}
         </Carousel>
