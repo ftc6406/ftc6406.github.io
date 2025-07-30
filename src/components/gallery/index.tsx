@@ -45,6 +45,18 @@ const Gallery = (): ReactNode => {
     }
   }
 
+  const cards = IMAGE_PATHS.map((imagePath, index) => {
+    return (
+      <Fragment key={`gallery-masonry-${index}`}>
+        <Card
+          imagePath={imagePath}
+          title="Hello world!"
+          body="Lorem ipsum dolor sit amet"
+        />
+      </Fragment>
+    );
+  });
+
   return (
     <div
       id="gallery"
@@ -53,7 +65,7 @@ const Gallery = (): ReactNode => {
         bg-linear-to-br from-accent to-primary"
     >
       <h1
-        className="mr-24 md:mr-28 lg:mr-32 mb-32
+        className="mr-0 md:mr-28 lg:mr-32 mb-32
           text-center lg:text-right text-6xl md:text-7xl lg:text-8xl"
       >
         Gallery
@@ -64,32 +76,19 @@ const Gallery = (): ReactNode => {
         className="hidden lg:flex"
         columnClassName=""
       >
-        {IMAGE_PATHS.map((imagePath, index) => {
-          return (
-            <Fragment key={`gallery-masonry-${index}`}>
-              <Card
-                imagePath={imagePath}
-                title="Hello world!"
-                body="Lorem ipsum dolor sit amet"
-              />
-            </Fragment>
-          );
-        })}
+        {cards}
       </Masonry>
 
       {/* Gallery carousel */}
       <div id="gallery-carousel" className="block lg:hidden">
         <Carousel
           responsive={RESPONSIVE}
+          swipeable={true}
           ssr={true} // render carousel on server-side.
           autoPlay={true}
           deviceType={deviceType}
         >
-          {IMAGE_PATHS.map((image) => {
-            return (
-              <img src={image} className="m-auto size-full object-cover" />
-            );
-          })}
+          {cards}
         </Carousel>
       </div>
     </div>
