@@ -47,7 +47,7 @@ const Gallery = (): ReactNode => {
 
   const cards = IMAGE_PATHS.map((imagePath, index) => {
     return (
-      <div key={`gallery-masonry-${index}`}>
+      <div key={`gallery-masonry-${index}`} className='ml-auto mr-auto flex justify-center'>
         <Card
           imagePath={imagePath}
           title="Hello world!"
@@ -58,6 +58,7 @@ const Gallery = (): ReactNode => {
     );
   });
 
+  console.log(cards);
   return (
     <div
       id="gallery"
@@ -81,7 +82,7 @@ const Gallery = (): ReactNode => {
       </Masonry>
 
       {/* Gallery carousel */}
-      <div id="gallery-carousel" className="flex">
+      <div id="gallery-carousel">
         <Carousel
           responsive={RESPONSIVE}
           swipeable={true}
