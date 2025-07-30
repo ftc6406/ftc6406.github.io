@@ -47,13 +47,14 @@ const Gallery = (): ReactNode => {
 
   const cards = IMAGE_PATHS.map((imagePath, index) => {
     return (
-      <Fragment key={`gallery-masonry-${index}`}>
+      <div key={`gallery-masonry-${index}`} className='m-4'>
         <Card
           imagePath={imagePath}
           title="Hello world!"
           body="Lorem ipsum dolor sit amet"
+          background={true}
         />
-      </Fragment>
+      </div>
     );
   });
 
@@ -75,6 +76,7 @@ const Gallery = (): ReactNode => {
         breakpointCols={numCols}
         className="hidden lg:flex"
         columnClassName=""
+        
       >
         {cards}
       </Masonry>

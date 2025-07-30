@@ -12,13 +12,11 @@ const Card = ({
   background?: boolean;
 }): ReactNode => {
   return (
-    <div className="flex">
+    <div className={`flex ${background ? 'flex-col' : ''}`}>
       <img src={imagePath} />
 
       <div
-        className={`absolute self-end p-4 ${
-          background ? 'bg-stone-900' : ''
-        }`}
+        className={`${background ? 'bg-stone-900' : 'absolute self-end'} px-4 py-8`}
       >
         <p className="opacity-80 text-xl font-bold">{title}</p>
         <p className="text-3xl">{body}</p>
