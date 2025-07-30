@@ -1,9 +1,26 @@
 import type { ReactNode } from 'react';
 
-const Card = ({ imagePath }: { imagePath: string }): ReactNode => {
+const Card = ({
+  imagePath,
+  title,
+  body,
+  background,
+}: {
+  imagePath: string;
+  title?: string;
+  body?: string;
+  background?: boolean;
+}): ReactNode => {
   return (
-    <div className="size-full object-cover bg-white">
+    <div className={`flex ${background ? 'flex-col' : ''}`}>
       <img src={imagePath} />
+
+      <div
+        className={`${background ? 'bg-stone-900' : 'absolute self-end'} px-4 py-8`}
+      >
+        <p className="opacity-80 text-xl font-bold">{title}</p>
+        <p className="text-3xl">{body}</p>
+      </div>
     </div>
   );
 };

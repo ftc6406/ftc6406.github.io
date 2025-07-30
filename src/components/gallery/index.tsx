@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -45,15 +45,28 @@ const Gallery = (): ReactNode => {
     }
   }
 
+  const cards = IMAGE_PATHS.map((imagePath, index) => {
+    return (
+      <div key={`gallery-masonry-${index}`}>
+        <Card
+          imagePath={imagePath}
+          title="Hello world!"
+          body="Lorem ipsum dolor sit amet"
+          background={true}
+        />
+      </div>
+    );
+  });
+
   return (
     <div
       id="gallery"
       className="flex flex-col w-full
-        px-24 md:px-28 lg:px-32 py-28 md:py-32 lg:py-36
+        p-8 pt-12 md:p-16 lg:p-32
         bg-linear-to-br from-accent to-primary"
     >
       <h1
-        className="pb-32
+        className="mr-0 lg:mr-32 mb-32
           text-center lg:text-right text-6xl md:text-7xl lg:text-8xl"
       >
         Gallery
@@ -61,32 +74,23 @@ const Gallery = (): ReactNode => {
 
       <Masonry
         breakpointCols={numCols}
-        className="hidden lg:flex"
-        columnClassName=""
+        className="hidden lg:flex w-auto -ml-4"
+        columnClassName="pl-4 space-y-4"
+        
       >
-        {IMAGE_PATHS.map((imagePath, index) => {
-          return (
-            <div key={`gallery-masonry-${index}`}>
-              <Card imagePath={imagePath} />
-            </div>
-          );
-        })}
+        {cards}
       </Masonry>
 
       {/* Gallery carousel */}
       <div id="gallery-carousel" className="block lg:hidden">
         <Carousel
           responsive={RESPONSIVE}
-          ssr={true} // means to render carousel on server-side.
-          infinite={true}
+          swipeable={true}
+          ssr={true} // render carousel on server-side.
           autoPlay={true}
           deviceType={deviceType}
         >
-          {IMAGE_PATHS.map((image) => {
-            return (
-              <img src={image} className="m-auto size-full object-cover" />
-            );
-          })}
+          {cards}
         </Carousel>
       </div>
     </div>
