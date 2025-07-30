@@ -1,4 +1,4 @@
-import { Fragment, type ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -47,7 +47,7 @@ const Gallery = (): ReactNode => {
 
   const cards = IMAGE_PATHS.map((imagePath, index) => {
     return (
-      <div key={`gallery-masonry-${index}`} className='m-4'>
+      <div key={`gallery-masonry-${index}`}>
         <Card
           imagePath={imagePath}
           title="Hello world!"
@@ -66,7 +66,7 @@ const Gallery = (): ReactNode => {
         bg-linear-to-br from-accent to-primary"
     >
       <h1
-        className="mr-0 md:mr-28 lg:mr-32 mb-32
+        className="mr-0 lg:mr-32 mb-32
           text-center lg:text-right text-6xl md:text-7xl lg:text-8xl"
       >
         Gallery
@@ -74,8 +74,8 @@ const Gallery = (): ReactNode => {
 
       <Masonry
         breakpointCols={numCols}
-        className="hidden lg:flex"
-        columnClassName=""
+        className="hidden lg:flex w-auto -ml-4"
+        columnClassName="pl-4 space-y-4"
         
       >
         {cards}
