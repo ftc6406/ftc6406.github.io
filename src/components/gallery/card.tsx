@@ -13,7 +13,7 @@ const Card = ({
 }): ReactNode => {
   return (
     <div className={`relative flex ${background ? 'flex-col' : ''}`}>
-      <img src={imagePath} className="aspect-3/2 object-cover" />
+      <img src={imagePath} className="aspect-3/2 lg:aspect-auto object-cover" />
 
       <div
         className={`${
