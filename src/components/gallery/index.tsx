@@ -61,7 +61,6 @@ const Gallery = (): ReactNode => {
     );
   });
 
-  console.log(cards);
   return (
     <div
       id="gallery"
