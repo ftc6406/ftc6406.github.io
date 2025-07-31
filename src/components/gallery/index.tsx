@@ -94,8 +94,8 @@ const Gallery = (): ReactNode => {
           ssr={true} // render carousel on server-side.
           autoPlay={true}
           deviceType={deviceType}
-          containerClass="size-full h-full object-cover"
-          itemClass='size-full h-full object-cover'
+          containerClass="size-full object-cover"
+          itemClass='size-full object-cover'
         >
           {cards}
         </Carousel>
