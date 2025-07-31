@@ -64,15 +64,18 @@ const Gallery = (): ReactNode => {
   return (
     <div
       id="gallery"
-      className="section flex flex-col w-full
+      className="section flex flex-col w-full gap-24
         bg-linear-to-b lg:bg-linear-to-br from-accent to-primary"
     >
-      <h1
-        className="section-header mr-0 lg:mr-32 mb-32
-          text-center lg:text-right"
+      <div
+        className="section-header
+          flex flex-col gap-12
+          items-center"
       >
-        Gallery
-      </h1>
+        <hr className="w-2/3 text-white/80" />
+        <h1 className="uppercase">GALLERY</h1>
+        <hr className="w-2/3 text-white/80" />
+      </div>
 
       <Masonry
         breakpointCols={numCols}
@@ -83,7 +86,10 @@ const Gallery = (): ReactNode => {
       </Masonry>
 
       {/* Gallery carousel */}
-      <div id="gallery-carousel" className="flex lg:hidden size-full object-cover">
+      <div
+        id="gallery-carousel"
+        className="flex lg:hidden size-full object-cover"
+      >
         <Carousel
           responsive={RESPONSIVE}
           swipeable={true}
@@ -93,7 +99,7 @@ const Gallery = (): ReactNode => {
           autoPlay={true}
           deviceType={deviceType}
           containerClass="size-full object-cover"
-          itemClass='size-full object-cover'
+          itemClass="size-full object-cover"
         >
           {cards}
         </Carousel>
