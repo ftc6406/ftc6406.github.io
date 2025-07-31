@@ -13,7 +13,7 @@ const Card = ({
 }): ReactNode => {
   return (
     <div
-      className={`flex ${background ? 'flex-col' : ''} size-full object-cover`}
+      className={`relative flex ${background ? 'flex-col' : ''} size-full object-cover`}
     >
       <img src={imagePath} />
 

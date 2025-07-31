@@ -55,7 +55,7 @@ const Gallery = (): ReactNode => {
           imagePath={imagePath}
           title="Hello world!"
           body="Lorem ipsum dolor sit amet"
-          background={true}
+          background={false}
         />
       </div>
     );
