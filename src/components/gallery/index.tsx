@@ -28,7 +28,7 @@ const RESPONSIVE = {
     items: 1,
   },
   mobile: {
-    breakpoint: { max: 768, min: 640 },
+    breakpoint: { max: 768, min: 0 },
     numCols: 2,
     items: 1,
   },
@@ -85,7 +85,7 @@ const Gallery = (): ReactNode => {
       </Masonry>
 
       {/* Gallery carousel */}
-      <div id="gallery-carousel" className="width-auto">
+      <div id="gallery-carousel" className="size-full object-cover">
         <Carousel
           responsive={RESPONSIVE}
           swipeable={true}
@@ -94,8 +94,8 @@ const Gallery = (): ReactNode => {
           ssr={true} // render carousel on server-side.
           autoPlay={true}
           deviceType={deviceType}
-          containerClass="w-full"
-          itemClass='w-auto'
+          containerClass="size-full object-cover"
+          itemClass='size-full object-cover'
         >
           {cards}
         </Carousel>
