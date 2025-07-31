@@ -11,28 +11,26 @@ const JoinUs = (): ReactNode => {
       />
 
       {/* Content */}
-      <div className="p-8 pt-12 md:p-16 lg:p-32 space-y-8 lg:space-y-12
-          bg-white text-base md:text-lg lg:text-xl text-black"
+      <div className="section space-y-8 lg:space-y-12
+          bg-white body-text text-black"
       >
-        <h1 className="text-3xl md:text-4xl lg:text-5xl">Join Us</h1>
+        <h1 className="section-header">Join Us</h1>
 
         {/* Team information */}
         <div className="grid xl:grid-flow-col xl:grid-cols-2 
             gap-8 xl:gap-32"
         >
           {/* Team overview */}
-          <div>
-            <p>
-              We are aspiring computer scientists and engineers. Our team comes
-              from all levels of technical experience, so we{' '}
-              <span className="font-medium">
-                encourage anyone to join, STEM or not,{' '}
-              </span>
-              and are willing to lend our expertise to teach newcomers the
-              skills necessary to explore their passions in robotics and
-              innovation.
-            </p>
-          </div>
+          <p>
+            We are aspiring computer scientists and engineers. Our team comes
+            from all levels of technical experience, so we{' '}
+            <span className="font-medium">
+              encourage anyone to join, STEM or not,{' '}
+            </span>
+            and are willing to lend our expertise to teach newcomers the
+            skills necessary to explore their passions in robotics and
+            innovation.
+          </p>
 
           {/* Team structure */}
           <div>
