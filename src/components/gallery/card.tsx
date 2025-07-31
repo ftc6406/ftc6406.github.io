@@ -12,7 +12,9 @@ const Card = ({
   background?: boolean;
 }): ReactNode => {
   return (
-    <div className={`flex ${background ? 'flex-col' : ''} size-full object-cover`}>
+    <div
+      className={`flex ${background ? 'flex-col' : ''} size-full object-cover`}
+    >
       <img src={imagePath} />
 
       <div
