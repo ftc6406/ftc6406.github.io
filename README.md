@@ -3,7 +3,7 @@
 Welcome to the web page for FTC Team 6406, First Tech Coyotes!
 This project is built using TypeScript, React, Vite, and Tailwind.
 
-## Gettings started
+## Getting started
 
 After cloning the directory, run `npm install`. It will install the necessary packages.
 Do not touch the `gh-pages` branch. That is where our website is deployed.
