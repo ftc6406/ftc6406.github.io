@@ -34,8 +34,7 @@ const Hero = (): ReactNode => {
               flex flex-col xl:flex-row gap-8 md:gap-12
               place-items-center xl:place-items-start
               
-              transition duration-1000
-              starting:opacity-0 opacity-100
+              transition duration-1000 appear
               starting:-translate-y-20 translate-y-0"
           >
             {/* Logo */}
@@ -104,15 +103,14 @@ const Hero = (): ReactNode => {
             className="w-24 md:w-28 mt-auto mb-8 md:mb-16 
               place-self-center 
               
-              transition duration-1000 animate-bounce
-              starting:opacity-0 opacity-100
-              starting:translate-y-20 translate-y-0"
+              transition duration-1000 animate-bounce appear
+              starting:opacity-0 opacity-100"
           />
         </div>
       </div>
 
       {/* The About Us text for mobile users */}
-      <AboutUs aboutUsText={ABOUT_US_TEXT} />
+      <AboutUs>{ABOUT_US_TEXT}</AboutUs>
     </>
   );
 };
