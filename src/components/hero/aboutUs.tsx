@@ -7,7 +7,7 @@ const AboutUs = ({ children }: { children: ReactNode }): ReactNode => {
         flex justify-center items-center bg-white
         text-center text-xl md:text-2xl lg:text-3xl"
     >
-      <p className="section-header text-black">{children}</p>
+      <p className="body-text text-black">{children}</p>
     </div>
   );
 };
