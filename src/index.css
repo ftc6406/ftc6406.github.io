@@ -7,9 +7,37 @@
   --color-primary: #345780;
   --color-secondary: #1f2937;
 
-  --background-image-hero-img: url();
+  --animate-appear: appear 0.5s ease-in-out;
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+hr {
+
+}
+
+.section {
+  @apply p-8 pt-12 md:p-16 lg:p-32;
+}
+
+.section-header {
+  @apply text-3xl md:text-4xl lg:text-5xl;
+}
+
+.body-text {
+  @apply text-base md:text-lg lg:text-xl;
+}
+
+.appear {
+  @apply starting:opacity-0 opacity-100;
 }

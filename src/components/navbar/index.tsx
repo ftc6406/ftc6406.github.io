@@ -23,9 +23,8 @@ const Navbar = (): ReactNode => {
       className={`fixed w-full px-4 md:px-8 lg:px-12 xl:px-16 py-2 md:py-3
         flex justify-between z-1000 
         
-        transition duration-1000
+        transition duration-1000 appear
         starting:translate-y-[-100%] translate-y-0
-        starting:opacity-0 opacity-100
         ${isOpen || isHeroScrolled ? 'bg-stone-900' : 'bg-transparent'}
       `}
     >
