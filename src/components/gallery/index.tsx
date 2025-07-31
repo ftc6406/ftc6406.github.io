@@ -72,9 +72,9 @@ const Gallery = (): ReactNode => {
           flex flex-col gap-12
           items-center"
       >
-        <hr className="w-8/10 text-white/80" />
+        <hr className="w-2/3 text-white/80" />
         <h1 className="uppercase">GALLERY</h1>
-        <hr className="w-8/10 text-white/80" />
+        <hr className="w-2/3 text-white/80" />
       </div>
 
       <Masonry
