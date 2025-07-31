@@ -64,13 +64,12 @@ const Gallery = (): ReactNode => {
   return (
     <div
       id="gallery"
-      className="flex flex-col w-full
-        p-8 pt-12 md:p-16 lg:p-32
+      className="section flex flex-col w-full
         bg-linear-to-b lg:bg-linear-to-br from-accent to-primary"
     >
       <h1
-        className="mr-0 lg:mr-32 mb-32
-          text-center lg:text-right text-6xl md:text-7xl lg:text-8xl"
+        className="section-header mr-0 lg:mr-32 mb-32
+          text-center lg:text-right"
       >
         Gallery
       </h1>
@@ -84,7 +83,7 @@ const Gallery = (): ReactNode => {
       </Masonry>
 
       {/* Gallery carousel */}
-      <div id="gallery-carousel" className="size-full object-cover">
+      <div id="gallery-carousel" className="flex lg:hidden size-full object-cover">
         <Carousel
           responsive={RESPONSIVE}
           swipeable={true}
