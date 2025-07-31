@@ -5,7 +5,7 @@
       "Innovate Award sponsored by RTX 2nd Place",
       "Think Award 2nd Place"
     ],
-    "images": ["place_holder.jpg"]
+    "images": ["assets/gallery/placeholder2.jpg"]
   },
   {
     "year": 2023,
@@ -14,11 +14,21 @@
       "Motivate Award 2nd Place",
       "Think Award 3rd Place"
     ],
-    "images": ["place_holder.jpg", "place_holder.jpg"]
+    "images": ["assets/gallery/placeholder.jpg", "assets/gallery/placeholder1.jpg"]
   },
   {
-    "year": 2022,
-    "awards": ["Judges' Choice Award"],
-    "images": ["place_holder.jpg"]
+    "year": 1922,
+    "awards": ["Placeholder's Award"],
+    "images": ["assets/gallery/placeholder2.jpg"]
+  },
+  {
+    "year": 1921,
+    "awards": ["Placeholder's Award"],
+    "images": ["assets/gallery/placeholder1.jpg", "assets/gallery/placeholder4.jpg", "assets/gallery/placeholder5.jpg", "assets/gallery/placeholder6.jpg"]
+  },
+  {
+    "year": 1920,
+    "awards": ["Placeholder's Award"],
+    "images": ["assets/gallery/placeholder3.jpg"]
   }
 ]
