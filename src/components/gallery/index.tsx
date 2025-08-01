@@ -7,9 +7,12 @@ import Masonry from 'react-masonry-css';
 import Card from './card';
 
 // Retrieves all files in `assets/gallery`.
-const MODULES = import.meta.glob('/assets/gallery/*');
+const MODULES = import.meta.glob('/public/assets/gallery/*');
 // Extract the filepaths.
-const IMAGE_PATHS = Object.keys(MODULES).map((ele) => ele.replace('/public', ''));
+const IMAGE_PATHS = Object.keys(MODULES).map((ele) =>
+  ele.replace('/public', '')
+);
+console.log(IMAGE_PATHS);
 
 const RESPONSIVE = {
   superLargeDesktop: {
@@ -52,7 +55,7 @@ const Gallery = (): ReactNode => {
         className="ml-auto mr-auto flex justify-center"
       >
         <Card
-          imagePath={`${import.meta.url}/${imagePath}`}
+          imagePath={imagePath}
           title="Hello world!"
           body="Lorem ipsum dolor sit amet"
           background={false}
