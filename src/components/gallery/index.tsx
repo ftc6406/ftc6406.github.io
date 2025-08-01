@@ -9,7 +9,7 @@ import Card from './card';
 // Retrieves all files in `assets/gallery`.
 const MODULES = import.meta.glob('/public/assets/gallery/*');
 // Extract the filepaths.
-const IMAGE_PATHS = Object.keys(MODULES);
+const IMAGE_PATHS = Object.keys(MODULES).map((ele) => ele.replace('/public', ''));
 
 const RESPONSIVE = {
   superLargeDesktop: {
