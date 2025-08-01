@@ -12,7 +12,6 @@ const MODULES = import.meta.glob('/public/assets/gallery/*');
 const IMAGE_PATHS = Object.keys(MODULES).map((ele) =>
   ele.replace('/public', '')
 );
-console.log(IMAGE_PATHS);
 
 const RESPONSIVE = {
   superLargeDesktop: {
