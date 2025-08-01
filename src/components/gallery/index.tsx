@@ -7,7 +7,7 @@ import Masonry from 'react-masonry-css';
 import Card from './card';
 
 // Retrieves all files in `assets/gallery`.
-const MODULES = import.meta.glob('/public/assets/gallery/*');
+const MODULES = import.meta.glob('/assets/gallery/*');
 // Extract the filepaths.
 const IMAGE_PATHS = Object.keys(MODULES);
 
@@ -52,7 +52,7 @@ const Gallery = (): ReactNode => {
         className="ml-auto mr-auto flex justify-center"
       >
         <Card
-          imagePath={imagePath}
+          imagePath={`${import.meta.url}/${imagePath}`}
           title="Hello world!"
           body="Lorem ipsum dolor sit amet"
           background={false}
