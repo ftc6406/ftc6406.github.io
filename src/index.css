@@ -22,16 +22,16 @@ html {
   scroll-behavior: smooth;
 }
 
-hr {
-
-}
-
 .section {
   @apply p-8 pt-12 md:p-16 lg:p-32;
 }
 
 .section-header {
   @apply text-3xl md:text-4xl lg:text-5xl;
+}
+
+.subtitle-text {
+  @apply text-xl md:text-2xl lg:text-3xl;
 }
 
 .body-text {
