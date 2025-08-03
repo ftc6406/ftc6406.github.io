@@ -20,7 +20,9 @@ const Navbar = (): ReactNode => {
   return (
     <div
       id="navbar"
-      className={`fixed w-full px-4 md:px-8 lg:px-12 xl:px-16 py-2 md:py-3
+      className={`fixed w-full 
+        px-4 md:px-8 lg:px-12 xl:px-16 
+        py-2 md:py-3 lg:py-4
         flex justify-between z-1000 
         
         transition duration-1000 appear
@@ -36,7 +38,7 @@ const Navbar = (): ReactNode => {
           className="w-8"
         />
 
-        <h2 className="text-lg md:text-xl lg:text-2xl font-bold">
+        <h2 className="subtitle-text font-bold">
           First Tech Coyotes
         </h2>
       </a>
@@ -67,7 +69,7 @@ const Navbar = (): ReactNode => {
             key={`navbar-link-${index}`}
             href={`#${tabName}`}
             className={`p-1 sm:p-2 md:p-4 flex items-center
-              text-base sm:text-lg md:text-xl text-nowrap capitalize
+              body-text text-nowrap capitalize
 
               transition-opacity duration-1000 transition-discrete
               starting:opacity-0
@@ -87,7 +89,7 @@ const Navbar = (): ReactNode => {
             key={`navbar-link-${index}`}
             href={`#${tabName}`}
             className="flex items-center 
-              text-base lg:text-lg text-nowrap capitalize
+              body-text text-nowrap capitalize
               hover:underline underline-offset-8"
           >
             {tabName}

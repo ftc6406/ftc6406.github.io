@@ -74,7 +74,7 @@ const Gallery = (): ReactNode => {
         bg-linear-to-b lg:bg-linear-to-br from-accent to-primary"
     >
       <div
-        className="section-header
+        className="header-text
           flex flex-col gap-12
           items-center"
       >

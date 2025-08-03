@@ -14,7 +14,7 @@ const JoinUs = (): ReactNode => {
       <div className="section space-y-8 lg:space-y-12
           bg-white body-text text-black"
       >
-        <h1 className="section-header">Join Us</h1>
+        <h1 className="header-text">Join Us</h1>
 
         {/* Team information */}
         <div className="grid xl:grid-flow-col xl:grid-cols-2 
