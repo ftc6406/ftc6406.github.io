@@ -7,7 +7,7 @@ const ContactUs = (): ReactNode => {
       className="section space-y-12
         bg-stone-900 body-text text-white"
     >
-      <h1 className="section-header">Contact Us</h1>
+      <h1 className="header-text">Contact Us</h1>
 
       <div className="grid lg:grid-flow-col lg:grid-cols-2 gap-4 lg:gap-32">
         <p>Still have any question? Feel free to reach out to us.</p>
