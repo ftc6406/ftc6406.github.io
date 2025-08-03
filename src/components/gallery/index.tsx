@@ -56,7 +56,7 @@ const Gallery = (): ReactNode => {
         <Card
           imagePath={imagePath}
           title="Hello world!"
-          body="Lorem ipsum dolor sit amet"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in."
           background={false}
         />
       </div>
