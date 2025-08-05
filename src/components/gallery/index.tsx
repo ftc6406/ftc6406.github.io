@@ -6,12 +6,7 @@ import 'react-multi-carousel/lib/styles.css';
 import Masonry from 'react-masonry-css';
 import Card from './card';
 
-// Retrieves all files in `assets/gallery`.
-const MODULES = import.meta.glob('/public/assets/gallery/*');
-// Extract the filepaths.
-const IMAGE_PATHS = Object.keys(MODULES).map((ele) =>
-  ele.replace('/public', '')
-);
+const GALLERY = await fetch('gallery.json').then((res) => res.json());
 
 const RESPONSIVE = {
   superLargeDesktop: {
@@ -47,21 +42,25 @@ const Gallery = (): ReactNode => {
     }
   }
 
-  const cards = IMAGE_PATHS.map((imagePath, index) => {
-    return (
-      <div
-        key={`gallery-masonry-${index}`}
-        className="ml-auto mr-auto flex justify-center"
-      >
-        <Card
-          imagePath={imagePath}
-          title="Hello world!"
-          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in."
-          background={false}
-        />
-      </div>
-    );
-  });
+  const cards = GALLERY.map(
+    (ele: { image: string; title: string; body: string }, index: number) => {
+      console.log(ele.image);
+
+      return (
+        <div
+          key={`gallery-masonry-${index}`}
+          className="ml-auto mr-auto flex justify-center"
+        >
+          <Card
+            imagePath={ele.image}
+            title={ele.title}
+            body={ele.body}
+            background={false}
+          />
+        </div>
+      );
+    }
+  );
 
   return (
     <div
