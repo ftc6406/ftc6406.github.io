@@ -44,8 +44,6 @@ const Gallery = (): ReactNode => {
 
   const cards = GALLERY.map(
     (ele: { image: string; title: string; body: string }, index: number) => {
-      console.log(ele.image);
-
       return (
         <div
           key={`gallery-masonry-${index}`}
