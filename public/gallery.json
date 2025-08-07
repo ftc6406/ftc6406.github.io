@@ -1,7 +1,7 @@
 [
   {
     "image": "assets/gallery/22-23_team_photo.jpg",
-    "title": "2022-2023 Team Photo",
+    "title": "2022-2023 Team",
     "body": "",
     "background": true
   },
@@ -19,7 +19,7 @@
   },
   {
     "image": "assets/gallery/chassis.jpg",
-    "title": "Robot chassis",
+    "title": "Robot Chassis",
     "body": "",
     "background": true
   }
