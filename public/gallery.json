@@ -1,13 +1,25 @@
 [
   {
+    "image": "assets/gallery/22-23_team_photo.jpg",
+    "title": "2022-2023 Team",
+    "body": "",
+    "background": true
+  },
+  {
+    "image": "assets/gallery/22-23_competition.jpg",
+    "title": "Powerplay season(2022-2023)",
+    "body": "",
+    "background": true
+  },
+  {
     "image": "assets/gallery/22-23_robot.jpg",
     "title": "2022-2023 Robot",
     "body": "",
     "background": true
   },
   {
-    "image": "assets/gallery/22-23_team_photo.jpg",
-    "title": "2022-2023 Team Photo",
+    "image": "assets/gallery/chassis.jpg",
+    "title": "Robot Chassis",
     "body": "",
     "background": true
   }
