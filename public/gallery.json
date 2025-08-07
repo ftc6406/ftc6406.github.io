@@ -1,26 +1,33 @@
 [
   {
     "image": "assets/gallery/22-23_team_photo.jpg",
-    "title": "2022-2023 Team",
-    "body": "",
+    "title": "2022-2023 team",
     "background": true
   },
   {
     "image": "assets/gallery/22-23_competition.jpg",
-    "title": "Powerplay season(2022-2023)",
-    "body": "",
+    "title": "Powerplay(2022-2023) competition",
+    "body": "DC International School",
+    "background": true
+  },
+  {
+    "image": "assets/gallery/22-23_prototype.jpg",
+    "title": "Powerplay(2022-2023) prototype",
     "background": true
   },
   {
     "image": "assets/gallery/22-23_robot.jpg",
-    "title": "2022-2023 Robot",
-    "body": "",
+    "title": "Powerplay(2022-2023) robot",
+    "background": true
+  },
+  {
+    "image": "assets/gallery/23-24_assembly.jpg",
+    "title": "Partially built robot from Centerstage(2023-2024)",
     "background": true
   },
   {
     "image": "assets/gallery/chassis.jpg",
-    "title": "Robot Chassis",
-    "body": "",
+    "title": "Into the Deep(2024-2025) robot chassis",
     "background": true
   }
 ]
