@@ -1,17 +1,5 @@
 [
   {
-    "image": "assets/gallery/15-16_finalist_alliance_award.jpg",
-    "title": "2015-2016 Finalist Alliance Award",
-    "body": "",
-    "background": true
-  },
-  {
-    "image": "assets/gallery/22-23_judges_award.jpg",
-    "title": "2022-2023 Judges' Choice Award",
-    "body": "",
-    "background": true
-  },
-  {
     "image": "assets/gallery/22-23_robot.jpg",
     "title": "2022-2023 Robot",
     "body": "",
@@ -20,18 +8,6 @@
   {
     "image": "assets/gallery/22-23_team_photo.jpg",
     "title": "2022-2023 Team Photo",
-    "body": "",
-    "background": true
-  },
-  {
-    "image": "assets/gallery/23-24_design_award (2).jpg",
-    "title": "2023-2024 Design Award",
-    "body": "",
-    "background": true
-  },
-  {
-    "image": "assets/gallery/23-24_design_award.jpg",
-    "title": "2023-2024 Design Award",
     "body": "",
     "background": true
   }
