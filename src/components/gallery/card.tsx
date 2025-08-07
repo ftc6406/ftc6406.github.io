@@ -2,9 +2,9 @@ import type { ReactNode } from 'react';
 
 const Card = ({
   imagePath,
-  title,
-  body,
-  background,
+  title = '',
+  body = '',
+  background = false,
 }: {
   imagePath: string;
   title?: string;
@@ -17,8 +17,12 @@ const Card = ({
 
       <div
         className={`${
-          background ? 'bg-stone-900' : 'absolute self-end'
-        } px-4 md:px-8 lg:px-4 py-6 md:py-12 lg:py-4 xl:py-6 2xl:py-8`}
+          title.trim().length == 0 && body.trim().length == 0
+            ? 'hidden'
+            : 'inline'
+        }
+        ${background ? 'bg-stone-900' : 'absolute self-end'} 
+        px-4 md:px-8 lg:px-4 py-6 md:py-12 lg:py-4 xl:py-6 2xl:py-8`}
       >
         <p className="opacity-80 text-lg md:text-2xl lg:text-base xl:text-lg 2xl:text-xl font-bold">
           {title}
