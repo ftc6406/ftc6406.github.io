@@ -1,7 +1,7 @@
 [
   {
-    "image": "assets/gallery/22-23_team_photo.jpg",
-    "title": "2022-2023 team",
+    "image": "assets/gallery/22-23_team.jpg",
+    "title": "Powerplay(2022-2023) team",
     "background": true
   },
   {
@@ -11,8 +11,8 @@
     "background": true
   },
   {
-    "image": "assets/gallery/22-23_prototype.jpg",
-    "title": "Powerplay(2022-2023) prototype",
+    "image": "assets/gallery/22-23_linear_slide.jpg",
+    "title": "Linear slide for our Powerplay(2022-2023) robot",
     "background": true
   },
   {
@@ -21,13 +21,39 @@
     "background": true
   },
   {
-    "image": "assets/gallery/23-24_assembly.jpg",
-    "title": "Partially-built robot from Centerstage(2023-2024)",
+    "image": "assets/gallery/22-23_robot1.jpg",
+    "title": "Powerplay(2022-2023) robot",
     "background": true
   },
   {
-    "image": "assets/gallery/chassis.jpg",
+    "image": "assets/gallery/22-23_robot2.jpg",
+    "title": "Powerplay(2022-2023) robot",
+    "background": true
+  },
+  {
+    "image": "assets/gallery/23-24_competition.jpg",
+    "title": "Centerstage(2023-2024) competition",
+    "body": "DC International School",
+    "background": true
+  },
+  {
+    "image": "assets/gallery/23-24_robot.jpg",
+    "title": "Centerstage(2023-2024) robot",
+    "background": true
+  },
+  {
+    "image": "assets/gallery/23-24_robot1.jpg",
+    "title": "Centerstage(2023-2024) robot",
+    "background": true
+  },
+  {
+    "image": "assets/gallery/24-25_robot.jpg",
     "title": "Into the Deep(2024-2025) robot chassis",
+    "background": true
+  },
+  {
+    "image": "assets/gallery/24-25_robot1.jpg",
+    "title": "Into the Deep(2024-2025) robot",
     "background": true
   }
 ]
