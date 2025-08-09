@@ -150,4 +150,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-public/assets/gallery/*
+public/assets/*/*
