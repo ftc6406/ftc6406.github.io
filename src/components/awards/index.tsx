@@ -53,7 +53,7 @@ const Awards = (): ReactNode => {
 
           {/* Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card src="assets/gallery/placeholder.jpg">Design Award</Card>
+            <Card src="assets/awards/23-24_design_award.jpg">Design Award</Card>
 
             <Card src="assets/gallery/placeholder.jpg" reverse>
               Motivate Award 2nd Place
