@@ -3,7 +3,6 @@ import { type ReactNode } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import Masonry from 'react-masonry-css';
 import Card from './card';
 
 const GALLERY = await fetch('gallery.json').then((res) => res.json());
@@ -41,6 +40,7 @@ const Gallery = (): ReactNode => {
       break;
     }
   }
+  console.log(numCols);
 
   const cards = GALLERY.map(
     (
@@ -79,13 +79,7 @@ const Gallery = (): ReactNode => {
         <hr className="w-2/3 text-white/80" />
       </div>
 
-      <Masonry
-        breakpointCols={numCols}
-        className="hidden lg:flex w-auto -ml-4"
-        columnClassName="pl-4 space-y-4"
-      >
-        {cards}
-      </Masonry>
+      <div className={`columns-3 *:break-inside-avoid gap-4 space-y-4`}>{cards}</div>
 
       {/* Gallery carousel */}
       <div

@@ -20,10 +20,9 @@ const Card = ({
           title.trim().length == 0 && body.trim().length == 0
             ? 'hidden'
             : 'inline'
-        }
-        ${background ? 'bg-stone-900' : 'absolute self-end'} 
-        px-4 md:px-8 lg:px-4 py-6 md:py-12 lg:py-4 xl:py-6 2xl:py-8
-        leading-8 md:leading-12 lg:leading-6 xl:leading-7 2xl:leading-8`}
+          }
+          ${background ? 'bg-stone-900' : 'absolute self-end'} 
+          px-4 md:px-8 lg:px-4 py-6 md:py-12 lg:py-4 xl:py-6 2xl:py-8`}
       >
         <p className="opacity-80 text-lg md:text-2xl lg:text-base xl:text-lg 2xl:text-xl font-bold">
           {title}
