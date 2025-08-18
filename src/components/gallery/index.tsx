@@ -3,7 +3,6 @@ import { type ReactNode } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import Masonry from 'react-masonry-css';
 import Card from './card';
 
 const GALLERY = await fetch('gallery.json').then((res) => res.json());
@@ -34,6 +33,8 @@ const RESPONSIVE = {
 const Gallery = (): ReactNode => {
   let deviceType;
   let numCols = RESPONSIVE.mobile.numCols;
+
+  // Obtain the device type and number of columns needed based on `RESPONSIVE`.
   for (const [key, value] of Object.entries(RESPONSIVE)) {
     if (window.innerWidth > value.breakpoint.min) {
       deviceType = key;
@@ -42,23 +43,23 @@ const Gallery = (): ReactNode => {
     }
   }
 
-  const cards = GALLERY.map(
+  const cards: ReactNode[] = GALLERY.map(
     (
       ele: { image: string; title: string; body: string; background: boolean },
       index: number
     ) => {
       return (
-        <div
-          key={`gallery-masonry-${index}`}
-          className="ml-auto mr-auto flex justify-center"
-        >
-          <Card
-            imagePath={ele.image}
-            title={ele.title}
-            body={ele.body}
-            background={ele.background}
-          />
-        </div>
+          <div
+            key={`gallery-masonry-${index}`}
+            className="ml-auto mr-auto flex justify-center"
+          >
+            <Card
+              imagePath={ele.image}
+              title={ele.title}
+              body={ele.body}
+              background={ele.background}
+            />
+          </div>
       );
     }
   );
@@ -79,13 +80,12 @@ const Gallery = (): ReactNode => {
         <hr className="w-2/3 text-white/80" />
       </div>
 
-      <Masonry
-        breakpointCols={numCols}
-        className="hidden lg:flex w-auto -ml-4"
-        columnClassName="pl-4 space-y-4"
+      <div
+        className={`hidden lg:block
+          columns-${numCols} *:break-inside-avoid gap-4 space-y-4`}
       >
         {cards}
-      </Masonry>
+      </div>
 
       {/* Gallery carousel */}
       <div
