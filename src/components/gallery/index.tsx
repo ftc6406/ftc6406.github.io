@@ -79,7 +79,7 @@ const Gallery = (): ReactNode => {
         <hr className="w-2/3 text-white/80" />
       </div>
 
-      <div className={`columns-3 *:break-inside-avoid`}>{cards}</div>
+      <div className={`columns-3 *:break-inside-avoid gap-4 space-y-4`}>{cards}</div>
 
       {/* Gallery carousel */}
       <div
