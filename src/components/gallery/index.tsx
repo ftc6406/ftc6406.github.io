@@ -33,6 +33,8 @@ const RESPONSIVE = {
 const Gallery = (): ReactNode => {
   let deviceType;
   let numCols = RESPONSIVE.mobile.numCols;
+
+  // Obtain the device type and number of columns needed based on `RESPONSIVE`.
   for (const [key, value] of Object.entries(RESPONSIVE)) {
     if (window.innerWidth > value.breakpoint.min) {
       deviceType = key;
@@ -40,25 +42,24 @@ const Gallery = (): ReactNode => {
       break;
     }
   }
-  console.log(numCols);
 
-  const cards = GALLERY.map(
+  const cards: ReactNode[] = GALLERY.map(
     (
       ele: { image: string; title: string; body: string; background: boolean },
       index: number
     ) => {
       return (
-        <div
-          key={`gallery-masonry-${index}`}
-          className="ml-auto mr-auto flex justify-center"
-        >
-          <Card
-            imagePath={ele.image}
-            title={ele.title}
-            body={ele.body}
-            background={ele.background}
-          />
-        </div>
+          <div
+            key={`gallery-masonry-${index}`}
+            className="ml-auto mr-auto flex justify-center"
+          >
+            <Card
+              imagePath={ele.image}
+              title={ele.title}
+              body={ele.body}
+              background={ele.background}
+            />
+          </div>
       );
     }
   );
@@ -80,7 +81,7 @@ const Gallery = (): ReactNode => {
       </div>
 
       <div
-        className={`hidden lg:flex
+        className={`hidden lg:block
           columns-${numCols} *:break-inside-avoid gap-4 space-y-4`}
       >
         {cards}
