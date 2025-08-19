@@ -32,15 +32,9 @@ const Navbar = (): ReactNode => {
     >
       {/* Logo and team name */}
       <a href="#hero" className="flex gap-4 items-center">
-        <img
-          src="assets/logo.svg"
-          alt="logo"
-          className="w-8"
-        />
+        <img src="assets/logo.svg" alt="logo" className="w-8" />
 
-        <h2 className="subtitle-text font-bold">
-          First Tech Coyotes
-        </h2>
+        <h2 className="subtitle-text font-bold">First Tech Coyotes</h2>
       </a>
 
       {/* Mobile nav menu toggle */}
