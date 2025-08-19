@@ -11,9 +11,7 @@ const Awards = (): ReactNode => {
     >
       {/* Awards introduction */}
       <div className="space-y-8">
-        <h1 className="header-text text-center">
-          Awards and Recognition
-        </h1>
+        <h1 className="header-text text-center">Awards and Recognition</h1>
 
         <p className="body-text text-center text-balance">
           We would like to recognize our team's tireless efforts in robotic

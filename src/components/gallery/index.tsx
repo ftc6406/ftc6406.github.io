@@ -49,17 +49,17 @@ const Gallery = (): ReactNode => {
       index: number
     ) => {
       return (
-          <div
-            key={`gallery-masonry-${index}`}
-            className="ml-auto mr-auto flex justify-center"
-          >
-            <Card
-              imagePath={ele.image}
-              title={ele.title}
-              body={ele.body}
-              background={ele.background}
-            />
-          </div>
+        <div
+          key={`gallery-masonry-${index}`}
+          className="ml-auto mr-auto flex justify-center"
+        >
+          <Card
+            imagePath={ele.image}
+            title={ele.title}
+            body={ele.body}
+            background={ele.background}
+          />
+        </div>
       );
     }
   );

@@ -20,7 +20,7 @@ const Card = ({
           title.trim().length == 0 && body.trim().length == 0
             ? 'hidden'
             : 'inline'
-          }
+        }
           ${background ? 'bg-stone-900' : 'absolute self-end'} 
           px-4 md:px-8 lg:px-4 py-6 md:py-12 lg:py-4 xl:py-6 2xl:py-8`}
       >

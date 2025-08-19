@@ -3,6 +3,12 @@
 Welcome to the web page for FTC Team 6406, First Tech Coyotes!
 This project is built using TypeScript, React, Vite, and Tailwind.
 
+- [Getting started](#getting-started)
+- [Previewing](#previewing)
+- [Deploying](#deploying)
+- [Gallery](#gallery)
+- [Acknowledgments](#acknowledgments)
+
 ## Getting started
 
 After cloning the directory, run `npm install`. It will install the necessary packages.
@@ -20,7 +26,7 @@ To build and deploy the website, run `npm run deploy` from the [root directory(`
 > Do **not** deploy the website until you are done with your changes and are ready for them to be made public.
 > Learned the hard way.
 
-## The Gallery
+## Gallery
 
 The gallery images are controlled by a JSON file called [`gallery.json`](./public/gallery.json).
 It contains an array of the images that are displayed in the gallery.
@@ -34,7 +40,7 @@ The last three are optional. If they are missing, the website will default to `"
 `"background"` controls whether the image will have a black box underneath to display text or the text will be superimposed over the image.
 `"true"` will set the image to have a black box underneath. `"false"` will not.
 
-## Image Attributions
+## Acknowledgments
 
 - [hero_placeholder.jpg](/public/assets/hero_placeholder.jpg) - By [Trendy Express](https://500px.com/trendyexpress). From [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Man_Atop_A_Mountain_(187811195).jpeg). This file is made available under the [Creative Commons CC0 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en). This file has not modified in any way, shape, or form.
 - [placeholder.jpg](/public/assets/gallery/placeholder.jpg) - © Vyacheslav Argenberg / <http://www.vascoplanet.com/>. From [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Himalayas,_Ama_Dablam,_Nepal.jpg). This file is licensed under the [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/deed.en). This file has not modified in any way, shape, or form.
