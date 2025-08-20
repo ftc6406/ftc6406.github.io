@@ -10,35 +10,29 @@ const GALLERY = await fetch('gallery.json').then((res) => res.json());
 const RESPONSIVE = {
   superLargeDesktop: {
     breakpoint: { max: 1536, min: 1280 },
-    numCols: 4,
     items: 1,
   },
   desktop: {
     breakpoint: { max: 1280, min: 1024 },
-    numCols: 4,
     items: 1,
   },
   tablet: {
     breakpoint: { max: 1024, min: 768 },
-    numCols: 2,
     items: 1,
   },
   mobile: {
     breakpoint: { max: 768, min: 0 },
-    numCols: 2,
     items: 1,
   },
 };
 
 const Gallery = (): ReactNode => {
   let deviceType;
-  let numCols = RESPONSIVE.mobile.numCols;
 
   // Obtain the device type and number of columns needed based on `RESPONSIVE`.
   for (const [key, value] of Object.entries(RESPONSIVE)) {
     if (window.innerWidth > value.breakpoint.min) {
       deviceType = key;
-      numCols = value.numCols;
       break;
     }
   }
@@ -82,7 +76,7 @@ const Gallery = (): ReactNode => {
 
       <div
         className={`hidden lg:block
-          columns-${numCols} *:break-inside-avoid gap-4 space-y-4`}
+          columns-3 xl:columns-4 *:break-inside-avoid gap-4 space-y-4`}
       >
         {cards}
       </div>
