@@ -30,15 +30,16 @@ To build and deploy the website, run `npm run deploy` from the [root directory(`
 
 The gallery images are controlled by a JSON file called [`gallery.json`](./public/gallery.json).
 It contains an array of the images that are displayed in the gallery.
-Each element of the array is an object with 1 to 4 properties: `"image"`, `"title"`, `"body"`, and `"background"`.
-The last three are optional. If they are missing, the website will default to `""`, `""`, and false, respectively.
+
+Each element of the array is an object with 1 to 4 properties: `"image"`, `"title"`, `"body"`, and `"showBackground"`.
+The last three are optional. If they are missing, the website will default to `""`, `""`, and `false`, respectively.
 
 `"image"` contains the file path to the image, but excluding `/public`.
 
 `"title"` and `"body"` are self explanatory.
 
-`"background"` controls whether the image will have a black box underneath to display text or the text will be superimposed over the image.
-`"true"` will set the image to have a black box underneath. `"false"` will not.
+`"showBackground"` controls whether the image will have a black box underneath to display text or the text will be superimposed over the image.
+`"true"` will set the image to have a black box underneath. `"false"` will set the text to be superimpose over the image.
 
 ## Acknowledgments
 
