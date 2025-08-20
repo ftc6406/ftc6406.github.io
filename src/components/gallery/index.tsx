@@ -39,7 +39,7 @@ const Gallery = (): ReactNode => {
 
   const cards: ReactNode[] = GALLERY.map(
     (
-      ele: { image: string; title: string; body: string; background: boolean },
+      ele: { image: string; title: string; body: string; showBackground: boolean },
       index: number
     ) => {
       return (
@@ -51,7 +51,7 @@ const Gallery = (): ReactNode => {
             imagePath={ele.image}
             title={ele.title}
             body={ele.body}
-            background={ele.background}
+            background={ele.showBackground}
           />
         </div>
       );
