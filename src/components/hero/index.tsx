@@ -52,7 +52,7 @@ const Hero = (): ReactNode => {
                 place-items-center xl:place-items-start"
             >
               {/* Team Name */}
-              <div className="space-y-4 text-center xl:text-left">
+              <div className="col-span-2 space-y-4 text-center xl:text-left">
                 <h1
                   className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl
                     font-bold"
