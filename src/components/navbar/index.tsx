@@ -23,7 +23,7 @@ const Navbar = (): ReactNode => {
       className={`fixed w-full 
         px-4 md:px-8 lg:px-12 xl:px-16 
         py-2 md:py-3 lg:py-4
-        flex justify-between z-1000 
+        flex justify-between z-1001
         
         transition duration-1000 appear
         starting:translate-y-[-100%] translate-y-0
@@ -50,8 +50,8 @@ const Navbar = (): ReactNode => {
 
       {/* Mobile nav dropdown menu */}
       <div
-        className={`absolute top-full left-0 w-full px-4 pb-2
-          z-1000 divide-y-1 divide-white/60
+        className={`absolute top-full left-0 w-full h-screen sm:h-auto
+          px-4 pb-2 divide-y-1 divide-white/60
 
           transition duration-1000 transition-discrete
           starting:bg-transparent
