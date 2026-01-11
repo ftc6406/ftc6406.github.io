@@ -11,10 +11,6 @@ const ContactUs = (): ReactNode => {
 
       <div className="grid lg:grid-flow-col lg:grid-cols-2 gap-4 lg:gap-32">
         <p>Still have any question? Feel free to reach out to us.</p>
-
-        <a className="select-all" href="mailto:example@gmail.com">
-          example@gmail.com
-        </a>
       </div>
 
       <hr className="text-white/60" />
