@@ -40,7 +40,7 @@ const Navbar = (): ReactNode => {
       {/* Mobile nav menu toggle */}
       <div className="flex lg:hidden items-center">
         <button
-          className="size-7"
+          className="size-5 md:size-6"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="toggle mobile menu"
         >
@@ -50,20 +50,23 @@ const Navbar = (): ReactNode => {
 
       {/* Mobile nav dropdown menu */}
       <div
-        className={`absolute top-full left-0 w-full h-screen sm:h-auto
-          px-4 pb-2 divide-y-1 divide-white/60
-
-          transition duration-1000 transition-discrete
-          starting:bg-transparent
-          ${isOpen ? 'bg-stone-900' : 'hidden bg-transparent'}
+        className={`absolute top-full left-0 
+          w-full h-screen px-4 pt-4
+          transition duration-1000 transition-discrete 
+          starting:bg-transparent starting:border-transparent
+          ${
+            isOpen
+              ? 'bg-stone-900 border-white/60'
+              : 'hidden bg-transparent border-transparent'
+          }
         `}
       >
         {TAB_NAMES.map((tabName, index) => (
           <a
             key={`navbar-link-${index}`}
             href={`#${tabName}`}
-            className={`p-1 sm:p-2 md:p-4 flex items-center
-              body-text text-nowrap capitalize
+            className={`px-1 py-4 sm:px-2
+              flex items-center body-text text-nowrap capitalize
 
               transition-opacity duration-1000 transition-discrete
               starting:opacity-0
