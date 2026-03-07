@@ -17,7 +17,7 @@ const Hero = (): ReactNode => {
     <>
       <div
         className="relative min-h-dvh 
-          bg-[url(/assets/hero_placeholder.jpg)] bg-center bg-cover"
+          bg-[url(/assets/team-picture.jpg)] bg-center bg-cover"
         id="hero"
       >
         {/* Backdrop filter */}
