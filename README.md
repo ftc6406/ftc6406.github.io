@@ -16,8 +16,8 @@ Do not touch the `gh-pages` branch. That is where our website is deployed.
 
 ## Previewing
 
-When previewing your changes, run `npm run dev`. It will update the website every
-time you change the code.
+When previewing your changes, run `npm run dev`.
+It will update the website every time you change the code.
 
 ## Deploying
 
@@ -25,8 +25,7 @@ To build and deploy the website, run `npm run deploy` from the [root directory(`
 
 > [!Warning]
 > Do **not** deploy the website until you are done with your changes and are ready
-> for them to be made public.
-> Learned the hard way.
+> for them to be made public. Learned the hard way.
 
 ## Gallery
 
@@ -34,17 +33,17 @@ The gallery images are controlled by a JSON file called [`gallery.json`](./publi
 It contains an array of the images that are displayed in the gallery.
 
 Each element of the array is an object with 1 to 4 properties: `"image"`, `"title"`,
-`"body"`, and `"showBackground"`. The last three are optional. If they are missing,
-the website will default to `""`, `""`, and `false`, respectively.
+`"body"`, and `"showBackground"`. The last three are optional.
+If they are missing, the website will default to `""`, `""`, and `false`, respectively.
 
 `"image"` contains the file path to the image, but excluding `/public`.
 
 `"title"` and `"body"` are self explanatory.
 
 `"showBackground"` controls whether the image will have a black box underneath to
-display text or the text will be superimposed over the image. `"true"` will set
-the image to have a black box underneath. `"false"` will superimpose the text over
-the image.
+display text or the text will be superimposed over the image.
+`"true"` will set the image to have a black box underneath.
+`"false"` will superimpose the text over the image.
 
 ## Acknowledgments
 
