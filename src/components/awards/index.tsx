@@ -1,6 +1,9 @@
 import type { ReactNode } from 'react';
-import Card from './card';
-import YearDivider from './yearDivider';
+
+import Placeholder from '@assets/gallery/placeholder.jpg';
+import DesignAward from '@assets/awards/23-24_design_award.jpg';
+import Card from './Card';
+import YearDivider from './YearDivider';
 
 const Awards = (): ReactNode => {
   return (
@@ -30,14 +33,14 @@ const Awards = (): ReactNode => {
           <div className="flex gap-4 lg:gap-8">
             <Card
               className="flex-1 md:flex-6"
-              src="assets/gallery/placeholder.jpg"
+              src={Placeholder}
             >
               Innovate Award sponsored by RTX 2nd Place
             </Card>
 
             <Card
               className="flex-1 md:flex-4"
-              src="assets/gallery/placeholder.jpg"
+              src={Placeholder}
               reverse
             >
               Think Award 2nd Place
@@ -51,13 +54,13 @@ const Awards = (): ReactNode => {
 
           {/* Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card src="assets/awards/23-24_design_award.jpg">Design Award</Card>
+            <Card src={DesignAward}>Design Award</Card>
 
-            <Card src="assets/gallery/placeholder.jpg" reverse>
+            <Card src={Placeholder} reverse>
               Motivate Award 2nd Place
             </Card>
 
-            <Card src="assets/gallery/placeholder.jpg">
+            <Card src={Placeholder}>
               Think Award 3rd Place
             </Card>
           </div>

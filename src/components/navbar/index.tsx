@@ -1,5 +1,9 @@
 import { useState, type ReactNode } from 'react';
 
+import CloseX from '@assets/close_x.svg';
+import HamburgerMenu from '@assets/hamburger_menu.svg';
+import Logo from '@assets/logo.svg';
+
 const Navbar = (): ReactNode => {
   // Navbar states
   const [isOpen, setIsOpen] = useState(false);
@@ -8,9 +12,7 @@ const Navbar = (): ReactNode => {
   const [isHeroScrolled, setIsHeroScrolled] = useState(false);
 
   const TAB_NAMES = ['gallery', 'awards', 'join', 'contact'];
-  const menuButtonImg = isOpen
-    ? 'assets/close_x.svg'
-    : 'assets/hamburger_menu.svg';
+  const menuButtonImg = isOpen ? CloseX : HamburgerMenu;
 
   // Changes navbar color after scrolling 100vh
   window.addEventListener('scroll', () =>
@@ -32,7 +34,7 @@ const Navbar = (): ReactNode => {
     >
       {/* Logo and team name */}
       <a href="#hero" className="flex gap-4 items-center">
-        <img src="assets/logo.svg" alt="logo" className="w-8" />
+        <img src={Logo} alt="logo" className="w-8" />
 
         <h2 className="subtitle-text font-bold">First Tech Coyotes</h2>
       </a>

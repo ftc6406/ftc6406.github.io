@@ -1,12 +1,14 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
+
+import path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [tailwindcss()],
-  esbuild: {
-    supported: {
-      'top-level-await': true, // Targets modern browsers that can handle top-level-await features
-    },
+  plugins: [react(), tailwindcss()],
+
+  resolve: {
+    alias: { '@assets': path.resolve(__dirname, './src/assets') },
   },
 });

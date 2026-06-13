@@ -1,8 +1,12 @@
 import type { ReactNode } from 'react';
 import '../../index.css';
 
-import AboutUs from './aboutUs';
-import { Typewriter } from 'react-simple-typewriter';
+import AboutUs from './AboutUs';
+// import { Typewriter } from 'react-simple-typewriter';
+
+import Logo from '@assets/logo.svg';
+import Chevron from '@assets/chevron.svg';
+
 
 const ABOUT_US_TEXT = (
   <span>
@@ -17,7 +21,7 @@ const Hero = (): ReactNode => {
     <>
       <div
         className="relative min-h-dvh 
-          bg-[url(/assets/team-picture.jpg)] bg-center bg-cover"
+          bg-[url(@assets/team-picture.jpg)] bg-center bg-cover"
         id="hero"
       >
         {/* Backdrop filter */}
@@ -40,7 +44,7 @@ const Hero = (): ReactNode => {
             {/* Logo */}
             <div className="shrink-0">
               <img
-                src="/assets/logo.svg"
+                src={Logo}
                 className="w-28 md:w-32 lg:w-36 xl:w-40 2xl:w-44"
               />
             </div>
@@ -65,11 +69,11 @@ const Hero = (): ReactNode => {
                     lg:text-5xl xl:text-6xl"
                 >
                   Student <br className="xs:hidden" />
-                  <Typewriter
+                  {/* <Typewriter
                     words={['engineers', 'programmers', 'innovators']}
                     loop={0} // Infinite loop
                     cursor
-                  />
+                  /> */}
                 </h2>
               </div>
 
@@ -99,7 +103,7 @@ const Hero = (): ReactNode => {
 
           {/* Chevron */}
           <img
-            src="assets/chevron.svg"
+            src={Chevron}
             className="w-24 md:w-28 mt-auto mb-8 md:mb-16 
               place-self-center 
               

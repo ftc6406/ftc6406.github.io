@@ -1,3 +1,5 @@
+import RightArrow from '@assets/right_arrow.svg';
+
 const CustomRightArrow = ({ onClick }: { onClick?: () => void }) => {
   return (
     <button
@@ -9,7 +11,7 @@ const CustomRightArrow = ({ onClick }: { onClick?: () => void }) => {
         }
       }}
     >
-      <img src="/assets/rightArrow.svg" />
+      <img src={RightArrow} />
     </button>
   );
 };

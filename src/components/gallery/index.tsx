@@ -1,9 +1,9 @@
 import { type ReactNode } from 'react';
 
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+// import Carousel from 'react-multi-carousel';
+// import 'react-multi-carousel/lib/styles.css';
 
-import Card from './card';
+import Card from './Card';
 
 const GALLERY = await fetch('gallery.json').then((res) => res.json());
 
@@ -86,7 +86,7 @@ const Gallery = (): ReactNode => {
         id="gallery-carousel"
         className="flex lg:hidden size-full object-cover"
       >
-        <Carousel
+        {/* <Carousel
           responsive={RESPONSIVE}
           swipeable={true}
           keyBoardControl={true}
@@ -98,7 +98,7 @@ const Gallery = (): ReactNode => {
           itemClass="size-full object-cover"
         >
           {cards}
-        </Carousel>
+        </Carousel> */}
       </div>
     </div>
   );
